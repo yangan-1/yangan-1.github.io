@@ -1,0 +1,11 @@
+{
+	"main": "zy.html",
+	"logo": "xya.png",
+	"features": [
+		{
+		  "code": "hello",
+		  "explain": "hello world",
+			"cmds":["Ñô°²", "Ñô°²Íø", "yang", "YANG"]
+		}
+	]
+}

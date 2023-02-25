@@ -1,0 +1,1782 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>阳安网</title>
+<link rel="icon" href="D://本地磁盘/yaw/Release/1.ico" >
+<style type="text/css">
+<!--
+.STYLE1 {	font-size: 36px
+}
+body {
+	background-color: #FFFFFF;
+}
+-->
+</style>
+</head>
+
+<body>
+<h1><a href="xbc.html"><span class="STYLE1"><img src="xya.png" width="50" height="50" /></span></a><span class="STYLE1">阳安网</span><a href="xbc.html">返回</a> <a name="0" id="0"></a></h1>
+<h1 align="center" class="STYLE1">html</h1>
+<h1>HTML入门教程（非常详细）</h1>
+<div id="arc-body">
+  <p><img align="left" alt="html教程" src="http://c.biancheng.net/uploads/allimg/200422/10-200422145119C7.gif" />HTML 是 Hyper Text Markup Language 的简写，表示超文本标记语言，同时 HTML 也是我们学习前端开发的基础。随着 web 前端技术的飞速发展，HTML 和 CSS 也成为了编程者的必备技能。</p>
+  <p>这套「HTML教程」可以帮助读者快速入门，其中包含了作者大量的实践经验，将知识系统化，浓缩为精华，用通俗易懂的语言直指网页设计初学者的痛点。</p>
+  <p>HTML 标签非常注重语义化，很多标签都是通俗易懂的，大大降低了我们学习的难度。这套 HTML 教程更是为了避免初学者走太多的弯路，指出了许多其它 HTML 教程中没有提到的学习误区，并且给初学者提供了一个具体的学习思路，除了注重 HTML 知识点的讲解，更加注重 web 前端开发技巧和思维。请读者在学习过程中保持不骄不躁的学习心态，认真学习每一个知识点。</p>
+  <p>学海无涯，苦做舟，学习如同修行，只有潜心才可以领悟真谛。HTML 中的每一个小知识点都可以让页面发生不同的变化，现在就让我们行动起来，跟着 HTML 教程的步伐，让我们一起走进 HTML 的世界。</p>
+</div>
+<dl id="arc-list">
+  <dt>教程目录</dt>
+  <dd><a href="#1">1. 网站到底是什么？</a></dd>
+  <dd><a href="#2">2. HTML是什么？HTML简介</a></dd>
+  <dd><a href="#3">3. HTML标签的语法格式</a></dd>
+  <dd><a href="#4">4. HTML属性的概念和使用</a></dd>
+  <dd><a href="#5">5. HTML标题标签&lt;h1&gt;到&lt;h6&gt;</a></dd>
+  <dd><a href="#6">6. HTML段落标签&lt;p&gt;</a></dd>
+  <dd><a href="#7">7. HTML文本格式化</a></dd>
+  <dd><a href="#8">8. HTML超链接标签&lt;a&gt;</a></dd>
+  <dd><a href="#9">9. HTML插入图片：&lt;img&gt;标签</a></dd>
+  <dd><a href="#10">10. HTML &lt;table&gt;标签（表格）</a></dd>
+  <dd><a href="#11">11. HTML列表标签：&lt;ul&gt;&lt;ol&gt;&lt;dl&gt;</a></dd>
+  <dd><a href="#12">12. HTML表单：&lt;form&gt;标签</a></dd>
+  <dd><a href="#13">13. HTML注释的写法（附带示例）</a></dd>
+  <dd><a href="#14">14. HTML嵌入CSS样式（四种方法）</a></dd>
+  <dd><a href="#15">15. HTML块级元素和内联元素（行内元素）</a></dd>
+  <dd><a href="#16">16. HTML布局（附带示例）</a></dd>
+  <dd><a href="#17">17. HTML &lt;iframe&gt;标签：内联框架</a></dd>
+  <dd><a href="#18">18. HTML &lt;head&gt;标签：头部</a></dd>
+</dl>
+<p><a name="1" id="1"></a></p>
+<h1>网站到底是什么？</h1>
+<div></div>
+<div id="ggxc-arctop-pc-1"></div>
+<div id="arc-body2">网站是由一个一个网页构成的，要想理解网站是什么，首先要理解网页是什么。
+    <h2>1. 什么是网页？</h2>
+  网页其实就是放在服务器上的一个文件，当我们浏览网页时，这个文件会被下载到我们本地的电脑，然后再由浏览器解析，渲染出各种漂亮的界面，比如表格、图片、标题、列表等。<br />
+  <br />
+  网页文件的后缀有很多种，比如.html、.php、.jsp、.asp等，相信读者在浏览器的地址栏里也都见到过，如下图所示：
+  <div><img alt="在浏览器地址栏中查看 URL" src="http://c.biancheng.net/uploads/allimg/200317/1-20031GF551201.gif" /><br />
+    图1：在浏览器地址栏中查看 URL</div>
+  <br />
+  但不管网页的后缀是什么，它的本质都是一样的，就是由 HTML 代码构成的纯文本文件。<br />
+  <br />
+  我们可以使用记事本、Notepad++、Sublime Text、Vim 等文本编辑器打开网页文件，看到它的所有内容，就像下面这样：
+  <div>
+    <div>
+      <pre><ol><li>&lt;!DOCTYPE html&gt;</li><li>&lt;html lang=&quot;zh-CN&quot;&gt;</li><li>&lt;head&gt;</li><li>    &lt;meta charset=&quot;UTF-8&quot;&gt;</li><li>    &lt;title&gt;这是网页标题&lt;/title&gt;</li><li>&lt;/head&gt;</li><li>&lt;body&gt;</li><li>    &lt;p&gt;这是一段文本&lt;/p&gt;</li><li></li><li>    &lt;a href=&quot;http://c.biancheng.net/&quot;&gt;这个一个超链接&lt;/a&gt;</li><li></li><li>    &lt;ul&gt;</li><li>        &lt;li&gt;条目1&lt;/li&gt;</li><li>        &lt;li&gt;条目2&lt;/li&gt;</li><li>        &lt;li&gt;条目3&lt;/li&gt;</li><li>    &lt;/ul&gt;</li><li>&lt;/body&gt;</li><li>&lt;/html&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  这就是 HTML 代码！我们可以看到很多由&lt;&gt;包围的特殊标记，这叫做 HTML 标签（Tag），浏览器通过识别这些 HTML 标签来渲染出各种界面和效果。<br />
+  <br />
+  每种 HTML 标签都有不同的含义，适用于不同的场景，能展示出不同的效果，例如：
+  <ul>
+    <li>&lt;html&gt; 标签用来包围当前网页的所有 HTML 代码，可以把它看做一个外壳。</li>
+    <li>&lt;head&gt; 标签表示网页的头部，用来设置一些网页的参数，在浏览器中是看不到的：
+        <ul>
+          <li>&lt;meta charset=&quot;UTF-8&quot;&gt; 用来指明当前网页的编码格式是 UTF-8；</li>
+          <li>&lt;title&gt; 用来设置当前网页的标题，相当于文件的名字，它会显示在浏览器的标题栏。</li>
+        </ul>
+    </li>
+    <li>&lt;body&gt; 标签表示网页的正文内容，也就是需要在浏览器主界面中显示的内容：
+        <ul>
+          <li>&lt;p&gt; 标签用来表示一个段落，能容纳一段文本；</li>
+          <li>&lt;a&gt; 标签用来表示一个超链接，用鼠标点击后可以跳转到其它网页；</li>
+          <li>&lt;ul&gt; 标签用来表示一个列表，其中的每个 &lt;li&gt; 都是子标签，用来表示一个列表项。</li>
+        </ul>
+    </li>
+  </ul>
+  <br />
+  将上面的代码保存到 index.html，拖到浏览器中运行，可以看到如下的效果：
+  <div><img alt="一个简单的网页" src="http://c.biancheng.net/uploads/allimg/200317/1-20031G34H6447.png" /><br />
+    图2：一个简单的网页</div>
+  <br />
+  这是一个非常简陋的网页，仅作为例子来演示，真实网页的 HTML 代码远比这复杂，你可以在网页上单击鼠标右键，然后在弹出菜单中选择“查看网页源代码”，就可以查看当前网页的 HTML 代码。
+  <h2>2. 什么是网站？</h2>
+  一个网站由很多网页组成，可以将多个网页放在一个文件夹中，这个文件夹还可以嵌套其它子文件夹，最终形成一个树状结构，如下图所示：
+  <div><img alt="一个简单的网站结构" src="http://c.biancheng.net/uploads/allimg/200317/1-20031G44142Y3.gif" /><br />
+    图3：一个简单的网站结构</div>
+  <br />
+  如果我们给顶级目录 program 绑定一个域名 www.domain.com，那么用户就可以通过 www.domain.com 来访问 program 文件夹中的所有文件（包括子文件夹），例如：
+  <ul>
+    <li>www.domain.com/demo.html</li>
+    <li>www.domain.com/python/</li>
+    <li>www.domain.com/java/spring.html</li>
+    <li>www.domain.com/java/maven/profile.html</li>
+  </ul>
+  <br />
+  可以认为，网站就是一个绑定了域名的文件夹，该文件夹中可以包含子文件夹以及各种各样的文件，这些文件都可以通过域名来访问。当我们在地址栏中输入一个 URL 时，它其实已经展示了服务器上的目录结构，例如 <a href="http://c.biancheng.net/linux/ln.html" target="_blank">http://c.biancheng.net/linux/ln.html</a>，就表示访问 linux 目录下的 ln.html 文件。<br />
+  <br />
+  当然，你也可以不绑定域名，只要在服务器上设置某个文件夹提供 Web 服务，用户也可以通过 IP 地址来访问。<br />
+  <br />
+  互联网上的所有服务器都是通过 IP 地址来定位的，域名只是 IP 地址的一种助记符，帮助用户记住网站的链接以及品牌。使用域名访问网站时，浏览器会先找到域名对应的 IP 地址，然后再通过 IP 地址请求服务器上的文件；这个过程叫做域名解析，是通过 DNS 服务器来完成的。<br />
+  <br />
+  网站的作用是把计算机上的数据（文章、博客、图片、视频等）分享出去，让别人也能获取到有用的信息；同时，别人也能发布自己的数据（发布文章、留言、上传视频等），让网站的内容更加丰富。网站和用户之间是一个相互促进的关系，网站用户越多，积累的数据也就越多，然后就会吸引更多用户继续分享数据，这是一个良性循环，是一个健康的生态。<br />
+  <br />
+  网站是互联网的基石，它让用户获取信息，也让用户分享信息，所以现在的互联网才能丰富多彩。
+  <h4>1) 网站服务器（Server）</h4>
+  我们都知道网站放在服务器上，服务器其实就是一台计算机，它和我们平时使用的笔记本、台式机并没有什么区别，都由主板、CPU、内存、风扇等部件构成。不过，服务器一般是不带显示器、键盘、音响等外设的（当然它也支持这些外设），因为服务器的唯一用途就是运行网站，没有其它作用，所以用家庭台式机的主机箱来类比服务器更加恰当。<br />
+  <br />
+  服务器一般放在专业的机房中，这些机房温度恒定、网络畅通、有备用电源、有容灾备份，能够保证服务器 7×24 小时不间断运行。<br />
+  <br />
+  另外，为了让服务器能够放入机柜中，避免占用太多空间，服务器一般看起来很薄，是扁平的，这就是人们常说的“刀片”。<br />
+  <div><img alt="刀片式服务器" src="http://c.biancheng.net/uploads/allimg/200317/1-20031GK1152b.jpg" /><br />
+    图4：刀片式服务器<br />
+    <br />
+    <img alt="服务器机柜" src="http://c.biancheng.net/uploads/allimg/200317/1-20031GK145228.jpg" /><br />
+    图5：服务器机柜</div>
+  <h2>3. 总结</h2>
+网站可以认为是放在服务器上的一个文件夹，它包含了很多网页文件以及很多子文件夹。用户访问网站就是读取文件的内容，用户分享数据就是修改文件的内容，或者删除现有的文件，或者创建一个新的文件。</div>
+<p><a name="2" id="2"></a></p>
+<h1>HTML是什么？HTML简介</h1>
+<div></div>
+<div id="ggxc-arctop-pc-2"></div>
+<div id="arc-body3">HTML 英文全称是 Hyper Text Markup Language，中文译为“超文本标记语言”，专门用来设计和编辑网页。<br />
+    <br />
+  使用 HTML 编写的文件称为“HTML 文档”，一般后缀为.html（也可以使用.htm，不过比较少见）。HTML 文档是一种纯文本文件，您可以使用 Windows 记事本、Linux Vim、Notepad++、Sublime Text、VS Code 等文本编辑来打开或者创建。<br />
+  <br />
+  每个网页都是一个 HTML 文档，使用浏览器访问一个链接（URL），实际上就是下载、解析和显示 HTML 文档的过程。将众多 HTML 文档放在一个文件夹中，然后提供对外访问权限，就构成了一个网站，这一点已经在《<a href="http://c.biancheng.net/view/7410.html" target="_blank">网站到底是什么</a>》中提及。
+  <h2>HTML 到底是什么？</h2>
+  首先，HTML 不是编程语言，没有逻辑处理能力，没有计算能力，不能动态地生成内容，而只能静态地展示网页信息。<br />
+  <br />
+  我们从 HTML 中文全称来分析一下它的本质：
+  <h4>1) 超文本</h4>
+  也即超越纯文本，这意味着 HTML 文档不仅能包含文本（文字），还能包含图片、音视频、表格、列表、链接、按钮、输入框等高级内容。<br />
+  <br />
+  超链接是互联网的纽带，它能将众多网页连接起来，让它们交织在一起，形成一张“网”。没有超链接，就没有互联网。
+  <h4>2) 标记语言</h4>
+  HTML 是一种计算机语言，但它不能编程，只能用来标记网页中的内容。HTML 通过不同的标签来标记不同的内容、格式、布局等，例如：
+  <ul>
+    <li>&lt;img&gt; 标签表示一张图片；</li>
+    <li>&lt;a&gt; 标签表示一个链接；</li>
+    <li>&lt;table&gt; 标签表示一个表格；</li>
+    <li>&lt;input&gt; 标签表示一个输入框；</li>
+    <li>&lt;p&gt; 标签表示一段文本；</li>
+    <li>&lt;strong&gt; 标签表示文本加粗效果；</li>
+    <li>&lt;div&gt; 标签表示块级布局。</li>
+  </ul>
+  <br />
+  本文最后给出的示例中演示了 HTML 标签的用法，您也可以转到《HTML标签与元素》学习 HTML 标签的具体语法格式。
+  <h4>总结</h4>
+  HTML 是一种用来开发网页的计算机语言，它通过标签（标记式指令）将文本、音视频、图片、表格、按钮、输入框等内容显示出来。<strong>也就是说，HTML 是用来给网页内容进行排版和布局的。</strong>
+  <h2>HTML 版本</h2>
+  自 HTML 诞生以来，经过不断的发展，市面上出现了许多 HTML 版本，有关 HTML 版本的简要介绍如下所示：<br />
+  <br />
+  <table>
+    <tbody>
+      <tr>
+        <th>HTML版本</th>
+        <th>版本说明</th>
+      </tr>
+      <tr>
+        <td>HTML 1.0</td>
+        <td>HTML 的第一个版本，发布于 1991 年。</td>
+      </tr>
+      <tr>
+        <td>HTML 2.0</td>
+        <td>HTML 的第二个版本，发布于 1995 年，该版本中增加了表单元素以及文件上传等功能。</td>
+      </tr>
+      <tr>
+        <td>HTML 3.2</td>
+        <td>HTML 的第三个版本由 W3C 于 1997 年初发布，该版本增加了创建表格以及表单的功能。</td>
+      </tr>
+      <tr>
+        <td>HTML 4.01</td>
+        <td>HTML 4.01 于 1999 年 12 月发布，该版本增加了对样式表（CSS）的支持。HTML 4.01 是一个非常稳定的版本，是当前的官方标准。</td>
+      </tr>
+      <tr>
+        <td>HTML 5</td>
+        <td>HTML5 的初稿于 2008 年 1 月发布，是公认的下一代 Web 语言，极大地提升了 Web 在富媒体、富内容和富应用等方面的能力，被喻为终将改变移动互联网的重要推手。</td>
+      </tr>
+    </tbody>
+  </table>
+  <br />
+  HTML 4 和 HTML 5（简称 H5）是两个最重要版本，HTML 4 适应了 PC 互联网时代，HTML 5 适应了移动互联网时代。<br />
+  <br />
+  HTML 5 在 HTML 4 的基础上增加了很多语义化的标签，功能更加强大，除了较低版本的 IE 浏览器，几乎所有其它浏览器都能很好地支持 HTML 5。如果您的用户很少使用 IE 浏览器，那么请放心地使用 HTML 5。<br />
+  <h2>HTML标签</h2>
+  如上所述，HTML 是一种标记语言，使用各种标签来格式化内容，标签的特点如下所示：<br />
+  <ul>
+    <li>HTML 标签由尖括号包围的关键词构成，比如 &lt;html&gt;；</li>
+    <li>除了少数标签外，大多数 HTML 标签都是成对出现的，比如 &lt;b&gt; 和 &lt;/b&gt;；</li>
+    <li>成对出现的标签中，第一个标签称为开始标签，第二个标签称为结束标签（闭合标签）。</li>
+  </ul>
+  <br />
+  HTML 中的不同标签具有不同的含义，学习 HTML 其实就是学习各个标签的含义，根据实际场景的需要，选择合适的标签，从而制作出精美的网页。<br />
+  <h2>HTML文档结构</h2>
+  HTML 页面的基本结构如下所示，其中包含了各种创建网页所需的标签（例如 doctype、html、head、title 和 body 等）。
+  <div>
+    <div>
+      <pre><ol><li>&lt;!DOCTYPE html&gt;</li><li>&lt;html lang=&quot;en&quot;&gt;</li><li>&lt;head&gt;</li><li>    &lt;meta charset=&quot;UTF-8&quot;&gt;</li><li>    &lt;title&gt;HTML演示&lt;/title&gt;</li><li>&lt;/head&gt;</li><li>&lt;body&gt;</li><li>    &lt;h1&gt;这是一个标题&lt;/h1&gt;</li><li>    &lt;p&gt;这是一个段落&lt;/p&gt;</li><li>    &lt;p&gt;这是另一个段落&lt;/p&gt;</li><li>    &lt;a href=&quot;http://yangan12.com/&quot; target=&quot;_blank&quot;&gt;这是一个链接，指向阳安网首页&lt;/a&gt;</li><li>    &lt;ul&gt;</li><li>        &lt;li&gt;HTML教程&lt;/li&gt;</li><li>        &lt;li&gt;CSS教程&lt;/li&gt;</li><li>        &lt;li&gt;JavaScript教程&lt;/li&gt;</li><li>    &lt;/ul&gt;</li><li></li><li>    &lt;input type=&quot;text&quot; placeholder=&quot;请输入内容&quot; /&gt;</li><li>&lt;/body&gt;</li><li>&lt;/html&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  语法说明如下：<br />
+  <ul>
+    <li>&lt;!DOCTYPE html&gt;：这是文档类型声明，用来将文档声明为 HTML 文档（从技术上来说它并不是标签），doctype 声明不区分大小写；</li>
+    <li>&lt;html&gt; &lt;/html&gt;：该标签是 HTML 页面的根标签，其他所有的标签都需要在 &lt;html&gt; 和 &lt;/html&gt; 标签之间定义；</li>
+    <li>&lt;head&gt; &lt;/head&gt;：该标签中用来定义 HTML 文档的一些信息，例如标题、编码格式等等；</li>
+    <li>&lt;meta charset=&quot;UTF-8&quot;&gt;：用来指明当前网页采用 UTF-8 编码，UTF-8 是全球通用的编码格式，绝大多数网页都采用 UTF-8 编码；</li>
+    <li>&lt;title&gt; &lt;/title&gt;：该标签用来定义网页的标题，网页标题会显示在浏览器的标签栏；</li>
+    <li>&lt;body&gt; &lt;/body&gt;：该标签用来定义网页中我们能通过浏览器看到的所有内容，例如段落、标题、图片、链接等等；</li>
+    <li>&lt;h1&gt; &lt;/h1&gt;：该标签用来定义标题；</li>
+    <li>&lt;p&gt; &lt;/p&gt;：该标签用来定义段落；</li>
+    <li>&lt;a&gt; &lt;/a&gt;：该标签用来定义链接；</li>
+    <li>&lt;ul&gt; &lt;/ul&gt;：该标签用来定义列表；</li>
+    <li>&lt;li&gt; &lt;/li&gt;：该标签用来定义列表项；</li>
+    <li>&lt;input type=&quot;text&quot; /&gt;：用来定义一个输入框。</li>
+  </ul>
+  <br />
+  由于 HTML 文档属于文本文件，所以我们可以使用任何文本编辑器来创建和修改 HTML 文件，对于初学者来说最好使用系统自带的文本编辑器，例如 Windows 记事本、Linux Vim 和 Mac OS TextEdit，当有了一定的基础之后再选用专业的文本编辑器，例如 Notepad++、Sublime Text、VS Code 等。<br />
+  <br />
+  另外，您必须将 HTML 文档保存为.html或者.htm格式才可以直接在浏览器中打开并浏览其中的内容。例如上面的示例代码，将其保存在一个名为 index.html 的文件中，双击即可在浏览器中看到运行结果，如下图所示：<br />
+  <br />
+  <div><img alt="HTML文档演示效果" src="http://c.biancheng.net/uploads/allimg/210927/1-21092G4123N60.png" /></div>
+</div>
+<p><a name="3" id="3"></a></p>
+<h1>HTML标签的语法格式</h1>
+<div></div>
+<div id="ggxc-arctop-pc-3"></div>
+<div id="arc-body4">HTML 中的标签就像关键字一样，每个标签都有自己的语义（含义），例如&lt;p&gt;标签代表段落，&lt;b&gt;标签代表加粗。根据标签的不同，浏览器会使用不同的方式展示标签中的内容。<br />
+    <br />
+  在实际开发中，有时我们也将 HTML 标签称为 HTML 元素。<br />
+  <h2>HTML 标签的语法格式</h2>
+  一般情况下，一个 HTML 标签由开始标签、属性、内容和结束标签组成，标签的名称不区分大小写，但大多数属性的值需要区分大小写，如下所示：<br />
+  <pre>	  属性  	   ↓  &lt;div class=&quot;foo&quot;&gt;C语言中文网&lt;/div&gt;   ↑            ↑     ↑  开始标签        内容   结束标签</pre>
+  除了 class 属性外，开始标签中还可以包含其它属性信息，比如 id、title 等，这些我们会在后面进行讲解。<br />
+  <p>注意，虽然 HTML 标签在语法上不区分大小写，但是为了规范和专业，强烈建议在定义标签时一律采用小写。</p>
+  当使用浏览器打开我们编写的 HTML 文档时，浏览器会从上到下依次读取文档中的内容，并根据 HTML 标签和属性将标签中的内容呈现在浏览器中。<br />
+  <br />
+  一个 HTML 文档中必须具有一些基本的标签，以便浏览器区分普通文本和 HTML 文档。您可以根据想要实现的效果使用任意数量的标签，但有以下几点需要注意：<br />
+  <ul>
+    <li>所有 HTML 标签都必须放在尖括号&lt; &gt;内；</li>
+    <li>HTML 中不同的标签可以实现不同的效果；</li>
+    <li>如果使用了某个标签，则必须使用对应的结束标签来结尾（自闭合标签除外）。</li>
+  </ul>
+  <h4>自闭合标签</h4>
+  有一些 HTML 标签没有单独的结束标签，而是在开始标签中添加/来进行闭合，这种标签称为自闭合标签。请看下面的例子：
+  <div>
+    <div>
+      <pre showmenu="false" shownum="false"><ul><li>&lt;img src=&quot;./logo.png&quot; alt=&quot;C语言中文网Logo&quot; /&gt;  &lt;!-- 图像 --&gt;</li><li>&lt;hr /&gt;  &lt;!-- 分割线 --&gt;</li><li>&lt;br /&gt;  &lt;!-- 文本换行 --&gt;</li><li>&lt;input type=&quot;text&quot; placeholder=&quot;请输入内容&quot; /&gt;  &lt;!-- 文本输入框 --&gt;</li></ul>
+  </pre>
+    </div>
+  </div>
+  自闭合标签不用包围内容，所以不需要单独的结束标签。只有少部分 HTML 标签是自闭合的。
+  <p>&lt;!--  --&gt; 表示 HTML 注释，用来对 HTML 代码进行说明，浏览器会忽略注释内容，所以用户在网页中看不到注释，我们将会在《HTML注释》中详细讲解。</p>
+  <h2>嵌套HTML标签</h2>
+  大多数 HTML 元素都是可以嵌套使用的，也就是说一个 HTML 标签中可以包含其他的 HTML 标签，我们编写的 HTML 文档就是由相互嵌套的 HTML 标签构成，如下例所示：
+  <div>
+    <div>
+      <pre><ol><li>&lt;!DOCTYPE html&gt;</li><li>&lt;html lang=&quot;en&quot;&gt;</li><li>&lt;head&gt;</li><li>    &lt;meta charset=&quot;UTF-8&quot;&gt;</li><li>    &lt;title&gt;HTML标签的嵌套&lt;/title&gt;</li><li>&lt;/head&gt;</li><li>&lt;body&gt;</li><li>    &lt;h1&gt;C语言中文网&lt;font size=&quot;4&quot; color=&quot;#666&quot;&gt;简介&lt;/font&gt;&lt;/h1&gt;</li><li>    &lt;p&gt;</li><li>        C语言中文网，一个在线学习&lt;b&gt;编程&lt;/b&gt;的网站，目前已经发布了将近 &lt;font color=&quot;red&quot;&gt;50&lt;sup&gt;①&lt;/sup&gt;&lt;/font&gt; 套教程，包括&lt;i&gt;C语言&lt;/i&gt;、&lt;i&gt;C++&lt;/i&gt;、&lt;i&gt;Java&lt;/i&gt;、&lt;i&gt;Python&lt;/i&gt; 等，请&lt;a href=&quot;http://c.biancheng.net/sitemap/&quot; target=&quot;_blank&quot;&gt;猛击这里&lt;/a&gt;查看所有教程。</li><li>        &lt;hr /&gt;</li><li>        &lt;small&gt;注①：C语言中文网会持续更新优质教程，教程数量将远远超过 50 套。&lt;/small&gt;</li><li>    &lt;/p&gt;</li><li>&lt;/body&gt;</li><li>&lt;/html&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  对代码的说明：
+  <ul>
+    <li>第 8 行代码，在 &lt;h1&gt; 标签中嵌套了 &lt;font&gt; 标签。&lt;font&gt; 标签用来设置文本样式，此处我们使用 size 属性设置了文本大小，使用 color 属性设置了文本颜色。</li>
+    <li>第 9~13 行代码，在 &lt;p&gt; 标签中嵌套了多种标签，其中：
+        <ul>
+          <li>&lt;b&gt; 标签用来加粗文本。</li>
+          <li>&lt;sup&gt; 标签用来设置上角标。</li>
+          <li>&lt;i&gt; 标签用来设置斜体文本。</li>
+          <li>&lt;a&gt; 标签用来设置超链接，其中 target 属性用来指明打开方式，_blank表示从新标签中打开。</li>
+          <li>&lt;hr&gt; 标签用来设置分割线，它是一个自闭合标签。</li>
+          <li>&lt;small&gt; 标签用来呈现小号字体。</li>
+        </ul>
+    </li>
+  </ul>
+  <p>&lt;font&gt; 是一种不被建议使用的标签，HTML 5 已经不再支持，请尽量使用 CSS 来设置文本样式。</p>
+  HTML 标签的嵌套层次是没有限制的，但是我们应尽量保持 HTML 文档的简洁。上面代码中嵌套层次最深的标签是 &lt;sup&gt;，它的嵌套路径为：
+  <p>body -&gt; p -&gt; font -&gt; sup。</p>
+  <br />
+  以上代码结果如下图所示：
+  <div><img alt="嵌套HTML标签演示" src="http://c.biancheng.net/uploads/allimg/210927/1-21092G51236392.png" /></div>
+</div>
+<p><a name="4" id="4"></a></p>
+<h1>HTML属性的概念和使用</h1>
+<div></div>
+<div id="ggxc-arctop-pc-4"></div>
+<div id="arc-body5">通过前面的学习，我们已经对 <a href="http://c.biancheng.net/view/9382.html" target="_blank">HTML 标签</a>有了简单的认识，知道可以在标签中可以添加一些属性，这些属性包含了标签的额外信息，例如：
+    <ul>
+      <li>href 属性可以为 &lt;a&gt; 标签提供链接地址；</li>
+      <li>src 属性可以为 &lt;img&gt; 标签提供图像的路径；</li>
+      <li>style 属性可以为几乎所有标签定义 CSS 样式。</li>
+    </ul>
+  <br />
+  本节我们就来讲解一下 HTML 标签属性的概念和用法。<br />
+  <h2>什么是属性</h2>
+  属性可以为 HTML 标签提供一些额外信息，或者对 HTML 标签进行修饰。属性需要添加在开始标签中，语法格式为：
+  <p>attr=&quot;value&quot;</p>
+  attr 表示属性名，value 表示属性值。属性值必须使用双引号&quot; &quot;或者单引号' '包围。
+  <p>注意，虽然双引号和单引号都可以包围属性值，但是为了规范和专业，请尽量使用双引号。</p>
+  一个标签可以没有属性，也可以有一个或者多个属性。<br />
+  <br />
+  使用 HTML 属性的例子：
+  <div>
+    <div>
+      <pre showmenu="false"><ol><li>&lt;p id=&quot;user-info&quot; class=&quot;color-red&quot;&gt;欢迎 &lt;font color=&quot;red&quot; size=&quot;3&quot;&gt;Tom&lt;/font&gt; 来到C语言中文网，您已经使用本站 3 年了，这是您第 12 次登录。&lt;p&gt;</li><li>&lt;div class=&quot;clearfloat&quot;&gt;</li><li>    &lt;p class=&quot;left&quot;&gt;这里显示 Tom 的账号信息&lt;/p&gt;</li><li>    &lt;p class=&quot;right&quot;&gt;这里显示 Tom 的个性签名&lt;/p&gt;</li><li>&lt;/div&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  <h4>专用属性</h4>
+  HTML 属性有很多，大体可以分为两类：
+  <ul>
+    <li>有些属性适用于大部分或者所有 HTML 标签，我们将这些属性称为通用属性；</li>
+    <li>有些属性只适用于一个或者几个特定的 HTML 标签，我们将这些属性称为专用属性。</li>
+  </ul>
+  <br />
+  HTML 中的 &lt;img&gt; 标签就有 src 和 alt 两个专用属性，&lt;a&gt; 标签也有 href 和 target 两个专用属性，如下例所示：<br />
+  <div>
+    <div>
+      <pre showmenu="false" shownum="false"><ul><li>&lt;img src=&quot;./logo.png&quot; alt=&quot;C语言中文网Logo&quot; width=&quot;100&quot; height=&quot;50&quot;&gt;</li><li>&lt;a href=&quot;http://c.biancheng.net/&quot; target=&quot;_blank&quot;&gt;C语言中文网&lt;/a&gt;</li></ul>
+  </pre>
+    </div>
+  </div>
+  对代码的说明：
+  <ul>
+    <li>&lt;img&gt; 标签中的 src 属性用来定义图像的路径，alt 属性用来定义图像的描述信息，当图像出现异常无法正常显示时就会显示 alt 中的信息。</li>
+    <li>&lt;a&gt; 标签的 href 属性用来定义链接的地址，target 属性用来定义新页面在浏览器中的打开方式。</li>
+  </ul>
+  <h4>自定义属性</h4>
+  除了自带的属性，HTML 也允许我们自定义属性，这些属性虽然可以被浏览器识别，但是并不会添加什么特殊效果，我们需要借助 CSS 和 JavaScript 处理自定义属性，为 HTML 标签添加指定样式或者行为。<br />
+  <br />
+  例如，<a href="http://c.biancheng.net/" target="_blank">C语言中文网首页</a>的顶部板块为了在手机端实现标签切换（tab 切换）效果，就为 &lt;li&gt; 和&lt;div&gt; 标签添加了一个自定义属性tabno，用以指明当前 tab 的编号，请看下图：<br />
+  <div><img alt="HTML自定义属性演示" src="http://c.biancheng.net/uploads/allimg/210927/1-21092G6134E51.png" /><br />
+    图1：HTML 自定义属性演示</div>
+  <h2>通用属性介绍</h2>
+  HTML 标签中有一些通用的属性，如 id、title、class、style 等，这些通用属性可以在大多数 HTML 标签中使用，下面来简单介绍一下它们的用法。<br />
+  <h4>1) id</h4>
+  id 属性用来赋予某个标签唯一的名称（标识符），当我们使用 CSS 或者 JavaScript 来操作这个标签时，就可以通过 id 属性来找到这个标签。<br />
+  为标签定义 id 属性可以给我们提供很多便利，比如：<br />
+  <ul>
+    <li>如果标签中带有 id 属性作为唯一标识符，通过 id 属性可以很方便的定位到该标签；</li>
+    <li>如果 HTML 文档中包含多个同名的标签，利用 id 属性的唯一性，可以很方便的区分它们。</li>
+  </ul>
+  <p>注意：在一个 HTML 文档中 id 属性的值必须是唯一的。</p>
+  示例代码如下所示：<br />
+  <div>
+    <div>
+      <pre showmenu="false" shownum="false"><ul><li>&lt;input type=&quot;text&quot; id=&quot;username&quot; /&gt;</li><li>&lt;div id=&quot;content&quot;&gt;C语言中文网&lt;/div&gt;</li><li>&lt;p id=&quot;url&quot;&gt;http://c.biancheng.net/&lt;/p&gt;</li></ul>
+  </pre>
+    </div>
+  </div>
+  <h4>2) class</h4>
+  与 id 属性类似，class 属性也可以为标签定义名称（标识符），不同的是 class 属性在整个 HTML 文档中不必是唯一的，我们可以为多个标签定义相同的 class 属性值。另外，还可以为一个 HTML 标签定义多个 class 属性值，如下所示：<br />
+  <div>
+    <div>
+      <pre showmenu="false" shownum="false"><ul><li>&lt;div class=&quot;className1 className2 className3&quot;&gt;&lt;/div&gt;</li><li>&lt;p class=&quot;content&quot;&gt;C语言中文网&lt;/p&gt;</li><li>&lt;div class=&quot;content&quot;&gt;http://c.biancheng.net/&lt;/div&gt;</li></ul>
+  </pre>
+    </div>
+  </div>
+  当使用 CSS 或者 JavaScript 来操作 HTML 标签时，同样可以使用 class 属性来找到对应的 HTML 标签。由于 class 属性不是唯一的，所以通过 CSS 或 JavaScript 对 HTML 标签的操作会应用于所有具有同名 class 属性的标签中。<br />
+  <h4>3) title</h4>
+  title 属性用来对标签内容进行描述说明，当鼠标移动到该标签上方时会显示出 title 属性的值，如下例所示：
+  <div>
+    <div>
+      <pre><ol><li>&lt;!DOCTYPE html&gt;</li><li>&lt;html lang=&quot;en&quot;&gt;</li><li>&lt;head&gt;</li><li>    &lt;meta charset=&quot;UTF-8&quot;&gt;</li><li>    &lt;title&gt;演示文档&lt;/title&gt;</li><li>&lt;/head&gt;</li><li>&lt;body&gt;</li><li>    &lt;a href=&quot;http://c.biancheng.net/html/&quot; title=&quot;HTML教程&quot;&gt;HTML教程&lt;/a&gt;</li><li>&lt;/body&gt;</li><li>&lt;/html&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  运行结果如下图所示：<br />
+  <div><img alt="HTML title 属性演示" src="http://c.biancheng.net/uploads/allimg/210927/1-21092G6293W10.png" /><br />
+    图2：HTML title 属性演示</div>
+  <p>将鼠标在链接处悬停片刻才能看到提示框。</p>
+  <h4>4) style</h4>
+  使用 style 属性我们可以在 HTML 标签内部为标签定义 CSS 样式，例如设置文本的颜色、字体等，如下例所示：
+  <div>
+    <div>
+      <pre><ol><li>&lt;!DOCTYPE html&gt;</li><li>&lt;html lang=&quot;en&quot;&gt;</li><li>&lt;head&gt;</li><li>    &lt;meta charset=&quot;UTF-8&quot;&gt;</li><li>    &lt;title&gt;演示文档&lt;/title&gt;</li><li>&lt;/head&gt;</li><li>&lt;body&gt;</li><li>    &lt;p style=&quot;color:red;&quot;&gt;http://c.biancheng.net/html/&lt;/p&gt;</li><li>    &lt;img src=&quot;./logo.png&quot; style=&quot;height:50px;&quot; alt=&quot;C语言中文网LOGO&quot;&gt;</li><li>    &lt;div style=&quot;<a href="http://c.biancheng.net/css3/padding.html" target="_blank">padding</a>:10px;<a href="http://c.biancheng.net/css3/border.html" target="_blank">border</a>:2px solid #999;text-align:center;&quot;&gt;C语言中文网&lt;/div&gt;</li><li>&lt;/body&gt;</li><li>&lt;/html&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  运行结果如下图所示：<br />
+  <div><img alt="HTML style 属性演示" src="http://c.biancheng.net/uploads/allimg/210927/1-21092G63633593.png" /><br />
+    图3：HTML style 属性演示</div>
+  <br />
+  除了上述的属性外，HTML 中的属性还有许多许多，这里简单了解一下即可，后面我们会详细介绍。</div>
+<p><a name="5" id="5"></a></p>
+<h1>HTML标题标签&lt;h1&gt;到&lt;h6&gt;</h1>
+<div></div>
+<div id="ggxc-arctop-pc-5"></div>
+<div id="arc-body6">HTML 中提供了从&lt;h1&gt;到&lt;h6&gt;六个级别的标题标签，&lt;h1&gt;标签的级别最高，&lt;h6&gt;标签的级别最低，通过这些标签可以定义网页中的标题（与 word 中的标题类似），合理使用标题可以使网页的层次结构更加清晰。<br />
+    <p>提示：HTML 中的标题可帮助搜索引擎理解网页的结构和内容。</p>
+  默认情况下，浏览器会以比普通文本更大和更粗的字体显示标题中的内容，使用&lt;h1&gt;标签定义的标题字体最大，而使用&lt;h6&gt;标签定义的标题字体最小，如下例所示：<br />
+  <div>
+    <div>
+      <pre><ol><li>&lt;!DOCTYPE html&gt;</li><li>&lt;html lang=&quot;en&quot;&gt;</li><li>&lt;head&gt;</li><li>    &lt;meta charset=&quot;UTF-8&quot;&gt;</li><li>    &lt;title&gt;HTML标题标签演示&lt;/title&gt;</li><li>&lt;/head&gt;</li><li>&lt;body&gt;</li><li>    &lt;h1&gt;h1 标题&lt;/h1&gt;</li><li>    &lt;h2&gt;h2 标题&lt;/h2&gt;</li><li>    &lt;h3&gt;h3 标题&lt;/h3&gt;</li><li>    &lt;h4&gt;h4 标题&lt;/h4&gt;</li><li>    &lt;h5&gt;h5 标题&lt;/h5&gt;</li><li>    &lt;h6&gt;h6 标题&lt;/h6&gt;</li><li>&lt;/body&gt;</li><li>&lt;/html&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  运行结果如下图所示：<br />
+  <div><img alt="HTML标题标签（&lt;h1&gt;到&lt;h6&gt;）演示" src="http://c.biancheng.net/uploads/allimg/210928/1-21092QP129B5.png" /><br />
+    图1：HTML 标题标签演示</div>
+  <p>注意：在网页上使用标题标签时，浏览器内置的样式会在每个标题的上下添加一定的空白区域（外边距），您可以使用 <a href="http://c.biancheng.net/css3/margin.html" target="_blank">CSS margin</a> 属性来调整空白区域的大小。</p>
+  关于标题标签的使用，有以下几点需要注意：<br />
+  <ul>
+    <li>HTML 标题标签只能用来定义标题，不可以使用标题标签来对文本进行加粗设计；</li>
+    <li>由于搜索引擎（例如百度）是使用标题来索引网页结构和内容的，因此使用标题标签有利于搜索引擎的抓取；</li>
+    <li>标题标签并不是随意使用的，要根据具体的使用环境，按照级别由高到低的使用标题标签。</li>
+  </ul>
+  <p>提示：应该使用&lt;h1&gt;标签来标记最重要的标题，该标题通常位于页面顶部，而且一个 HTML 文档中通常应该有且仅有一个&lt;h1&gt;标题，至于较低级别的标题标签（例如&lt;h2&gt;、&lt;h3&gt;、&lt;h4&gt;等）的使用则可以不加限制。</p>
+</div>
+<p><a name="6" id="6"></a></p>
+<h1>HTML段落标签&lt;p&gt;</h1>
+<div></div>
+<div id="ggxc-arctop-pc-6"></div>
+<div id="arc-body7">HTML 中可以使用段落标签 &lt;p&gt;来将文档中的内容分割为若干个段落，语法格式如下：<br />
+    <p>&lt;p&gt;段落中的内容。&lt;/p&gt;</p>
+  段落标签由开始标签&lt;p&gt;和结束标签&lt;/p&gt;组成，开始和结束标签之间的内容会被视为一个段落。段落标签是一个非常基本的标签，我们在网页上发布文章时就会用到它，如下例所示：
+  <div>
+    <div>
+      <pre><ol><li>&lt;!DOCTYPE html&gt;</li><li>&lt;html lang=&quot;en&quot;&gt;</li><li>&lt;head&gt;</li><li>    &lt;meta charset=&quot;UTF-8&quot;&gt;</li><li>    &lt;title&gt;HTML段落标签演示&lt;/title&gt;</li><li>&lt;/head&gt;</li><li>&lt;body&gt;</li><li>    &lt;p&gt;C语言中文网，一个在线学习编程的网站，网址：&lt;a href=&quot;http://www.biancheng.net/&quot; target=&quot;_blank&quot;&gt;http://www.biancheng.net/&lt;/a&gt;&lt;/p&gt;</li><li>    &lt;p&gt;C语言中文网目前已经发布了将近 &lt;b&gt;50&lt;/b&gt; 套教程，包括 HTML、CSS、JavaScript 等，您可以&lt;a href=&quot;http://c.biancheng.net/sitemap/&quot; target=&quot;_blank&quot;&gt;猛击这里&lt;/a&gt;查看所有教程。&lt;/p&gt;</li><li>    &lt;p&gt;我们的 Slogan：千锤百炼，只为大作；精益求精，句句斟酌；这种教程，看一眼就倾心。&lt;/p&gt;</li><li>&lt;/body&gt;</li><li>&lt;/html&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  运行结果如下图所示：<br />
+  <div><img alt="HTML段落标签演示" src="http://c.biancheng.net/uploads/allimg/210928/1-21092R02634B5.png" /><br />
+    图1：HTML 段落标签演示</div>
+  <p>注意：浏览器内置的样式会在段落的上下自动添加一定的空白区域（外边距），您可以使用 <a href="http://c.biancheng.net/css3/margin.html" target="_blank">CSS margin</a> 属性来设置空白区域的大小。</p>
+  在 HTML4 以及更早的版本中，可以省略段落标签的结束标签，浏览器会自动补全缺失的结束标签，如下所示：<br />
+  <p>&lt;p&gt;C语言中文网<br />
+    &lt;p&gt;HTML教程<br />
+    &lt;p&gt;http://www.biancheng.net/html/</p>
+  <h2>段落中的空白符</h2>
+  默认情况下，段落标签会对文本中的空白符进行合并，将多个连续的空白符显示为一个空格的效果，具体表现为：
+  <ul>
+    <li>如果段落中出现多个连续的空格，浏览器会忽略这些空格只保留一个；</li>
+    <li>如果段落中出现多个连续的换行，浏览器会将这些换行转换成一个空格。</li>
+  </ul>
+  <br />
+  下面通过一个示例来演示段落中的空白符：
+  <div>
+    <div>
+      <pre><ol><li>&lt;!DOCTYPE html&gt;</li><li>&lt;html lang=&quot;en&quot;&gt;</li><li>&lt;head&gt;</li><li>    &lt;meta charset=&quot;UTF-8&quot;&gt;</li><li>    &lt;title&gt;HTML段落中的空白符&lt;/title&gt;</li><li>&lt;/head&gt;</li><li>&lt;body&gt;</li><li>    &lt;p&gt;C语言中文网&lt;/p&gt;</li><li>    &lt;p&gt;http:            //c.biancheng.net/html/&lt;/p&gt;</li><li>    &lt;p&gt;</li><li></li><li></li><li>        HTML      教</li><li></li><li></li><li>    程&lt;/p&gt;</li><li>&lt;/body&gt;</li><li>&lt;/html&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  运行结果如下图所示：<br />
+  <div><img alt="HTML段落中的空白符演示" src="http://c.biancheng.net/uploads/allimg/210928/1-21092R03441438.png" /><br />
+    图2：演示 HTML 段落中的空白符</div>
+  <br />
+  如果想要在段落中换行，需要使用专门的换行标签&lt;br /&gt;，&lt;br /&gt;标签属于自闭和标签，因此不需要对应的结束标签&lt;/br&gt;，如下例所示：
+  <div>
+    <div>
+      <pre><ol><li>&lt;!DOCTYPE html&gt;</li><li>&lt;html lang=&quot;en&quot;&gt;</li><li>&lt;head&gt;</li><li>    &lt;meta charset=&quot;UTF-8&quot;&gt;</li><li>    &lt;title&gt;使用&amp;lt;br&amp;gt;标签换行&lt;/title&gt;</li><li>&lt;/head&gt;</li><li>&lt;body&gt;</li><li>    &lt;p&gt;C语言中文网&lt;br /&gt;http://c.biancheng.net/html/&lt;br /&gt;HTML教程&lt;/p&gt;</li><li>&lt;/body&gt;</li><li>&lt;/html&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  运行结果如下图所示：<br />
+  <div><img alt="换行标签" src="http://c.biancheng.net/uploads/allimg/210928/1-21092R04042Y5.png" /><br />
+    图3：换行标签的使用</div>
+</div>
+<p><a name="7" id="7"></a></p>
+<h1>HTML文本格式化</h1>
+<div id="ggxc-arctop-pc-7"></div>
+<div id="arc-body8">一些 HTML 标签除了具有一定的语义（含义）外，还有默认的样式，例如&lt;b&gt;（加粗）、&lt;em&gt;（倾斜）等，通过这些标签我们无需借助 CSS 就可以为网页中的内容定义样式。在这些具有语义和默认样式的标签中，有许多是针对文本的，通过这些标签我们可以格式化文本（为文本添加样式），例如使文本加粗、倾斜或者添加下划线等。<br />
+    <br />
+  HTML 中有许多用来格式化文本的标签，如下表所示：<br />
+  <br />
+  <table>
+    <tbody>
+      <tr>
+        <th>标签</th>
+        <th>描述</th>
+      </tr>
+      <tr>
+        <td>&lt;b&gt;...&lt;/b&gt;</td>
+        <td>加粗标签中的字体</td>
+      </tr>
+      <tr>
+        <td>&lt;em&gt;...&lt;/em&gt;</td>
+        <td>强调标签中的内容，并使标签中的字体倾斜</td>
+      </tr>
+      <tr>
+        <td>&lt;i&gt;...&lt;/i&gt;</td>
+        <td>定义标签中的字体为斜体</td>
+      </tr>
+      <tr>
+        <td>&lt;small&gt;...&lt;/small&gt;</td>
+        <td>定义标签中的字体为小号字体</td>
+      </tr>
+      <tr>
+        <td>&lt;strong&gt;...&lt;/strong&gt;</td>
+        <td>强调标签中的内容，并将字体加粗</td>
+      </tr>
+      <tr>
+        <td>&lt;sub&gt;...&lt;/sub&gt;</td>
+        <td>定义下标文本</td>
+      </tr>
+      <tr>
+        <td>&lt;sup&gt;...&lt;/sup&gt;</td>
+        <td>定义上标文本</td>
+      </tr>
+      <tr>
+        <td>&lt;ins&gt;...&lt;/ins&gt;</td>
+        <td>定义文档的其余部分之外的插入文本</td>
+      </tr>
+      <tr>
+        <td>&lt;del&gt;...&lt;/del&gt;</td>
+        <td>在文本内容上添加删除线</td>
+      </tr>
+      <tr>
+        <td>&lt;code&gt;...&lt;/code&gt;</td>
+        <td>定义一段代码</td>
+      </tr>
+      <tr>
+        <td>&lt;kbd&gt;...&lt;/kbd&gt;</td>
+        <td>用来表示文本是通过键盘输入的</td>
+      </tr>
+      <tr>
+        <td>&lt;samp&gt;...&lt;/samp&gt;</td>
+        <td>定义程序的样本</td>
+      </tr>
+      <tr>
+        <td>&lt;var&gt;...&lt;/var&gt;</td>
+        <td>定义变量</td>
+      </tr>
+      <tr>
+        <td>&lt;pre&gt;...&lt;/pre&gt;</td>
+        <td>定义预格式化的文本，被该标签包裹的文本会保留所有的空格和换行符，字体也会呈现为等宽字体</td>
+      </tr>
+      <tr>
+        <td>&lt;abbr&gt;...&lt;/abbr&gt;</td>
+        <td>用来表示标签中的内容为缩写形式</td>
+      </tr>
+      <tr>
+        <td>&lt;address&gt;...&lt;/address&gt;</td>
+        <td>用来定义文档作者的联系信息，被该标签包裹的文本通常会以斜体呈现，并在文本前面换行</td>
+      </tr>
+      <tr>
+        <td>&lt;bdo&gt;...&lt;/bdo&gt;</td>
+        <td>定义标签中的文字方向</td>
+      </tr>
+      <tr>
+        <td>&lt;blockquote&gt;...&lt;/blockquote&gt;</td>
+        <td>定义一段引用的文本，例如名人名言，文本会换行输出，并在左右两边进行缩进</td>
+      </tr>
+      <tr>
+        <td>&lt;q&gt;...&lt;/q&gt;</td>
+        <td>定义一段短的引用，浏览器会将引用的内容使用双引号包裹起来</td>
+      </tr>
+      <tr>
+        <td>&lt;cite&gt;...&lt;/cite&gt;</td>
+        <td>表示对某个文献的引用，例如书籍或杂志的名称，文本会以斜体显示</td>
+      </tr>
+      <tr>
+        <td>&lt;dfn&gt;...&lt;/dfn&gt;</td>
+        <td>用来定义一个术语，标签中的文本会以斜体呈现</td>
+      </tr>
+    </tbody>
+  </table>
+  <br />
+  按照作用的不同，可以将这些用来格式化文本的标签分为两类：<br />
+  <ul>
+    <li>物理标签：这类标签用来为设置文本的外观；</li>
+    <li>逻辑标签：这类标签用来赋予文本一些逻辑或语义值。</li>
+  </ul>
+  <br />
+  通过上表可以看出，有些标签的呈现效果虽然相同，但语义却不同，例如&lt;strong&gt;和&lt;b&gt;标签、&lt;em&gt;和&lt;i&gt;标签，下面就来详细介绍一下。<br />
+  <h2>&lt;strong&gt;和&lt;b&gt;标签之间的区别</h2>
+  默认情况下，&lt;strong&gt;和&lt;b&gt;标签都可以使文本以粗体展示标签中的文本，但是&lt;strong&gt;标签的语义是标签中的内容具有很高的重要性，而&lt;b&gt;标签的语义仅仅是加粗文本以引起读者的注意，并没有特殊的意思。<br />
+  <br />
+  示例代码如下所示：
+  <div>
+    <div>
+      <pre><ol><li>&lt;!DOCTYPE html&gt;</li><li>&lt;html lang=&quot;en&quot;&gt;</li><li>&lt;head&gt;</li><li>    &lt;meta charset=&quot;UTF-8&quot;&gt;</li><li>    &lt;title&gt;&amp;lt;strong&amp;gt;和&amp;lt;b&amp;gt;标签演示&lt;/title&gt;</li><li>&lt;/head&gt;</li><li>&lt;body&gt;</li><li>    &lt;p&gt;当您决定使用C语言中文网，您已经超越了 &lt;strong&gt;90%&lt;/strong&gt; 的程序员，请记住网址 &lt;b&gt;http://c.biancheng.net/&lt;/b&gt;。&lt;/p&gt;</li><li>&lt;/body&gt;</li><li>&lt;/html&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  此处给90%添加 &lt;strong&gt; 标签是为了强调C语言中文网的重要性，以及它带来的震撼效果；而给网址添加 &lt;b&gt; 标签仅仅是为了视觉上的加粗效果，这样能引起读者的注意。<br />
+  <br />
+  运行结果如下图所示：
+  <div><img alt="&lt;strong&gt;和&lt;b&gt;标签演示" src="http://c.biancheng.net/uploads/allimg/210928/1-21092R05513Q1.png" /><br />
+    图1：&lt;strong&gt; 和 &lt;b&gt; 标签示例</div>
+  <h2>&lt;em&gt;和&lt;i&gt;标记之间的区别</h2>
+  同样，&lt;em&gt;和&lt;i&gt;标签默认情况下均以斜体显示标签中的文本，但是&lt;em&gt;标签具有强调的语义，用来表示标签中的内容很重要，而&lt;i&gt;标签仅仅用于定义斜体文本。<br />
+  <br />
+  示例代码如下：
+  <div>
+    <div>
+      <pre><ol><li>&lt;!DOCTYPE html&gt;</li><li>&lt;html lang=&quot;en&quot;&gt;</li><li>&lt;head&gt;</li><li>    &lt;meta charset=&quot;UTF-8&quot;&gt;</li><li>    &lt;title&gt;&amp;lt;em&amp;gt;和&amp;lt;i&amp;gt;标签演示&lt;/title&gt;</li><li>&lt;/head&gt;</li><li>&lt;body&gt;</li><li>    &lt;p&gt;当您决定使用C语言中文网，您已经超越了 &lt;em&gt;90%&lt;/em&gt; 的程序员，请记住网址 &lt;i&gt;http://c.biancheng.net/&lt;/i&gt;。&lt;/p&gt;</li><li>&lt;/body&gt;</li><li>&lt;/html&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  同上例一样，给90%添加 &lt;em&gt; 标签是为了强调C语言中文网带来的震撼效果，而给网址添加 &lt;i&gt; 标签仅仅是为了引起读者的注意。<br />
+  <br />
+  运行结果如下图所示：
+  <div><img alt="&lt;em&gt; 和 &lt;i&gt; 标签示例" src="http://c.biancheng.net/uploads/allimg/210928/1-21092R10120Q7.png" /><br />
+    图2：&lt;em&gt; 和 &lt;i&gt; 标签示例</div>
+  <br />
+  根据 HTML5 的规范，标题应该用&lt;h1&gt;~&lt;h6&gt;标签定义，被强调的文本应该用&lt;em&gt;标签定义，重要的文本应该用&lt;strong&gt;标签定义，被标记的或者高亮显示的文本应该用&lt;mark&gt;标签定义等等，类似这样的规范还有很多，后面我们会一一为大家介绍。</div>
+<p><a name="8" id="8"></a></p>
+<h1>TML超链接标签&lt;a&gt;</h1>
+<div></div>
+<div id="ggxc-arctop-pc-8"></div>
+<div id="arc-body9">在 HTML 中，我们使用 &lt;a&gt; 标签来表示超链接。<br />
+    <br />
+  超链接（Hyperlink）通常简称为链接（Link），是指从一个网页指向另一个目标的连接关系，这个目标可以是另一个网页，也可以是当前网页中的其它位置，还可以是图片、文件、应用程序等。链接的两端分别称为源锚点和目标锚点，通过点击源锚点即可以跳转到目标锚点。
+  <p>超链接是网页中最常见的元素之一，整个互联网都是基于超链接而构建的。网站由众多网页构成，超链接使得网页之间不再独立，它就像一根线，把网页连接在一起，形成一个网状结构。互联网之所以能够称之为“网”，就是因为有超链接的存在。</p>
+  &lt;a&gt; 标签的语法格式如下：
+  <p>&lt;a href=&quot;url&quot;  target=&quot;opentype&quot;&gt;链接文本&lt;/a&gt;</p>
+  其中，href 属性用来指明要跳转到的 url，target 属性用来指明新页面的打开方式，链接文本需要写在 &lt;a&gt; 和 &lt;/a&gt; 之间。<br />
+  <br />
+  例如，链接到C语言中文网首页，并在浏览器新窗口中打开：
+  <div>
+    <div>
+      <pre showmenu="false" shownum="false"><ul><li>&lt;a href=&quot;http://c.biancheng.net&quot; target=&quot;_blank&quot;&gt;C语言中文网&lt;/a&gt;</li></ul>
+  </pre>
+    </div>
+  </div>
+  链接到 HTML 教程的第一篇文章，并在当前窗口中打开：
+  <div>
+    <div>
+      <pre showmenu="false" shownum="false"><ul><li>&lt;a href=&quot;http://c.biancheng.net/view/7410.html&quot; target=&quot;_blank&quot;&gt;网站到底是什么&lt;/a&gt;</li></ul>
+  </pre>
+    </div>
+  </div>
+  <h2>href 属性</h2>
+  href 属性指定链接的目标，也就是要跳转到什么位置。href 可以有多种形式，例如：
+  <ul>
+    <li>href 可以指向一个网页（.html、.php、.jsp、.asp 等格式），这也是最常见的形式，例如 href=&quot;http://c.biancheng.net/view/1719.html&quot;；</li>
+    <li>href 可以指向图片（.jpg、.gif、.png 等格式）、音频（.mp3、.wav等格式）、视频（.mp4、.mkv格式）等媒体文件，例如 href=&quot;/uploads/allimg/181221/134I32557-0.jpg&quot;；</li>
+    <li>href 可以指向压缩文件（.zip、.rar 等格式）、可执行程序（.exe）等，一些下载网站的链接就可以写成这种形式，例如 href=&quot;./../uploads/data_package/ComputerFoundation.zip&quot;；</li>
+    <li>href 甚至还可以指向本机的文件，只是很少这样使用，例如 href=&quot;D:/Program Files/360/360safe/360Safe.exe&quot;。</li>
+  </ul>
+  <br />
+  你看，href 本质上就是指向一个文件，这个文件几乎可以是任意格式的。如果浏览器支持这种格式，那么它就可以在浏览器上显示，比如常见的图片、音频、视频等，如果浏览器不支持这种格式，那么就提示用户下载。<br />
+  <br />
+  另外，href 使用的路径可以是绝对路径，也可以是相对路径。绝对路径往往以域名为起点，例如 http://c.biancheng.net/view/1719.html；相对路径往往以当前文件或者当前域名为起点，例如  ./../uploads/data_package/ComputerFoundation.zip。对 URL 结构不了解的读者，请转到《<a href="http://c.biancheng.net/view/7538.html" target="_blank">绝对路径与相对路径</a>》进行学习。
+  <h2>target 属性</h2>
+  target 是可选属性，用来指明新页面的打开方式。默认情况下，新页面在当前浏览器窗口中打开，我们可以使用 target 属性来改变新页面的打开方式。常见的打开方式如下表所示：<br />
+  <br />
+  <table>
+    <caption>
+      target 属性值
+    </caption>
+    <tbody>
+      <tr>
+        <th>属性值</th>
+        <th>说明</th>
+      </tr>
+      <tr>
+        <td>_self</td>
+        <td>默认，在现有窗口中打开新页面，原窗口将被覆盖。</td>
+      </tr>
+      <tr>
+        <td>_blank</td>
+        <td>在新窗口中打开新页面，原窗口将被保留。</td>
+      </tr>
+      <tr>
+        <td>_parent</td>
+        <td>在当前框架的上一层打开新页面。</td>
+      </tr>
+      <tr>
+        <td>_top</td>
+        <td>在顶层框架中打开新页面。</td>
+      </tr>
+    </tbody>
+  </table>
+  <br />
+  绝大部分情况下，target 属性要么不写，保持默认的 _self，要么将它的值设置为 _blank，在新窗口中打开页面。例如：
+  <div>
+    <div>
+      <pre showmenu="false" shownum="false"><ul><li>&lt;a href=&quot;http://c.biancheng.net/html/&quot; target=&quot;_blank&quot;&gt;HTML教程（新窗口打开）&lt;/a&gt;</li><li>&lt;a href=&quot;http://c.biancheng.net/css3/&quot;&gt;CSS教程（当前窗口打开）&lt;/a&gt;</li></ul>
+  </pre>
+    </div>
+  </div>
+  <h2>&lt;a&gt; 标签的默认样式</h2>
+  浏览器会为 &lt;a&gt; 标签设置一些默认样式。
+  <h4>1) 鼠标样式</h4>
+  当鼠标移入链接区域时，会变成一只小手；当鼠标移出链接区域时，会变回箭头形状。
+  <h4>2) 颜色及下划线</h4>
+  超链接被点击之前为蓝色，超链接被点击之后变成紫色。超链接默认带有下划线，下划线颜色和文本颜色保持一致。 <br />
+  <br />
+  浏览器根据历史记录来判断超链接是否被点击过，如果 href 属性和历史记录中的某条 URL 重合，那么说明该链接被点击了。清空浏览器的历史记录会让超链接的颜色再次变回蓝色。<br />
+  <br />
+  【示例】HTML 超链接的多种形式：
+  <div>
+    <div>
+      <pre><ol><li>&lt;!DOCTYPE html&gt;</li><li>&lt;html lang=&quot;en&quot;&gt;</li><li>&lt;head&gt;</li><li>    &lt;meta charset=&quot;UTF-8&quot;&gt;</li><li>    &lt;title&gt;HTML &amp;lt;a&amp;gt;标签演示&lt;/title&gt;</li><li>&lt;/head&gt;</li><li>&lt;body&gt;</li><li>    &lt;p&gt;</li><li>        &lt;a href=&quot;http://c.biancheng.net/html/&quot; target=&quot;_blank&quot;&gt;HTML教程（新窗口打开）&lt;/a&gt;&lt;br&gt;</li><li>        &lt;a href=&quot;http://c.biancheng.net/css3/&quot;&gt;CSS教程（当前窗口打开）&lt;/a&gt;&lt;br&gt;</li><li>        &lt;a href=&quot;http://c.biancheng.net/js/&quot;&gt;JS教程（被点击过）&lt;/a&gt;</li><li>    &lt;/p&gt;</li><li>&lt;/body&gt;</li><li>&lt;/html&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  运行效果：
+  <div><img alt="HTML超链接演示" src="http://c.biancheng.net/uploads/allimg/210929/1-21092Z9442V60.png" /><br />
+    图1：HTML 超链接演示</div>
+</div>
+<p><a name="9" id="19"></a></p>
+<h1>HTML插入图片：&lt;img&gt;标签</h1>
+<div></div>
+<div id="ggxc-arctop-pc-9"></div>
+<div id="arc-body10">一图胜千言，图片比文字更具表现力，恰当地使用图片可以让网页更加精美。<br />
+    <br />
+  HTML 使用 &lt;img&gt; 标签插入图片，img 是 image 的简称。&lt;img&gt; 是自闭和标签，只包含属性，没有结束标签。&lt;img&gt; 标签的语法格式如下：<br />
+  <p>&lt;img src=&quot;url&quot; alt=&quot;text&quot;&gt;</p>
+  对属性的说明：
+  <ul>
+    <li>src 是必选属性，它是 source 的简称，用来指明图片的地址或者路径。src 支持多种图片格式，比如 jpg、png、gif 等。src 可以使用相对路径，也可以使用绝对路径。</li>
+    <li>alt 是可选属性，用来定义图片的文字描述信息。当由于某些原因（例如图片路径错误、网络连接失败）导致图片无法加载时，就会显示 alt 属性中的信息。</li>
+  </ul>
+  <br />
+  【示例】使用 &lt;img&gt; 标签插入图片：
+  <div>
+    <div>
+      <pre><ol><li>&lt;!DOCTYPE html&gt;</li><li>&lt;html lang=&quot;en&quot;&gt;</li><li>&lt;head&gt;</li><li>    &lt;meta charset=&quot;UTF-8&quot;&gt;</li><li>    &lt;title&gt;HTML插入图片&lt;/title&gt;</li><li>&lt;/head&gt;</li><li>&lt;body&gt;</li><li>    &lt;!-- 使用绝对路径插入网络图片 --&gt;</li><li>    &lt;img src=&quot;http://c.biancheng.net/cpp/templets/new/images/logo.jpg?v=3.994&quot; alt=&quot;C语言中文网Logo&quot;&gt; &lt;br&gt;</li><li>    &lt;!-- 在当前 HTML 文档的上层目录中有一个 images 文件夹，该文件夹下有一张图片 html5.png --&gt;</li><li>    &lt;img src=&quot;../images/html5.png&quot; alt=&quot;HTML5 Logo&quot;&gt;</li><li>&lt;/body&gt;</li><li>&lt;/html&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  显示效果：
+  <div><img alt="HTML插入图片示例" src="http://c.biancheng.net/uploads/allimg/210929/1-210929102314950.png" /><br />
+    图1：HTML 插入图片示例</div>
+  <br />
+  可以看到，图片 html5.png 不存在，加载失败，此时显示出 alt 属性中的文本信息。<br />
+  <h2>设置图片的宽度和高度</h2>
+  在 &lt;img&gt; 标签中可以使用 width 和 height 属性来指定图片的宽度和高度。默认情况下，这些属性的值都是以像素为单位的。<br />
+  <div>
+    <div>
+      <pre showmenu="false" shownum="false"><ul><li>&lt;img src=&quot;./logo.gif&quot; alt=&quot;C语言中文网Logo&quot; width=&quot;150&quot; height=&quot;150&quot;&gt;</li><li>&lt;img src=&quot;./html5.png&quot; alt=&quot;HTML5 Logo&quot; width=&quot;100&quot; height=&quot;100&quot;&gt;</li></ul>
+  </pre>
+    </div>
+  </div>
+  除此之外，您也可以使用 style 属性指定图片的宽度和高度，如下所示：<br />
+  <div>
+    <div>
+      <pre showmenu="false" shownum="false"><ul><li>&lt;img src=&quot;./logo.gif&quot; alt=&quot;C语言中文网Logo&quot; style=&quot;width: 100px; height: 100px;&quot;&gt;</li><li>&lt;img src=&quot;./html5.png&quot; alt=&quot;HTML5 Logo&quot; style=&quot;width: 150px; height: 150px;&quot;&gt;</li></ul>
+  </pre>
+    </div>
+  </div>
+  <p>注意，width 和 height 属性只是临时修改图片的尺寸，并不会改变图片原始文件的大小。</p>
+  关于 width 和 height 属性的两点建议：
+  <ul>
+    <li>一般建议为图片设置 width 和 height 属性，以便浏览器可以在加载图片之前为其分配足够的空间，否则图片加载过程中可能会导致您的网站布局失真或闪烁。</li>
+    <li>如果您的页面使用响应式布局（自适应布局），建议在上传图片之前裁剪好尺寸，而不要设置 width 和 height 属性，这样图片能够跟随屏幕宽度自动改变尺寸，从而不会变形，或者超出屏幕宽度。</li>
+  </ul>
+  <h2>HTML5 中的图片属性</h2>
+  有时我们需要按照比例来放大或缩小图片的尺寸以适应不同的设备，避免图片过大超出屏幕的范围，为此 HTML5 中增加了&lt;picture&gt;标签，该标签允许您针对不同类型的设备定义多个版本的图片。<br />
+  <br />
+  在 &lt;picture&gt; 标签中包含零个或多个 &lt;source&gt; 标签，通过 &lt;source&gt; 标签中的 media 属性可以设定匹配条件（允许哪个版本的图片显示），通过 srcset 属性可以定义图片的路径。另外，在 &lt;picture&gt; 标签的最后还需要定义一个 &lt;img&gt; 标签。如下例所示：<br />
+  <div>
+    <div>
+      <pre showmenu="false" shownum="false"><ul><li>&lt;picture&gt;</li><li>    &lt;source media=&quot;(min-width: 1000px)&quot; srcset=&quot;logo-large.png&quot;&gt;</li><li>    &lt;source media=&quot;(max-width: 500px)&quot; srcset=&quot;logo-small.png&quot;&gt;</li><li>    &lt;img src=&quot;logo-default.png&quot; alt=&quot;C语言中文网默认Logo&quot;&gt;</li><li>&lt;/picture&gt;</li></ul>
+  </pre>
+    </div>
+  </div>
+  浏览器将评估每个 &lt;source&gt; 标签，并在其中选择最合适的 &lt;source&gt; 标签，如果未找到匹配项，则使用 &lt;img&gt; 标签所定义的图片。另外，&lt;img&gt; 必须是 &lt;picture&gt; 标签的最后一个子元素。
+  <h2>图像映射</h2>
+  图像映射允许您在一个图片中定义超链接，实现思想就是在图像中划分一些区域，并在这些区域中定义超链接。例如，我们可以按照地图的划分为每个国家或城市所在的区域定义超链接。<br />
+  <br />
+  下面通过示例来演示一下：<br />
+  <div>
+    <div>
+      <pre><ol><li>&lt;!DOCTYPE html&gt;</li><li>&lt;html lang=&quot;en&quot;&gt;</li><li>&lt;head&gt;</li><li>    &lt;title&gt;HTML图片映射&lt;/title&gt;</li><li>&lt;/head&gt;</li><li>&lt;body&gt;</li><li>    &lt;img src=&quot;logo.png&quot; usemap=&quot;#objects&quot; alt=&quot;C语言中文网Logo&quot;&gt;</li><li>    &lt;map name=&quot;objects&quot;&gt;</li><li>        &lt;area shape=&quot;rect&quot; coords=&quot;0,0,82,126&quot; href=&quot;http://c.biancheng.net/html/&quot; alt=&quot;HTML教程&quot;&gt;</li><li>        &lt;area shape=&quot;circle&quot; coords=&quot;90,58,3&quot; href=&quot;http://www.biancheng.net/css3/&quot; alt=&quot;CSS教程&quot;&gt;</li><li>        &lt;area shape=&quot;circle&quot; coords=&quot;124,58,8&quot; href=&quot;http://www.biancheng.net/js/&quot; alt=&quot;JavaScript教程&quot;&gt;</li><li>    &lt;/map&gt;</li><li>&lt;/body&gt;</li><li>&lt;/html&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  &lt;map&gt; 标签的 name 属性对应的是 &lt;img&gt; 标签的 usemap 属性，&lt;area&gt;标签用于定义图片的可点击区域，您可以在图像中定义任意数量的可点击区域。<br />
+  <p>注意：图片映射不能应用于网站导航，因为它对搜索引擎并不友好。图像映射经常与地图一起使用，有许多工具都可以创建图像映射，例如 Adobe Dreamweaver 就可轻松创建图像地图。</p>
+  <h4>shape 和 coords 属性</h4>
+  在 &lt;area&gt; 标签中可以通过 shape 属性来定义可点击区域的形状，并通过 coords 属性来定义形状所对应的坐标。其中 shape 属性的可选值有三个，分别是 rect（矩形）、circle（圆形）和 poly（多边形），coords 属性中坐标的值则取决于可点击区域的形状。<br />
+  <br />
+  假如定义一个矩形的可点击区域，示例代码如下：<br />
+  <p>&lt;area shape=&quot;rect&quot; coords=&quot;x1, y1, x2, y2&quot; href=&quot;http://c.biancheng.net/&quot; alt=&quot;&quot;&gt;</p>
+  其中 x1、y1 代表矩形的左上角坐标，x2、y2 代表矩形的右下角坐标。<br />
+  <br />
+  假如定义一个圆形的可点击区域，示例代码如下：<br />
+  <p>&lt;area shape=&quot;circle&quot; coords=&quot;x, y, radius&quot; href=&quot;&quot; alt=&quot;&quot;&gt;</p>
+  其中 x、y 代表圆心的坐标，而 radius 则是圆的半径。<br />
+  <br />
+  假如定义一个多边形的可点击区域，示例代码如下：<br />
+  <p>&lt;area shape=&quot;poly&quot; coords=&quot;x1, y1, x2, y2, x3, y3, ..., xn, yn&quot; href=&quot;http://c.biancheng.net/&quot; alt=&quot;&quot;&gt;</p>
+  其中每对 x 和 y 的值都代表一个多边形的顶点坐标。<br />
+  <p>注意：所有坐标都是相对于图片的左上角来计算的。</p>
+</div>
+<p><a name="10" id="110"></a></p>
+<h1>HTML &lt;table&gt;标签（表格）</h1>
+<div id="ggxc-arctop-pc-10"></div>
+<div id="arc-body11">在 HTML 中，我们使用 &lt;table&gt; 标签来定义表格。HTML 中的表格和 Excel 中的表格是类似的，都包括行、列、单元格、表头等元素。但是 HTML 表格在功能方面远没有 Excel 表格强大，HTML 表格不支持排序、求和、方差等数学计算，它一般用来展示数据。<br />
+    <br />
+  在学习表格之前，我们不妨先来看一段简单的 HTML 代码：<br />
+  <div>
+    <div>
+      <pre><ol><li>&lt;table border=&quot;1&quot;&gt;</li><li>   &lt;tr&gt;</li><li>     &lt;th&gt;名称&lt;/th&gt;</li><li>     &lt;th&gt;官网&lt;/th&gt;</li><li>     &lt;th&gt;性质&lt;/th&gt;</li><li>   &lt;/tr&gt;</li><li>   &lt;tr&gt;</li><li>     &lt;td&gt;C语言中文网&lt;/td&gt;</li><li>     &lt;td&gt;http://c.biancheng.net/&lt;/td&gt;</li><li>     &lt;td&gt;教育&lt;/td&gt;</li><li>   &lt;/tr&gt;</li><li>    &lt;tr&gt;</li><li>     &lt;td&gt;百度&lt;/td&gt;</li><li>     &lt;td&gt;http://www.baidu.com/&lt;/td&gt;</li><li>     &lt;td&gt;搜索&lt;/td&gt;</li><li>     &lt;/tr&gt;</li><li>   &lt;tr&gt;</li><li>      &lt;td&gt;当当&lt;/td&gt;</li><li>     &lt;td&gt;http://www.dangdang.com/&lt;/td&gt;</li><li>      &lt;td&gt;图书&lt;/td&gt;</li><li>    &lt;/tr&gt;</li><li>&lt;/table&gt;</li></ol>
+</pre>
+    </div>
+  </div>
+  <div></div>
+  <div>图1：普通 table 表格</div>
+  <br />
+  这是一个 4 行 3 列的表格。第一行为表头，其余三行为内容。<br />
+  <br />
+  在上述代码中，我们使用了&lt;table&gt;、&lt;tr&gt;、&lt;td&gt; 及 &lt;th&gt; 四个标签：<br />
+  <ul>
+    <li>&lt;table&gt; 表示表格，表格的所有内容需要写在 &lt;table&gt; 和 &lt;/table&gt; 之间。</li>
+    <li>&lt;tr&gt; 是 table row 的简称，表示表格的行。表格中有多少个 &lt;tr&gt; 标签就表示有多少行数据。</li>
+    <li>&lt;td&gt; 是 table datacell 的简称，表示表格的单元格，这才是真正存放表格数据的标签。单元格的数据可以是文本、图片、列表、段落、表单、水平线、表格等多种形式。</li>
+    <li>&lt;th&gt; 是 table heading 的简称，表示表格的表头。&lt;th&gt; 其实是 &lt;td&gt; 单元格的一种变体，本质上还是一种单元格。&lt;th&gt; 一般位于第一行，充当每一列的标题。大多数的浏览器会把表头显示为粗体居中的文本。</li>
+  </ul>
+     
+  <br />
+  默认情况下，表格是没有边框的。但是我们可以使用 &lt;table&gt; 标签中的 border 属性来设置表格的边框宽度，单位是像素（px）。本例中我们将表格的边框宽度设置为 1px。注意，px 是默认的单位，不用显式指明。<br />
+  <h2>1. 表格的边框合并：</h2>
+  细心的读者可能已经发现了，网页中常见的表格样式大多为单层边框，上例中展示的表格为双层边框。为了避免这种情况，我们可以利用 CSS 中的 border-collapse 属性来设置表格的边框。border-collapse 是“边框塌陷”的意思，当属性值为 collapse 时，可以使表格的双边框变为单边框。<br />
+  <br />
+  示例代码如下：<br />
+  <div>
+    <div>
+      <pre><ol><li>&lt;table border=&quot;1&quot; style=&quot;border-collapse: collapse;&quot;&gt;</li><li>   &lt;tr&gt;</li><li>      &lt;th&gt;名称&lt;/th&gt;</li><li>      &lt;th&gt;官网&lt;/th&gt;</li><li>      &lt;th&gt;性质&lt;/th&gt;</li><li>    &lt;/tr&gt;</li><li>    &lt;tr&gt;</li><li>       &lt;td&gt;C语言中文网&lt;/td&gt;</li><li>      &lt;td&gt;http://c.biancheng.net/&lt;/td&gt;</li><li>      &lt;td&gt;教育&lt;/td&gt;</li><li>     &lt;/tr&gt;</li><li>    &lt;tr&gt;</li><li>        &lt;td&gt;百度&lt;/td&gt;</li><li>      &lt;td&gt;http://www.baidu.com/&lt;/td&gt;</li><li>      &lt;td&gt;搜索&lt;/td&gt;</li><li>   &lt;/tr&gt;</li><li>   &lt;tr&gt;</li><li>       &lt;td&gt;当当&lt;/td&gt;</li><li>      &lt;td&gt;http://www.dangdang.com/&lt;/td&gt;</li><li>      &lt;td&gt;图书&lt;/td&gt;</li><li>   &lt;/tr&gt;</li><li>&lt;/table&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  运行效果如下图所示：
+  <div><img alt="表格的边框合并" src="http://c.biancheng.net/uploads/allimg/200409/10-20040911153J59.png" /><br />
+    图2：合并边框后的表格</div>
+  <h2>2. 表格的标题</h2>
+  HTML 允许使用 &lt;caption&gt; 标签来为表格设置标题，标题用来描述表格的内容。<br />
+  <br />
+  我们常见的表格一般都有标题，表格的标题使用 &lt;caption&gt; 标签来表示。默认情况下，表格的标题位于整个表格的第一行并且居中显示。一个表格只能有一个标题，也就是说 &lt;table&gt; 标签中只能有一个 &lt;caption&gt; 标签。<br />
+  <br />
+  请看下面的例子：<br />
+  <div>
+    <div>
+      <pre><ol><li>&lt;table border=&quot;1&quot; style=&quot;border-collapse: collapse;&quot;&gt;</li><li>  &lt;caption&gt;这是表格的标题&lt;/caption&gt;</li><li>  &lt;tr&gt;</li><li>     &lt;th&gt;名称&lt;/th&gt;</li><li>     &lt;th&gt;官网&lt;/th&gt;</li><li>     &lt;th&gt;性质&lt;/th&gt;</li><li>  &lt;/tr&gt;</li><li>   &lt;tr&gt;</li><li>     &lt;td&gt;C语言中文网&lt;/td&gt;</li><li>     &lt;td&gt;http://c.biancheng.net/&lt;/td&gt;</li><li>     &lt;td&gt;教育&lt;/td&gt;</li><li>  &lt;/tr&gt;</li><li>  &lt;tr&gt;</li><li>     &lt;td&gt;&lt;/td&gt;</li><li>     &lt;td&gt;http://www.baidu.com/&lt;/td&gt;</li><li>     &lt;td&gt;搜索&lt;/td&gt;</li><li>  &lt;/tr&gt;</li><li>  &lt;tr&gt;</li><li>      &lt;td&gt;当当&lt;/td&gt;</li><li>     &lt;td&gt;http://www.dangdang.com/&lt;/td&gt;</li><li>      &lt;td&gt;图书&lt;/td&gt;</li><li>  &lt;/tr&gt;</li><li>&lt;/table&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  <div>    图3：带标题的表格</div>
+  <h2>3. 单元格的合并</h2>
+  和 Excel 类似，HTML 也支持单元格的合并，包括跨行合并和跨列合并两种。<br />
+  <br />
+  <ul>
+    <li>rowspan：表示跨行合并。在 HTML 代码中，允许我们使用 rowspan 特性来表明单元格所要跨越的行数。</li>
+    <li>colspan：表示跨列合并。同样的，在 HTML 中，允许我们使用 colspan 特性来表明单元格所要跨越的列数。</li>
+  </ul>
+  <br />
+  具体格式如下：<br />
+  <p>&lt;td rowspan=&quot;n&quot;&gt;单元格内容&lt;/td&gt;<br />
+    &lt;td colspan=&quot;n&quot;&gt;单元格内容&lt;/td&gt;</p>
+  n 是一个整数，表示要合并的行数或者列数。<br />
+  <p>此处需注意，不论是 rowspan 还是 colspan 都是 &lt;td&gt; 标签的属性。</p>
+  下面的例子中，我们将表格第 1 列的第 3、4 行单元格合并（跨行合并），将第 4 行的第 2、3 列合并（跨列合并）。具体代码如下：<br />
+  <div>
+    <div>
+      <pre><ol><li>&lt;table border=&quot;1&quot; style=&quot;border-collapse: collapse;&quot;&gt;</li><li>    &lt;tr&gt;</li><li>       &lt;th&gt;名称&lt;/th&gt;</li><li>     &lt;th&gt;官网&lt;/th&gt;</li><li>     &lt;th&gt;性质&lt;/th&gt;</li><li>    &lt;/tr&gt;</li><li>    &lt;tr&gt;</li><li>      &lt;td&gt;C语言中文网&lt;/td&gt;</li><li>     &lt;td&gt;http://c.biancheng.net/&lt;/td&gt;</li><li>     &lt;td&gt;教育&lt;/td&gt;</li><li>    &lt;/tr&gt;</li><li>    &lt;tr&gt;</li><li>      &lt;td rowspan=&quot;2&quot;&gt;百度&lt;/td&gt;</li><li>      &lt;td&gt;http://www.baidu.com/&lt;/td&gt;</li><li>      &lt;td&gt;搜索&lt;/td&gt;</li><li>    &lt;/tr&gt;</li><li>    &lt;tr&gt;</li><li>      &lt;td colspan=&quot;2&quot;&gt;http://www.dangdang.com/&lt;/td&gt;</li><li>    &lt;/tr&gt;</li><li>&lt;/table&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  运行效果如图：
+  <div><br />
+  图4：合并单元格后的表格</div>
+  <br />
+  通过运行结果可以发现：<br />
+  <ul>
+    <li>rowspan 属性表示向下合并单元格，colspan 属性表示向右合并单元格。</li>
+    <li> 每次合并 n 个单元格都要少写 n-1 个&lt;td&gt;标签。</li>
+  </ul>
+  <p>提示：即使一个单元格中没有任何内容，我们仍需使用 &lt;td&gt; 或 &lt;th&gt; 元素来表示一个空单元格的存在，建议在 &lt;td&gt; 或 &lt;th&gt; 中加入 &amp;nbsp;（空格），否则低版本的 IE 可能无法显示出这个单元格的边框。</p>
+</div>
+<p><a name="11" id="111"></a></p>
+<h1>HTML列表标签：&lt;ul&gt;&lt;ol&gt;&lt;dl&gt;</h1>
+<div></div>
+<div id="ggxc-arctop-pc-11"></div>
+<div id="arc-body12">HTML 列表（List）可以将若干条相关的内容整理起来，让内容看起来更加有条理。在列表内您可以放置​​文本、图像、链接等，也可以在一个列表中定义另一个列表（列表嵌套）。<br />
+    <br />
+  HTML 为我们提供了三种不同形式的列表：
+  <ul>
+    <li>有序列表，使用 &lt;ol&gt; + &lt;li&gt; 标签</li>
+    <li>无序列表，使用 &lt;ul&gt; + &lt;li&gt; 标签</li>
+    <li>定义列表，使用 &lt;dl&gt; + &lt;dt&gt; + &lt;dd&gt; 标签</li>
+  </ul>
+  <h2>1. 有序列表</h2>
+  在 HTML 中， &lt;ol&gt; 标签用来表示有序列表。有序列表之间的内容有先后顺序之分，例如菜谱中的一系列步骤，这些步骤需要按顺序完成，这时就可以使用有序列表。<br />
+  <br />
+  我们来看一个简单的实例：
+  <div>
+    <div>
+      <pre><ol><li>&lt;!DOCTYPE html&gt;</li><li>&lt;html lang=&quot;en&quot;&gt;</li><li>&lt;head&gt;</li><li>    &lt;meta charset=&quot;UTF-8&quot;&gt;</li><li>    &lt;title&gt;HTML有序列表&lt;/title&gt;</li><li>&lt;/head&gt;</li><li>&lt;body&gt;</li><li>    &lt;p&gt;煮米饭的步骤：&lt;/p&gt;</li><li>    &lt;ol&gt;</li><li>        &lt;li&gt;将水煮沸&lt;/li&gt;</li><li>        &lt;li&gt;加入一勺米&lt;/li&gt;</li><li>        &lt;li&gt;搅拌均匀&lt;/li&gt;</li><li>        &lt;li&gt;继续煮10分钟&lt;/li&gt;</li><li>    &lt;/ol&gt;</li><li>&lt;/body&gt;</li><li>&lt;/html&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  在浏览器中运行效果如图所示：
+  <div><img alt="HTML有序列表演示" src="http://c.biancheng.net/uploads/allimg/210929/1-2109291113211D.png" /><br />
+    图1：HTML 有序列表演示</div>
+  <br />
+  有序列表需要使用 &lt;ol&gt; 和 &lt;li&gt; 标签：
+  <ul>
+    <li>&lt;ol&gt; 是 order list 的简称，表示有序列表，它可以为列表的每一项进行编号，默认从数字 1 开始。</li>
+    <li>&lt;li&gt; 是 list item 的简称，表示列表的每一项，&lt;ol&gt; 中有多少个 &lt;li&gt; 就表示有多少条内容。列表项中可以包含文本、图片、链接等，甚至还可以是另外一个列表。</li>
+  </ul>
+  <br />
+  注意，&lt;ol&gt; 一般和 &lt;li&gt; 配合使用，不会单独出现，而且不建议在 &lt;ol&gt; 中直接使用除 &lt;li&gt; 之外的其他标签。
+  <h2>2. 无序列表</h2>
+  HTML 使用 &lt;ul&gt; 标签来表示无序列表。无序列表和有序列表类似，都是使用 &lt;li&gt; 标签来表示列表的每一项，但是无序列表之间的内容没有顺序。例如，早饭的种类不需要表明顺序，这时就可以使用无序列表。<br />
+  <br />
+  我们来看一个简单的例子：
+  <div>
+    <div>
+      <pre><ol><li>&lt;!DOCTYPE html&gt;</li><li>&lt;html lang=&quot;en&quot;&gt;</li><li>&lt;head&gt;</li><li>    &lt;meta charset=&quot;UTF-8&quot;&gt;</li><li>    &lt;title&gt;HTML无序列表&lt;/title&gt;</li><li>&lt;/head&gt;</li><li>&lt;body&gt;</li><li>    &lt;p&gt;早餐的种类：&lt;/p&gt;</li><li>    &lt;ul&gt;</li><li>        &lt;li&gt;鸡蛋&lt;/li&gt;</li><li>        &lt;li&gt;牛奶&lt;/li&gt;</li><li>        &lt;li&gt;面包&lt;/li&gt;</li><li>        &lt;li&gt;生菜&lt;/li&gt;</li><li>    &lt;/ul&gt;</li><li>&lt;/body&gt;</li><li>&lt;/html&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  浏览器运行结果如图所示：
+  <div><img alt="HTML无序列表演示" src="http://c.biancheng.net/uploads/allimg/210929/1-2109291120122S.png" /><br />
+    图2：HTML 无序列表演示</div>
+  <br />
+  无序列表需要使用 &lt;ul&gt; 和 &lt;li&gt; 标签：
+  <ul>
+    <li>&lt;ul&gt; 是 unordered list 的简称，表示无序列表。</li>
+    <li>&lt;ul&gt; 和 &lt;ol&gt; 中的 &lt;li&gt; 一样，都表示列表中的每一项。默认情况下，无序列表的每一项都使用●符号表示。</li>
+  </ul>
+  <br />
+  注意，&lt;ul&gt; 一般和 &lt;li&gt; 配合使用，不会单独出现，而且不建议在 &lt;ul&gt; 中直接使用除 &lt;li&gt; 之外的其他标签。
+  <h2>3. 定义列表</h2>
+  在 HTML 中，&lt;dl&gt; 标签用于创建定义列表。定义列表由标题（术语）和描述两部分组成，描述是对标题的解释和说明，标题是对描述的总结和提炼。<br />
+  <br />
+  定义列表具体语法格式如下：<br />
+  <p>&lt;dl&gt;<br />
+        
+    &lt;dt&gt;标题1&lt;dt&gt;<br />
+        
+    &lt;dd&gt;描述文本2&lt;dd&gt;<br />
+        
+    &lt;dt&gt;标题2&lt;dt&gt;<br />
+        
+    &lt;dd&gt;描述文本2&lt;dd&gt;<br />
+        
+    &lt;dt&gt;标题3&lt;dt&gt;<br />
+        
+    &lt;dd&gt;描述文本3&lt;dd&gt;<br />
+    &lt;/dl&gt;</p>
+  定义列表需要使用 &lt;dl&gt;、&lt;dt&gt; 和 &lt;dd&gt; 标签：
+  <ul>
+    <li>&lt;dl&gt; 是 definition list 的简称，表示定义列表。</li>
+    <li>&lt;dt&gt; 是 definition term 的简称，表示定义术语，也就是我们说的标题。</li>
+    <li>&lt;dd&gt; 是 definition description 的简称，表示定义描述 。</li>
+  </ul>
+  <p>可以认为 &lt;dt&gt; 定义了一个概念（术语），&lt;dd&gt; 用来对概念（术语）进行解释。</p>
+  注意，&lt;dt&gt; 和 &lt;dd&gt; 是同级标签，它们都是 &lt;dl&gt; 的子标签。一般情况下，每个 &lt;dt&gt; 搭配一个 &lt;dd&gt;，一个 &lt;dl&gt; 可以包含多对 &lt;dt&gt; 和 &lt;dd&gt;。<br />
+  <br />
+  我们来看一个简单的例子：
+  <div>
+    <div>
+      <pre><ol><li>&lt;!DOCTYPE html&gt;</li><li>&lt;html lang=&quot;en&quot;&gt;</li><li>&lt;head&gt;</li><li>    &lt;meta charset=&quot;UTF-8&quot;&gt;</li><li>    &lt;title&gt;HTML定义列表&lt;/title&gt;</li><li>&lt;/head&gt;</li><li>&lt;body&gt;</li><li>    &lt;dl&gt;</li><li>        &lt;dt&gt;HTML&lt;/dt&gt;</li><li>        &lt;dd&gt;HTML 是一种专门用来开发网页的标记语言，您可以转到《&lt;a href=&quot;http://c.biancheng.net/html/&quot; target=&quot;_blank&quot;&gt;HTML教程&lt;/a&gt;》了解更多。&lt;/dd&gt;</li><li>        &lt;dt&gt;CSS&lt;/dt&gt;</li><li>        &lt;dd&gt;CSS 层叠样式表可以控制 HTML 文档的显示样式，用来美化网页，您可以转到《&lt;a href=&quot;http://c.biancheng.net/css3/&quot; target=&quot;_blank&quot;&gt;CSS教程&lt;/a&gt;》了解更多。&lt;/dd&gt;</li><li>        &lt;dt&gt;JavaScript&lt;/dt&gt;</li><li>        &lt;dd&gt;JavaScript 简称 JS，是一种用来开发网站（包括前端和后台）的脚本编程语言，您可以转到《&lt;a href=&quot;http://c.biancheng.net/js/&quot; target=&quot;_blank&quot;&gt;JS教程&lt;/a&gt;》了解更多。&lt;/dd&gt;</li><li>    &lt;/dl&gt;</li><li>&lt;/body&gt;</li><li>&lt;/html&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  浏览器运行效果如下图：
+  <div><img alt="HTML定义列表演示" src="http://c.biancheng.net/uploads/allimg/210929/1-210929145550292.png" /><br />
+    图3：HTML 定义列表演示</div>
+  <br />
+  &lt;dt&gt; 和 &lt;dd&gt; 虽然是同级标签，但是它们的默认样式不同，&lt;dd&gt; 带有一段缩进，而 &lt;dt&gt; 顶格显示，这样层次更加分明。
+  <h2>4. 列表的默认样式</h2>
+  浏览器会对列表设置一些默认样式，包括外边距、内边距和列表项标记，我们可以通过 CSS 样式表的 <a href="http://c.biancheng.net/css3/margin.html" target="_blank">margin</a>、<a href="http://c.biancheng.net/css3/padding.html" target="_blank">padding</a> 和 <a href="http://c.biancheng.net/css3/list-style.html" target="_blank">list-style</a> 属性来修改它们，请看下面的例子：
+  <div>
+    <div>
+      <pre><ol><li>&lt;!DOCTYPE html&gt;</li><li>&lt;html lang=&quot;en&quot;&gt;</li><li>&lt;head&gt;</li><li>    &lt;meta charset=&quot;UTF-8&quot;&gt;</li><li>    &lt;title&gt;修改HTML列表的默认样式&lt;/title&gt;</li><li>&lt;/head&gt;</li><li>&lt;body&gt;</li><li>    &lt;p style=&quot;margin:0px auto;&quot;&gt;煮米饭的步骤：&lt;/p&gt;</li><li>    &lt;ol style=&quot;margin:0px auto; padding-left:20px; list-style:upper-latin;&quot;&gt;</li><li>        &lt;li&gt;将水煮沸&lt;/li&gt;</li><li>        &lt;li&gt;加入一勺米&lt;/li&gt;</li><li>        &lt;li&gt;搅拌均匀&lt;/li&gt;</li><li>        &lt;li&gt;继续煮10分钟&lt;/li&gt;</li><li>    &lt;/ol&gt;</li><li></li><li>    &lt;p style=&quot;margin-bottom:0px;&quot;&gt;早餐的种类：&lt;/p&gt;</li><li>    &lt;ul style=&quot;margin:0px auto; padding-left:20px; list-style:square;&quot;&gt;</li><li>        &lt;li&gt;鸡蛋&lt;/li&gt;</li><li>        &lt;li&gt;牛奶&lt;/li&gt;</li><li>        &lt;li&gt;面包&lt;/li&gt;</li><li>        &lt;li&gt;生菜&lt;/li&gt;</li><li>    &lt;/ul&gt;</li><li></li><li>    &lt;dl style=&quot;margin-bottom:0px;&quot;&gt;</li><li>        &lt;dt&gt;&lt;b&gt;HTML&lt;/b&gt;&lt;/dt&gt;</li><li>        &lt;dd style=&quot;margin:auto auto 10px 0px;&quot;&gt;HTML 是一种专门用来开发网页的标记语言。&lt;/dd&gt;</li><li>        &lt;dt&gt;&lt;b&gt;CSS&lt;/b&gt;&lt;/dt&gt;</li><li>        &lt;dd style=&quot;margin:auto auto 10px 0px;&quot;&gt;CSS 层叠样式表可以控制 HTML 文档的显示样式，用来美化网页。&lt;/dd&gt;</li><li>        &lt;dt&gt;&lt;b&gt;JavaScript&lt;/b&gt;&lt;/dt&gt;</li><li>        &lt;dd style=&quot;margin:auto auto 10px 0px;&quot;&gt;JavaScript 简称 JS，是一种用来开发网站（包括前端和后台）的脚本编程语言。&lt;/dd&gt;</li><li>    &lt;/dl&gt;</li><li>&lt;/body&gt;</li><li>&lt;/html&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  对 CSS 样式的说明：
+  <ul>
+    <li>margin:0px auto;将上下外边距设置为 0 像素，将左右外边距设置为自动。</li>
+    <li>margin-bottom:0px;将下方外边距设置为 0 像素。</li>
+    <li>margin:auto auto 10px 0px;将上方和右侧外边距设置为自动，将下方外边距设置为 10 像素，将左侧外边距设置为 0 像素。</li>
+    <li>padding-left:20px;将左侧内边距设置为 20 像素。</li>
+    <li>list-style:upper-latin;将列表项标记设置为大写拉丁字母。</li>
+    <li>list-style:square;将列表项标记设置为实心方块。</li>
+  </ul>
+  <br />
+  上述代码在浏览器中的运行效果：
+  <div><img alt="修改HTML列表的默认样式" src="http://c.biancheng.net/uploads/allimg/210929/1-21092915050Hc.png" /><br />
+    图4：修改 HTML 列表的默认样式</div>
+  <h2>5. 总结</h2>
+  <table>
+    <tbody>
+      <tr>
+        <th width="70">列表分类</th>
+        <th>说明</th>
+      </tr>
+      <tr>
+        <td>有序列表</td>
+        <td>&lt;ol&gt; 表示有序列表，&lt;li&gt; 表示列表中的每一项，默认使用阿拉伯数字编号。</td>
+      </tr>
+      <tr>
+        <td>无序列表</td>
+        <td>&lt;ul&gt; 表示无序列表，&lt;li&gt; 表示列表中的每一项，默认使用●符号作为作为每一项的标记。</td>
+      </tr>
+      <tr>
+        <td>定义列表</td>
+        <td>&lt;dl&gt; 表示定义列表，&lt;dt&gt; 表示定义术语、&lt;dd&gt; 表示定义描述。一般情况下，每个 &lt;dt&gt; 搭配一个 &lt;dd&gt;，一个 &lt;dl&gt; 可以包含多对 &lt;dt&gt; 和 &lt;dd&gt;。</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br />
+<p><a name="12" id="112"></a></p>
+<h1>HTML表单：&lt;form&gt;标<a href="#0">签</a></h1>
+<div></div>
+<div id="ggxc-arctop-pc-12"></div>
+<div id="arc-body13">当您想要通过网页来收集一些用户的信息（例如用户名、电话、邮箱地址等）时，就需要用到 HTML 表单。表单可以接收用户输入的信息，然后将其发送到后端应用程序，例如 PHP、Java、Python 等，后端应用程序将根据定义好的业务逻辑对表单传递来的数据进行处理。<br />
+    <br />
+  表单属于 HTML 文档的一部分，其中包含了如输入框、复选框、单选按钮、提交按钮等不同的表单控件，用户通过修改表单中的元素（例如输入文本，选择某个选项等）来完成表单，通过表单中的提交按钮将表单数据提交给后端程序。<br />
+  <br />
+  在 HTML 中创建表单需要用到&lt;form&gt;标签，具体语法如下所示：<br />
+  <p>&lt;form action=&quot;URL&quot; method=&quot;GET|POST&quot;&gt;<br />
+        
+    表单中的其它标签<br />
+    &lt;/form&gt;</p>
+  对属性的说明：
+  <ul>
+    <li>action 属性用来指明将表单提交到哪个页面；</li>
+    <li>method 属性表示使用哪个方式提交数据，包括 GET 和 POST 两种方式，它们两者的区别如下：
+        <ul>
+          <li>GET：用户点击提交按钮后，提交的信息会被显示在页面的地址栏中。一般情况下，GET 提交方式中不建议包含密码，因为密码被提交到地址栏，不安全。</li>
+          <li>POST：如果表单包含密码这种敏感信息，建议使用 POST 方式进行提交，这样数据会传送到后台，不显示在地址栏中，相对安全。</li>
+        </ul>
+    </li>
+  </ul>
+  <h2>表单属性</h2>
+  HTML 为&lt;form&gt;标签提供了一些专用的属性，如下表所示：<br />
+  <br />
+  <table>
+    <tbody>
+      <tr>
+        <th>属性</th>
+        <th>可选值</th>
+        <th>描述</th>
+      </tr>
+      <tr>
+        <td>accept</td>
+        <td>MIME_type</td>
+        <td>HTML5 中不再支持，设置服务器要接收的文件类型</td>
+      </tr>
+      <tr>
+        <td>accept-charset</td>
+        <td>character_set</td>
+        <td>设置表单数据的字符集（默认为 HTML 文档字符集）</td>
+      </tr>
+      <tr>
+        <td>action</td>
+        <td>URL</td>
+        <td>设置要将表单提交到何处（默认为当前页面）</td>
+      </tr>
+      <tr>
+        <td>autocomplete</td>
+        <td>on、off</td>
+        <td>设置是否启用表单的自动完成功能（默认开启）</td>
+      </tr>
+      <tr>
+        <td>enctype</td>
+        <td>application/x-www-form-urlencoded、<br />
+          multipart/form-data、<br />
+          text/plain</td>
+        <td>设置在提交表单数据之前如何对数据进行编码（适用于 method=&quot;post&quot; 的情况）</td>
+      </tr>
+      <tr>
+        <td>method</td>
+        <td>get、post</td>
+        <td>设置使用哪种 HTTP 方法来提交表单数据（默认为 get）</td>
+      </tr>
+      <tr>
+        <td>name</td>
+        <td>text</td>
+        <td>设置表单的名称</td>
+      </tr>
+      <tr>
+        <td>novalidate</td>
+        <td>novalidate</td>
+        <td>如果使用该属性，则提交表单时不进行验证</td>
+      </tr>
+      <tr>
+        <td>target</td>
+        <td>_blank、_self、_parent、_top</td>
+        <td>设置在何处打开 action 属性设定的链接（默认为 _self）</td>
+      </tr>
+    </tbody>
+  </table>
+  <br />
+  action 和 method 是最常用的两个属性。<br />
+  <h2>表单控件</h2>
+  表单用来收集用户数据，这些数据需要填写在各种控件中。HTML 控件也通过标签来实现，只是它们会呈现一些特殊的外观，并具有一些交互功能。<br />
+  <br />
+  HTML 表单中可以包含如下表所示的控件：<br />
+  <br />
+  <table>
+    <tbody>
+      <tr>
+        <th>控件/标签</th>
+        <th>描述</th>
+      </tr>
+      <tr>
+        <td>&lt;input&gt;</td>
+        <td>定义输入框</td>
+      </tr>
+      <tr>
+        <td>&lt;textarea&gt;</td>
+        <td>定义文本域（一个可以输入多行文本的控件）</td>
+      </tr>
+      <tr>
+        <td>&lt;label&gt;</td>
+        <td>为表单中的各个控件定义标题</td>
+      </tr>
+      <tr>
+        <td>&lt;fieldset&gt;</td>
+        <td>定义一组相关的表单元素，并使用边框包裹起来</td>
+      </tr>
+      <tr>
+        <td>&lt;legend&gt;</td>
+        <td>定义 &lt;fieldset&gt; 元素的标题</td>
+      </tr>
+      <tr>
+        <td>&lt;select&gt;</td>
+        <td>定义下拉列表</td>
+      </tr>
+      <tr>
+        <td>&lt;optgroup&gt;</td>
+        <td>定义选项组</td>
+      </tr>
+      <tr>
+        <td>&lt;option&gt;</td>
+        <td>定义下拉列表中的选项</td>
+      </tr>
+      <tr>
+        <td>&lt;button&gt;</td>
+        <td>定义一个可以点击的按钮</td>
+      </tr>
+      <tr>
+        <td>&lt;datalist&gt;</td>
+        <td>指定一个预先定义的输入控件选项列表</td>
+      </tr>
+      <tr>
+        <td>&lt;keygen&gt;</td>
+        <td>定义表单的密钥对生成器字段</td>
+      </tr>
+      <tr>
+        <td>&lt;output&gt;</td>
+        <td>定义一个计算结果</td>
+      </tr>
+    </tbody>
+  </table>
+  <br />
+  这里我们不再一一列举各种控件的用法，请读者点击链接跳转到对应页面学习，下面我们通过一个完整的示例来演示一下：<br />
+  <div>
+    <div>
+      <pre><ol><li>&lt;!DOCTYPE html&gt;</li><li>&lt;html lang=&quot;en&quot;&gt;</li><li>&lt;head&gt;</li><li>    &lt;meta charset=&quot;UTF-8&quot;&gt;</li><li>    &lt;title&gt;HTML form表单演示&lt;/title&gt;</li><li>&lt;/head&gt;</li><li>&lt;body&gt;</li><li>    &lt;form action=&quot;./userinfo.php&quot; method=&quot;POST&quot;&gt;</li><li>        &lt;!-- 文本输入框控件 --&gt;</li><li>        &lt;label&gt;用户名： &lt;/label&gt;&lt;input name=&quot;username&quot; type=&quot;text&quot;&gt;&lt;br&gt;</li><li></li><li>        &lt;!-- 密码框控件 --&gt;</li><li>        &lt;label&gt;密&amp;emsp;码： &lt;/label&gt;&lt;input name=&quot;password&quot; type=&quot;password&quot;&gt;&lt;br&gt;</li><li></li><li>        &lt;!-- 下拉菜单控件 --&gt;</li><li>        &lt;label&gt;性&amp;emsp;别：&lt;/label&gt;</li><li>        &lt;select name=&quot;sex&quot;&gt;</li><li>            &lt;option value=&quot;1&quot;&gt;男&lt;/option&gt;</li><li>            &lt;option value=&quot;2&quot;&gt;女&lt;/option&gt;</li><li>            &lt;option value=&quot;3&quot;&gt;未知&lt;/option&gt;</li><li>        &lt;/select&gt;</li><li>        &lt;br&gt;</li><li></li><li>        &lt;!-- 复选框控件 --&gt;</li><li>        &lt;label&gt;爱&amp;emsp;好：&lt;/label&gt;</li><li>        &lt;input type=&quot;checkbox&quot; name=&quot;hobby&quot; value=&quot;1&quot;&gt;听音乐</li><li>        &lt;input type=&quot;checkbox&quot; name=&quot;hobby&quot; value=&quot;2&quot;&gt;看电影</li><li>        &lt;input type=&quot;checkbox&quot; name=&quot;hobby&quot; value=&quot;3&quot;&gt;打游戏</li><li>        &lt;br&gt;</li><li></li><li>        &lt;!-- 单选按钮控件 --&gt;</li><li>        &lt;label&gt;学&amp;emsp;历：&lt;/label&gt;</li><li>        &lt;input type=&quot;radio&quot; name=&quot;education&quot; value=&quot;1&quot;&gt;小学</li><li>        &lt;input type=&quot;radio&quot; name=&quot;education&quot; value=&quot;2&quot;&gt;中学</li><li>        &lt;input type=&quot;radio&quot; name=&quot;education&quot; value=&quot;3&quot;&gt;本科</li><li>        &lt;input type=&quot;radio&quot; name=&quot;education&quot; value=&quot;4&quot;&gt;硕士</li><li>        &lt;input type=&quot;radio&quot; name=&quot;education&quot; value=&quot;5&quot;&gt;博士</li><li>        &lt;br&gt;</li><li></li><li>        &lt;!-- 按钮 --&gt;</li><li>        &lt;input type=&quot;submit&quot; value=&quot;提 交&quot;&gt;&amp;emsp;&amp;emsp;</li><li>        &lt;input type=&quot;reset&quot; value=&quot;重 置&quot;&gt;</li><li>    &lt;/form&gt;</li><li>&lt;/body&gt;</li><li>&lt;/html&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  运行结果如下图所示：
+  <div><img alt="HTML form表单演示" src="http://c.biancheng.net/uploads/allimg/210929/1-210929163KWX.png" /><br />
+    图1：HTML form 表单演示</div>
+  <br />
+  填写好用户数据，点击“提交”按钮，即可使用 POST 方式将数据提交到当前目录下的 userinfo.php 页面，在服务器端通过 PHP 代码可以接收提交的数据。</div>
+<p><a name="13" id="113"></a></p>
+<h1>HTML注释的写法（附带示例）</h1>
+<div></div>
+<div id="ggxc-arctop-pc-13"></div>
+<div id="arc-body14">HTML 注释主要用来对文档中的代码进行解释说明，注释也是代码的一部分，但浏览器会自动忽略注释的内容，所以用户在网页中是看不到注释的。<br />
+    <br />
+  我们在编写代码时应该善用注释，因为一个完整的 HTML 文档往往由成百上千行代码组成，当我们想要修改其中的某个部分时可能需要花费很长的时间才能找到想要修改的地方。有了注释就不一样了，我们可以根据功能或者其它条件将程序划分为若干个部分并通过注释进行标记，这样可以帮助您和他人阅读您的代码，提高代码的可读性。<br />
+  <h2>单行注释</h2>
+  在 HTML 中您可以使用&lt;!--  --&gt;在代码中添加注释，&lt;!--和--&gt;之间的所有内容都会被视为注释。示例代码如下：
+  <div>
+    <div>
+      <pre><ol><li>&lt;!DOCTYPE html&gt;</li><li>&lt;html lang=&quot;en&quot;&gt;</li><li>&lt;!-- head 开始 --&gt;</li><li>&lt;head&gt;</li><li>    &lt;meta charset=&quot;UTF-8&quot;&gt;  &lt;!-- 当前文档采用UTF-8编码 --&gt;</li><li>    &lt;title&gt;HTML注释的写法&lt;/title&gt;</li><li>&lt;/head&gt;</li><li>&lt;!-- head 结束 --&gt;</li><li>&lt;!-- body 开始 --&gt;</li><li>&lt;body&gt;</li><li>    &lt;!-- 一段文本 --&gt;</li><li>    &lt;p&gt;欢迎来到C语言中文网学习HTML教程，请记住地址：http://c.biancheng.net/html/&lt;/p&gt;</li><li>&lt;/body&gt;</li><li>&lt;!-- body 结束 --&gt;</li><li>&lt;/html&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  运行结果如下所示：<br />
+  <div><img alt="HTML注释的写法" src="http://c.biancheng.net/uploads/allimg/210929/1-2109291A01S24.png" /><br />
+    图1：HTML 注释的写法</div>
+  <br />
+  注释可以出现在 HTML 文档的任意位置，包括文档开头、文档末尾、文档中间、标签外部、标签内容中等。
+  <h2>多行注释</h2>
+  前面我们主要演示的是单行注释，在 HTML 中同样支持多行注释。多行注释与单行注释的区别并不大，我们只需要保证注释的内容在&lt;!--和--&gt;之间即可，如下所示：<br />
+  <p>&lt;!--<br />
+        
+    多行注释<br />
+    --&gt;</p>
+  使用注释除了可以对代码进行说明外，还可以用来注释程序中的代码，例如当不希望某段代码执行时，就可以先将它们注释掉，这样浏览器就不会执行这段代码了。<br />
+  <h2>IE 条件注释</h2>
+  条件注释仅对 Windows 系统上的 Internet Explorer（IE）浏览器中有效，其他的浏览器会忽略它们。从 IE5 开始支持条件注释，您可以使用条件注释为使用 IE 浏览器的用户提供一些说明。如下所示：
+  <div>
+    <div>
+      <pre><ol><li>&lt;!DOCTYPE html&gt;</li><li>&lt;html lang=&quot;en&quot;&gt;</li><li>&lt;head&gt;</li><li>    &lt;meta charset=&quot;UTF-8&quot;&gt;</li><li>    &lt;title&gt;IE浏览器条件注释&lt;/title&gt;</li><li>&lt;/head&gt;</li><li>&lt;body&gt;</li><li>&lt;h4&gt;根据不同的 IE 版本显示不同的内容&lt;/h4&gt;</li><li>&lt;!-- 如果使用 IE，则显示 --&gt;</li><li>    &lt;!--[if IE]&gt;</li><li>        &lt;p&gt;您正在使用IE浏览器&lt;/p&gt;</li><li>    &lt;![endif]--&gt;</li><li></li><li>    &lt;!-- 如果使用 IE8，则显示 --&gt;</li><li>    &lt;!--[if IE 8]&gt;</li><li>        &lt;p&gt;您正在使用 IE8&lt;/p&gt;</li><li>    &lt;![endif]--&gt;</li><li></li><li>    &lt;!-- 如果不是使用 IE7，则显示 --&gt;</li><li>    &lt;!--[if !IE 7]&gt;</li><li>        &lt;p&gt;您使用的不是 IE7&lt;/p&gt;</li><li>    &lt;![endif]--&gt;</li><li></li><li>    &lt;!-- 如果版本小于 IE10，则显示 --&gt;</li><li>    &lt;!--[if lt IE 10]&gt;</li><li>        &lt;p&gt;您正在使用 IE10 以下的版本&lt;/p&gt;</li><li>    &lt;![endif]--&gt;</li><li></li><li>    &lt;!-- 如果版本大于等于 IE6，则显示 --&gt;</li><li>    &lt;!--[if gte IE 6]&gt;</li><li>        &lt;p&gt;您正在使用 IE6 及其以上的版本&lt;/p&gt;</li><li>    &lt;![endif]--&gt;</li><li>&lt;/body&gt;</li><li>&lt;/html&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  在 IE8 下的运行效果：
+  <div><img alt="条件注释在IE8下的运行效果" src="http://c.biancheng.net/uploads/allimg/210929/1-2109291GK31X.png" /><br />
+    图2：条件注释在 IE8 下的运行效果</div>
+  <br />
+  在 Chrome 浏览器下的运行效果：
+  <div><img alt="条件注释在Chrome下的运行效果" src="http://c.biancheng.net/uploads/allimg/210929/1-2109291GZ3641.png" /><br />
+    图3：条件注释在 Chrome 下的运行效果</div>
+  <br />
+  条件注释可以检测当前浏览器是否是 IE，以及 IE 版本，开发人员可以根据不同的 IE 浏览器加载不同的样式表或者 JS 脚本。<br />
+  <br />
+  比较 IE 版本将会用到如下关键字：
+  <ul>
+    <li>lt：less than 的简写，也就是小于的意思。</li>
+    <li>lte：less than or equal to 的简写，也就是小于或等于的意思。</li>
+    <li>gt：greater than 的简写，也就是大于的意思。</li>
+    <li>gte：greater than or equal to 简写，也就是大于或等于的意思。</li>
+    <li>!：不等于</li>
+  </ul>
+  <br />
+  IE 浏览器对 HTML5 支持不太友好，低版本的行为更是怪异，IE 已经逐渐退出市场，各大互联网巨头也不再兼容 IE，大家在开发过程中也不用重点考虑 IE。</div>
+<p><a name="14" id="114"></a></p>
+<h1>HTML嵌入CSS样式（四种方法）</h1>
+<div></div>
+<div id="ggxc-arctop-pc-14"></div>
+<div id="arc-body15">HTML 仅能呈现一些信息，表现能力非常有限，需要结合 CSS 一起使用，以使页面更加精美。<br />
+    <br />
+  CSS 样式既可以作为单独的文件（.css类型的文件）引入到 HTML 文档中，也可以直接写在 HTML 文档中，大致分为如下四种方法：
+  <ul>
+    <li>行内样式：使用 HTML 标签的 style 属性定义 CSS 样式；</li>
+    <li>内嵌样式：使用 &lt;style&gt; 标签在 HTML 文档头部（&lt;head&gt; 和 &lt;head&gt; 之间）定义 CSS 样式；</li>
+    <li>链接式：使用 &lt;link&gt; 标签引入外部 CSS 样式表文件。</li>
+    <li>导入式：使用 @import 命令导入外部 CSS 样式表文件。</li>
+  </ul>
+  <br />
+  第1种和第2种方法都是将 CSS 样式写到当前 HTML 文档中，第3种和第4种方法都是将 CSS 样式放在外部文件中，然后再导入到当前 HTML 文档中。<br />
+  <h2>1. 行内样式（内联样式）</h2>
+  行内样式就是把 CSS 样式直接放在代码行内的标签中，一般都是放入标签的style属性中，由于行内样式直接插入标签中，故是最直接的一种方式，同时也是修改最不方便的样式。<br />
+  <br />
+  【示例1】针对段落、&lt;h2&gt; 标签、&lt;em&gt; 标签、&lt;strong&gt;标签以及 &lt;div&gt; 标签，分别应用 CSS 行内样式。
+  <div>
+    <div>
+      <pre><ol><li>&lt;!doctype html&gt;</li><li>&lt;html&gt;</li><li>&lt;head&gt;</li><li>&lt;meta charset=&quot;UTF-8&quot;&gt;</li><li>&lt;title&gt;行内样式&lt;/title&gt;</li><li>&lt;/head&gt;</li><li>&lt;body&gt;</li><li>    &lt;p style=&quot;background-color: #999900&quot;&gt;行内元素，控制段落-1&lt;/p&gt;</li><li>    &lt;h2 style=&quot;background-color: #FF6633&quot;&gt;行内元素，h2 标题元素&lt;/h2&gt;</li><li>    &lt;p style=&quot;background-color: #999900&quot;&gt;行内元素，控制段落-2&lt;/p&gt;</li><li>    &lt;strong style=&quot;font-size:30px;&quot;&gt;行内元素，strong 比 em 效果要强&lt;/strong&gt;</li><li>    &lt;div style=&quot;background-color:#66CC99; color:#993300; height:30px; line-height:30px;&quot;&gt;行内元素，div 块级元素&lt;/div&gt;</li><li>    &lt;em style=&quot;font-size:2em;&quot;&gt;行内元素，em 强调&lt;/em&gt;</li><li>&lt;/body&gt;</li><li>&lt;/html&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  页面演示效果如下图所示：<br />
+  <div><img alt="HTML行内样式的应用" src="http://c.biancheng.net/uploads/allimg/181109/1-1Q10915253S16.gif" /><br />
+    图1：行内样式的应用</div>
+  <br />
+  在上面示例中，行内样式由 HTML 元素的 style 属性嵌入，即将 CSS 代码放入style=&quot;&quot;引号内即可，多个 CSS 属性值则通过分号;间隔。例如示例中的 &lt;div&gt; 标签：
+  <p>&lt;div style=&quot;background-color:#66CC99; color:#993300; height:30px; line-height:30px;&quot;&gt;行内元素，div 块级元素 &lt;/div&gt;</p>
+  <br />
+  段落 &lt;p&gt; 标签设置背景色为褐色（background-color: #999900），标题 &lt;h2&gt; 标签设置背景色为红色（background-color: #FF6633）。<br />
+  <br />
+  &lt;strong&gt; 标签设置字体为 30 像素（font-size:30px;），&lt;div&gt; 标签设置高度和行高为 30 像素以及进行背景色、颜色的设置（background-color:#66CC99; color:#993300; height:30px; line-height:30px;），&lt;em&gt; 标签设置字体大小为相对单位（font-size: 2em;）。<br />
+  <br />
+  两个段落 &lt;p&gt; 标签，虽内容不同，但使用一样的背景色设置，却添加两次 CSS 行内属性设置背景色 background-color: #999900。<br />
+  <br />
+  行内元素虽然编写简单，但通过示例可以发现存在以下缺陷：
+  <ul>
+    <li>每一个标签要设置样式都需要添加 style 属性。</li>
+    <li>与过去网页制作者将 HTML 的标签和样式糅杂在一起的效果不同的是，现在是通过 CSS 编写行内样式，过去釆用的是 HTML 标签属性实现的样式效果。虽方式不同，但导致的后果是一样的：后期维护成本高，即当修改页面时需要逐个打开网站每个页面一一修改，根本看不到 CSS 所起到的作用。</li>
+    <li>添加如此多的行内样式，页面体积大，门户网站若釆用这种方式编写，那将浪费服务器带宽和流量。</li>
+  </ul>
+  <br />
+  网络上有些网页通过查看源文件可以看到这种编写方式，虽然一个网页只有一部分是如此做的， 但需要分情况：
+  <ul>
+    <li>若网页制作者编写这样的行内样式，可以快速更改当前样式，不必考虑以前编写的样式冲突问题；</li>
+    <li>网页中若存在这种情况则是后台编辑时，通过编辑器生成的样式，或后台未开发完整，需为编辑人员开发可选择样式的选项而非通过编辑器直接改变颜色、粗细、背景色、倾斜等效果。</li>
+  </ul>
+  <h2>2. 内嵌样式</h2>
+  内嵌样式通过将 CSS 写在网页源文件的头部，即在 &lt;head&gt; 和 &lt;head&gt; 之间，通过使用 HTML 标签中的 &lt;style&gt; 标签将其包围，其特点是该样式只能在此页使用，解决行内样式多次书写的弊端。<br />
+  <br />
+  【示例2】为段落设置内嵌式样式书写方法，减少代码量。
+  <div>
+    <div>
+      <pre><ol><li>&lt;!doctype html&gt;</li><li>&lt;html&gt;</li><li>&lt;head&gt;</li><li>&lt;meta charset=&quot;utf-8&quot;&gt;</li><li>&lt;title&gt;内嵌式&lt;/title&gt;</li><li>&lt;style type=&quot;text/css&quot;&gt;</li><li>p{</li><li>    text-align: left;  /*文本左对齐*/</li><li>    font-size: 18px;  /*字体大小 18 像素*/</li><li>    line-height: 25px;  /*行高 25 像素*/</li><li>    text-indent: 2em;  /*首行缩进2个文字大小空间*/</li><li>    width: 500px;  /*段落宽度 500 像素*/</li><li>    margin: 0 auto;  /*浏览器下居中*/</li><li>    margin-bottom: 20px;  /*段落下边距 20 像素*/</li><li>}</li><li>&lt;/style&gt;</li><li>&lt;/head&gt;</li><li>&lt;body&gt;</li><li>    &lt;p&gt;“百度”这一公司名称便来自宋词“众里寻他千百度”。（百度公司会议室名为青玉案，即是这首词的词牌）。而“熊掌”图标的想法来源于“猎人巡迹熊爪”的刺激，与李博士的“分析搜索技术”非常相似，从而构成百度的搜索概念，也最终成为了百度的图标形象。在这之后，由于在搜索引擎中，大都有动物形象来形象，如 SOHU 的狐，如 GOOGLE 的狗，而百度也便顺理成章称作了熊。百度熊也便成了百度公司的形象物。&lt;/p&gt;</li><li>    &lt;p&gt;在百度那次更换 LOGO 的计划中，百度给出的 3 个新 LOGO 设计方案在网民的投票下，全部被否决，更多的网民将选票投给了原有的熊掌标志。&lt;/p&gt;</li><li>    &lt;p&gt;此次更换 LOGO 的行动共进行了 3 轮投票，直到第 2 轮投票结束，新的笑脸 LOGO 都占据了绝对优势。但到最后一轮投票时，原有的熊掌标志却戏剧性地获得了最多的网民选票，从而把 3 个新 LOGO 方案彻底否决。&lt;/p&gt;</li><li>&lt;/body&gt;</li><li>&lt;/html&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  页面演示效果如下图所示：<br />
+  <div><img alt="HTML内嵌样式的使用" src="http://c.biancheng.net/uploads/allimg/181109/1-1Q10915435Q30.gif" /><br />
+    图2：内嵌样式的应用</div>
+  <br />
+  在上面示例中，段落进行如下设置：文本左对齐、字体为 14 号、行高 25 像素、宽度 500 像素、下边距 20 像素、浏览器下居中、首行缩进两个文字大小空间。首行缩进使用相对单位，此设置的作用是当字体大小改变时（如font-size: 18px;）依然能够实现缩进两个文字大小空间。<br />
+  <br />
+  行内样式带来了样式修改的不方便，例如上个示例中两个段落都使用同样的样式，但需要编写两遍；而使用内嵌式样式后，就可以将所有的段落样式放在一起。<br />
+  <br />
+  style 不仅可定义 CSS 样式，还可以定义 <a href="http://c.biancheng.net/js/" target="_blank">JavaScript</a> 脚本，故使用 style 时需要注意。当 style 的 type 值为text/css时，内部编写 CSS 样式；若 style 的 type 值为text/javascript时，内部编写 <a href="http://c.biancheng.net/java/" target="_blank">Java</a>Script 脚本。
+  <h4>style 标签的 title 属性</h4>
+  style 中有一个比较特殊的属性 title，使用 title 可以为不同的样式设置一个标题，浏览者就可以根据标题选择不同的样式达到浏览器中切换的效果，但 IE 浏览器不支持，Firefox 浏览器支持此效果。<br />
+  <br />
+  【示例3】分别为火狐浏览器设置两种字体大小样式，通过火狐“查看”菜单进行修改。
+  <div>
+    <div>
+      <pre><ol><li>&lt;!doctype html&gt;</li><li>&lt;html&gt;</li><li>&lt;head&gt;</li><li>&lt;meta charset=&quot;utf-8&quot;&gt;</li><li>&lt;style type=&quot;text/css&quot; title=&quot;字体14号&quot;&gt;</li><li>p{</li><li>    text-align: left;  /*文本左对齐*/</li><li>    font-size: 14px;  /*字体大小 14 像素*/</li><li>    line-height: 25px;  /*行高 25 像素*/</li><li>    text-indent: 2em;  /*首行缩进两个文字大小空间*/</li><li>    width: 500px;  /*段落宽度 500 像素*/</li><li>    margin: 0 auto;  /*浏览器下居中*/</li><li>}</li><li>&lt;/style&gt;</li><li>&lt;style type=&quot;text/css&quot; title=&quot;字体 18 号&quot;&gt;</li><li>p{</li><li>    text-align: left;  /*文本左对齐*/</li><li>    font-size: 18px;  /*字体大小 18 像素*/</li><li>    line-height: 25px;  /*行高 25 像素*/</li><li>    text-indent: 2em;  /*首行缩进两个文字大小空间*/</li><li>    width: 500px;  /*段落宽度 500 像素*/</li><li>    margin: 0 auto;  /*浏览器下居中*/</li><li>    color: #6699FF;  /*字体颜色的改变*/</li><li>}</li><li>&lt;/style&gt;</li><li>&lt;/head&gt;</li><li>&lt;body&gt;</li><li>    &lt;p&gt;“百度”这一公司名称便来自宋词“众里寻他千百度”。（百度公司会议室名为青玉案，即是这首词的词牌）。而“熊掌”图标的想法来源于“猎人巡迹熊爪”的刺激，与李博士的“分析搜索技术”非常相似，从而构成百度的搜索概念，也最终成为了百度的图标形象。&lt;/p&gt;</li><li>&lt;/body&gt;</li><li>&lt;/html&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  页面演示效果如下图所示。<br />
+  <br />
+  <div><img alt="" src="http://c.biancheng.net/uploads/allimg/181109/1-1Q109161042339.gif" /><br />
+    图3：火狐浏览器内嵌式更换样式</div>
+  <br />
+  在上面不例中，通过&lt;style type=&quot;text/css&quot; title=&quot;名称&quot;&gt;定义了两种字体大小，通过火狐浏览器“查看”菜单下的“页面样式”子菜单中有两个选项：字体14号、字体18号，默认情况下显示的是第一次书写的&lt;style type=&quot;text/css&quot; title=&quot;名称&quot;&gt;，通过菜单可以改变该页面样式。
+  <h2>3. 链接式</h2>
+  链接式通过 HTML 的 &lt;link&gt; 标签，将外部样式表文件链接到 HTML 文档中，这也是网络上网站应用最多的方式，同时也是最实用的方式。这种方法将 HTML 文档和 CSS 文件完全分离，实现结构层和表示层的彻底分离，增强网页结构的扩展性和 CSS 样式的可维护性。<br />
+  <br />
+  【示例4】使用链接式为 HTML 代码应用样式，书写、更改方便。
+  <div>
+    <div>
+      <pre><ol><li>&lt;!doctype html&gt;</li><li>&lt;html&gt;</li><li>&lt;head&gt;</li><li>&lt;meta charset=&quot;utf-8&quot;&gt;</li><li>&lt;title&gt;&lt;/title&gt;</li><li>&lt;link href=&quot;lianjie.css&quot; type=&quot;text/css&quot; rel=&quot;stylesheet&quot; /&gt;</li><li>&lt;link href=&quot;lianjie-2.css&quot; type=&quot;text/css&quot; rel=&quot;stylesheet&quot; /&gt;</li><li>&lt;/head&gt;</li><li>&lt;body&gt;</li><li>    &lt;p&gt;我是被 lianjie-2.css 文件控制的，楼下的你呢？？&lt;/p&gt;</li><li>    &lt;h3&gt;楼上的，&lt;span&gt;lianjie.css&lt;/span&gt; 文件给我穿的花衣服。&lt;/h3&gt;</li><li>&lt;/body&gt;</li><li>&lt;/html&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  页面演示效果如下图所示：<br />
+  <div><img alt="HTML链接式嵌入CSS样式" src="http://c.biancheng.net/uploads/allimg/181109/1-1Q1091626121A.gif" /><br />
+    图4：链接式的应用</div>
+  <br />
+  在上面示例中，通过 link 链接两个 CSS 文件，且都有效，这也是网站制作者将公共部分放入一个 CSS 文件，当前页面样式编写新的样式文件。<br />
+  <br />
+  lianjie.css 文件代码：
+  <div>
+    <div>
+      <pre><ol><li>h3{</li><li>    font-weight: normal;  /*取消标题默认加粗效果*/</li><li>    background-color: #66CC99;  /* 设置背景色 */</li><li>    height: 50px;  /*设置标签的高度*/</li><li>    line-height:50px;  /* 设置标签的行高 */</li><li>}</li><li>span{</li><li>    color: #FFOOOO;  /* 字体颜色 */</li><li>    font-weight:bold;  /* 字体加粗 */</li><li>}</li></ol>
+  </pre>
+    </div>
+  </div>
+  <br />
+  lianjie-2.css 文件代码：
+  <div>
+    <div>
+      <pre><ol><li>p{</li><li>    color: #FF3333;  /*字体颜色设置*/</li><li>    font-weight: bold;  /* 字体加粗 */</li><li>    border-bottom: 3px dashed #009933;  /* 设置下边框线 */</li><li>    line-height: 30px;  /* 设置行高 */</li><li>}</li></ol>
+  </pre>
+    </div>
+  </div>
+  <br />
+  链接式样式使 CSS 代码和 HTML 代码完全分离，达到结构与样式的分开，使 HTML 代码专门构建页面结构，而美化工作由 CSS 完成。<br />
+  <br />
+  链接式导入 CSS 样式的好处：
+  <ul>
+    <li>CSS 文件可以放在不同的 HTML 文件中，使网站所有页面样式统一；</li>
+    <li>再者将 CSS 代码放入一个 CSS 文件中便于管理、减少代码以及维护时间；</li>
+    <li>当修改 CSS 文件时，所有应用此 CSS 文件的 HTML 文件都将更新，而不必从服务器上将所有的页面取回再修改完毕后上传。</li>
+  </ul>
+  <h2>4. 导入样式</h2>
+  导入样式使用 @import 命令导入外部样式表。导入样式有 6 种书写方式：
+  <div>
+    <div>
+      <pre><ol><li>@import daoru.css;</li><li>@import 'daomxss';</li><li>@import &quot;daoru.css&quot;;</li><li>@import url(daoru.css);</li><li>@import url('daoru.css');</li><li>@import url(&quot;daoru.css&quot;);</li></ol>
+  </pre>
+    </div>
+  </div>
+  <br />
+  【示例5】导入样式表 lianjie.css 和 daoru.css 以及书写 &lt;body&gt; 标签的背景色，注意导入样式表和 &lt;body&gt; 标签样式的前后不可颠倒。
+  <div>
+    <div>
+      <pre><ol><li>&lt;html&gt;</li><li>&lt;head&gt;</li><li>&lt;meta charset=&quot;utf-8&quot;&gt;</li><li>&lt;title&gt;&lt;/title&gt;</li><li>&lt;style type=&quot;text/css&quot;&gt;</li><li>    @import url(lianjie.css);</li><li>    @import url(daoru.css);</li><li>    body { background-color: #e4e929; }</li><li>&lt;/style&gt;</li><li>&lt;/head&gt;</li><li>&lt;body&gt;</li><li>    &lt;div&gt;</li><li>        &lt;p&gt;我是被 lianjie-2.css 文件控制的，楼下的你呢？？&lt;/p&gt;</li><li>        &lt;h3&gt;褛上的，&lt;span&gt;lianjie.css&lt;/span&gt;文件给我穿的花衣服。&lt;/h3&gt;</li><li>    &lt;/div&gt;</li><li>&lt;/body&gt;</li><li>&lt;/html&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  页面演示效果如下图所示。<br />
+  <br />
+  <div><img alt="" src="http://c.biancheng.net/uploads/allimg/181109/1-1Q1091640541b.gif" /><br />
+    图5：导入样式应用</div>
+  <br />
+  在上面示例中，必须是@import url(&quot;lianjie-2.css&quot;); p{text-indent: 3em;}，而不能是p{text-indent:3em;} @import url(&quot;lianjie-2.css&quot;);，否则将导入效果无效。在 CSS 文件中也需要将 @import 放在前面，后面加入 CSS 样式，否则也是无效。<br />
+  <br />
+  lianjie.css 文件代码，同上一个示例即链接式。<br />
+  <br />
+  daoru.css 文件代码：
+  <div>
+    <div>
+      <div>
+        <pre><a href="http://c.biancheng.net/view/1293.html#"></a><a href="http://c.biancheng.net/view/1293.html#"></a></pre>
+      </div>
+      <pre><ol><li>@import url(&quot;lianjie-2.css&quot;);</li><li>p { text-indent: 3em; }</li></ol>
+  </pre>
+    </div>
+  </div>
+</div>
+<p><a name="15" id="115"></a></p>
+<h1>HTML块级元素和内联元素（行内元素）</h1>
+<div></div>
+<div id="ggxc-arctop-pc-15"></div>
+<div id="arc-body16">HTML 标签（元素）可以分为两个类别，分别是块级元素和内联元素（也叫行内元素）。<br />
+    <h2>块级元素</h2>
+  块级元素最主要的特点是它们自己独占一行，块级元素中最具代表性的就是&lt;div&gt;，此外还有&lt;p&gt;、&lt;nav&gt;、&lt;aside&gt;、&lt;header&gt;、&lt;footer&gt;、&lt;section&gt;、&lt;article&gt;、&lt;ul&gt;、&lt;address&gt;、&lt;h1&gt;~&lt;h6&gt;等。<br />
+  <br />
+  块级元素一般都具有特定的语义，可以使代码的可读性更强。<br />
+  <br />
+  块级元素的主要特征如下所示：<br />
+  <ul>
+    <li>不管是否使用换行标签&lt;br&gt;，块级元素总是在新行上开始；</li>
+    <li>块级元素的宽度、高度以及外边距和内边距等都可以控制；</li>
+    <li>如果省略块级元素的宽度，那么它的宽度默认为当前浏览器窗口的宽度；</li>
+    <li>块级元素中可以包含其它的内联元素和块级元素。</li>
+  </ul>
+  <h2>内联元素</h2>
+  内联元素也可以称为行内元素，行内元素中最常用的是&lt;span&gt;，此外还有&lt;b&gt;、&lt;i&gt;、&lt;u&gt;、&lt;em&gt;、&lt;strong&gt;、&lt;sup&gt;、&lt;sub&gt;、&lt;big&gt;、&lt;small&gt;、&lt;li&gt;、&lt;ins&gt;、&lt;del&gt;、&lt;code&gt;、&lt;cite&gt;、&lt;dfn&gt;、&lt;kbd&gt;和&lt;var&gt;等。<br />
+  <br />
+  内联元素往往带有某种特殊的显示效果，可以代替部分 CSS 样式，非常实用，例如：
+  <ul>
+    <li>&lt;b&gt;和&lt;i&gt;标签可以修饰字体；</li>
+    <li>&lt;sub&gt;和&lt;sup&gt;两个标签分别用来定义下标文本和上标文本。</li>
+  </ul>
+  <br />
+  行内元素的主要特征如下所示：<br />
+  <ul>
+    <li>行内元素和其他元素会在同一行上显示；</li>
+    <li>行内元素的宽、高以及外边距和内边距都不可以改变；</li>
+    <li>行内元素的宽度就是其中内容的宽度，且不可以改变；</li>
+    <li>内联元素中只能容纳文本或者其他内联元素。</li>
+  </ul>
+  <br />
+  对于行内元素的使用，需要注意如下几点：<br />
+  <ul>
+    <li>设置宽度 width 无效；</li>
+    <li>设置高度 height 无效，但可以通过 line-height 来设置行高；</li>
+    <li>可以设置 margin 外边距，但只对左右外边距有效，上下无效；</li>
+    <li>设置 padding 内边距时，只有左右 padding 有效，上下则无效，需要注意的是元素范围是增大了，但是对元素周围的内容是没影响的；</li>
+    <li>可以通过 display 属性将元素在行内元素和块级元素之间进行切换。</li>
+  </ul>
+  <h2>重点说明两个标签</h2>
+  &lt;div&gt; 和 &lt;span&gt; 分别是最常用的块级元素和内联元素，我们有必要重点说明一下。
+  <h4>1) &lt;div&gt; 标签</h4>
+  &lt;div&gt; 是非常重要的块级标记，在网页布局（Layout）方面发挥着重要的作用，使用&lt;div&gt;我们可以定义页面的各个部分，通过与 CSS 相结合可以实现各种各样的效果，下面通过一个示例演示&lt;div&gt;标签的使用。
+  <div>
+    <div>
+      <pre><ol><li>&lt;!DOCTYPE html&gt;</li><li>&lt;html lang=&quot;en&quot;&gt;</li><li>&lt;head&gt;</li><li>    &lt;meta charset=&quot;UTF-8&quot;&gt;</li><li>    &lt;title&gt;&amp;lt;div&amp;gt;标签演示&lt;/title&gt;</li><li>&lt;/head&gt;</li><li>&lt;body&gt;</li><li>    &lt;p&gt;C语言中文网的《&lt;a href=&quot;http://c.biancheng.net/html/&quot; target=&quot;_blank&quot;&gt;HTML教程&lt;/a&gt;》是我们花费了数月时间倾力打造的，它通俗易懂，并且贴近实用。&lt;/p&gt;</li><li></li><li>    &lt;div style=&quot;padding:0px 20px;border:1px solid #ccc; background-color:#eee;&quot;&gt;</li><li>        &lt;h4&gt;HTML教程目录（部分）&lt;/h4&gt;</li><li>        &lt;ul&gt;</li><li>            &lt;li&gt;&lt;a href=&quot;/view/7410.html&quot; target=&quot;_blank&quot;&gt;网站到底是什么&lt;/a&gt;&lt;/li&gt;</li><li>            &lt;li&gt;&lt;a href=&quot;/view/9381.html&quot; target=&quot;_blank&quot;&gt;HTML是什么&lt;/a&gt;&lt;/li&gt;</li><li>            &lt;li&gt;&lt;a href=&quot;/view/9382.html&quot; target=&quot;_blank&quot;&gt;HTML标签的语法格式&lt;/a&gt;&lt;/li&gt;</li><li>            &lt;li&gt;&lt;a href=&quot;/view/9383.html&quot; target=&quot;_blank&quot;&gt;HTML属性的概念和使用&lt;/a&gt;&lt;/li&gt;</li><li>        &lt;/ul&gt;</li><li>    &lt;/div&gt;</li><li>&lt;/body&gt;</li><li>&lt;/html&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  运行效果如下图所示：
+  <div><img alt="HTML div标签演示" src="http://c.biancheng.net/uploads/allimg/210930/1-2109301111362Q.png" /><br />
+    图1：HTML &lt;div&gt; 标签演示</div>
+  <br />
+  &lt;div&gt; 标签及其包围的内容可以看做网页的一个板块，&lt;div&gt; 标签本身并没有什么特殊的显示效果，需要借助 CSS 样式对外边距、内边距、背景、边框等进行设置，从而达到对板块布局的目的。<br />
+  <h4>2) &lt;span&gt; 标签</h4>
+  HTML 中的&lt;span&gt;标签是一个内联元素，可以对 HTML 文档中的内容进行修饰，此标签不会为文档内容提供任何视觉效果，但可以与 CSS 结合使用来美化网页。下面通过一个示例来演示&lt;span&gt;标签的使用：
+  <div>
+    <div>
+      <pre><ol><li>&lt;!DOCTYPE html&gt;</li><li>&lt;html lang=&quot;en&quot;&gt;</li><li>&lt;head&gt;</li><li>&lt;meta charset=&quot;UTF-8&quot;&gt;</li><li>&lt;style type=&quot;text/css&quot;&gt;</li><li>    #profile span{</li><li>        display: inline-block;</li><li>        padding: 2px 4px;</li><li>        border: 1px solid #ddd;</li><li>        background-color: #f6f6f6;</li><li>        border-radius: 3px;</li><li>    }</li><li>&lt;/style&gt;</li><li>&lt;title&gt;&amp;lt;span&amp;gt;标签演示&lt;/title&gt;</li><li>&lt;/head&gt;</li><li>&lt;body&gt;</li><li>    &lt;h1&gt;C语言中文网&lt;span style=&quot;font-size:18px; color:#666;&quot;&gt;简介&lt;/span&gt;&lt;/h1&gt;</li><li>    &lt;p id=&quot;profile&quot;&gt;</li><li>        C语言中文网，一个在线学习&lt;b&gt;编程&lt;/b&gt;的网站，目前已经发布了将近 50&lt;sup&gt;①&lt;/sup&gt; 套教程，包括 &lt;span&gt;C语言&lt;/span&gt;、&lt;span&gt;C++&lt;/span&gt;、&lt;span&gt;Java&lt;/span&gt;、&lt;span&gt;Python&lt;/span&gt; 等，请&lt;a href=&quot;http://c.biancheng.net/sitemap/&quot; target=&quot;_blank&quot;&gt;猛击这里&lt;/a&gt;查看所有教程。</li><li>        &lt;hr /&gt;</li><li>        &lt;span style=&quot;font-size:14px;&quot;&gt;注①：C语言中文网会持续更新优质教程，教程数量将远远超过 50 套。&lt;/span&gt;</li><li>    &lt;/p&gt;</li><li>&lt;/body&gt;</li><li>&lt;/html&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  运行结果如下图所示：
+  <div><img alt="HTML span标签演示" src="http://c.biancheng.net/uploads/allimg/210930/1-210930150Q5603.png" /><br />
+    图2：HTML &lt;span&gt; 标签演示</div>
+  <br />
+  &lt;span&gt; 标签本身并没有什么特殊效果，通常需要借助 CSS 来改变内容的样式，比如字体、颜色、大小、边框、背景等。<br />
+  <br />
+  那些不被推荐的 HTML 内联标签，比如 &lt;font&gt;、&lt;small&gt;、&lt;big&gt; 等，建议使用 &lt;span&gt; + CSS 样式来代替；但是那么具有明确语义的内联标签，比如 &lt;strong&gt;、&lt;b&gt;、&lt;code&gt;、&lt;em&gt;、&lt;i&gt;、&lt;s&gt; 等，还是应该坚持使用，这些标签比 &lt;span&gt; 更加具有语义，更有助于搜索引擎理解页面内容。
+  <h2>元素的嵌套</h2>
+  大部分 HTML 元素都可以相互嵌套，并且嵌套深度也没有明确限制，这包括：
+  <ul>
+    <li>块级元素可以嵌套块级元素；</li>
+    <li>块级元素可以嵌套内联元素；</li>
+    <li>内联元素可以嵌套内联元素；</li>
+    <li>内联元素可以嵌套块级元素。</li>
+  </ul>
+  <br />
+  值得注意的是，一般不建议在内联元素中嵌套块级元素，这样不仅不符合开发规范，还会导致内联元素被撑开，独自占据一行。但是有时候又不得不这样做，比如<a href="http://c.biancheng.net/" target="_blank">C语言中文网首页</a>的教程列表，一个板块链接到一套教程，为了让读者点击板块的任何一个地方都能跳转到教程页面，我们就在 &lt;a&gt; 标签中嵌套了 &lt;div&gt;、&lt;h4&gt; 和 &lt;p&gt; 标签，代码如下：
+  <div>
+    <div>
+      <pre><ol><li>&lt;a href=&quot;/html/&quot; target=&quot;_blank&quot; class=&quot;clearfix&quot;&gt;</li><li>    &lt;div class=&quot;image&quot;&gt;</li><li>        &lt;img align=&quot;center&quot; src=&quot;/templets/new/images/index_pc/icon_html.png&quot; alt=&quot;HTML图标&quot;&gt;</li><li>    &lt;/div&gt;</li><li>    &lt;div class=&quot;desc&quot;&gt;</li><li>        &lt;h4&gt;HTML教程&lt;/h4&gt;</li><li>        &lt;p&gt;HTML是一种专门开发网页的标记语言，由浏览器解析。&lt;/p&gt;</li><li>    &lt;/div&gt;</li><li>&lt;/a&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  总之，这是一条建议，不是强制规定。
+  <h2>块级元素和内联元素的转换</h2>
+  标签的很多默认行为都可以借助 CSS 改变，显示类型也不例外，我们可以通过 <a href="http://c.biancheng.net/css3/display.html" target="_blank">CSS display</a> 属性将块级元素修改为内联元素，或者将内联元素修改为块级元素，或者兼具两者优点，将标签设置为行内块级元素。<br />
+  <br />
+  CSS 虽然可以改变标签的显示类型，但是不能改变标签的语义，读者还是应该根据语义去使用标签，例如：
+  <ul>
+    <li>&lt;div&gt; 标签用来布局，而不用来显示文本；</li>
+    <li>&lt;p&gt; 标签用来显示文本，而不用来布局；</li>
+    <li>&lt;strong&gt; 标签用来强调文本，加粗只是附带效果；</li>
+    <li>&lt;b&gt; 标签用来从视觉上加粗文本，引起读者注意。</li>
+  </ul>
+</div>
+<p><a name="16" id="116"></a></p>
+<h1>HTML布局（附带示例）</h1>
+<div id="ggxc-arctop-pc-16"></div>
+<div id="arc-body17">网页布局是创建一个网站时一个必不可少的过程，通过布局可以改变网页中内容的排列方式，让网页看起来更加合理、美观。在布局的过程中您还可以使用 CSS 来修改 HTML 标签的样式或者使用 JavaScript 来为网页添加一些特殊效果。<br />
+    <br />
+  前面在介绍《<a href="http://c.biancheng.net/view/9392.html" target="_blank">HTML块级元素和内联元素</a>》时提到过 &lt;div&gt; 标签，它是一个专门用来布局的标签，HTML4 主要依赖 &lt;div&gt; 标签进行布局。但是，&lt;div&gt; 是一个包罗万象的标签，不具有明确的语义，不能指明当前板块的作用，也不利于搜索引擎理解页面内容。<br />
+  <br />
+  为了改进传统布局模式，HTML5 提出了多个专门用于布局的标签，它们用来定义网页的不同部分，语义更加明确。HTML5 布局标签如下：<br />
+  <br />
+  <table>
+    <tbody>
+      <tr>
+        <th>标签</th>
+        <th>说明</th>
+      </tr>
+      <tr>
+        <td>&lt;header&gt;</td>
+        <td>用于定义网页的头部，头部中一般包含一些介绍性的内容，例如网站名称、logo 或者作者的信息。</td>
+      </tr>
+      <tr>
+        <td>&lt;nav&gt;</td>
+        <td>用于定义网页中的导航栏。</td>
+      </tr>
+      <tr>
+        <td>&lt;section&gt;</td>
+        <td>用于在网页中定义一个单独的部分，其中可以包含文本、图像、表格等等。<br />
+            <br />
+          &lt;section&gt; 代表 HTML 文档中的“节”或“段”，“段”可以理解为一篇文章里按照主题的分段，“节”则可以理解为一个页面里的分组。其主要作用就是对页面的内容进行分块或者对文章的内容进行分段。</td>
+      </tr>
+      <tr>
+        <td>&lt;article&gt;</td>
+        <td>用于定义文章或者其它独立的信息，代表一个页面中自成一体的内容，例如论坛的帖子、博客上的文章、一篇用户的评论等。</td>
+      </tr>
+      <tr>
+        <td>&lt;aside&gt;</td>
+        <td>用于定义网页内容以外的部分，例如网页的侧边栏。</td>
+      </tr>
+      <tr>
+        <td>&lt;footer&gt;</td>
+        <td>用于定义网页的底部，例如作者、版权等信息。</td>
+      </tr>
+      <tr>
+        <td>&lt;details&gt;</td>
+        <td>用于定义一些详细信息，并且可以根据需要隐藏或显示这些详细信息。</td>
+      </tr>
+      <tr>
+        <td>&lt;summary&gt;</td>
+        <td>用于为&lt;details&gt;标签定义标题。</td>
+      </tr>
+    </tbody>
+  </table>
+  <br />
+  各个标签适用的板块如下图所示：<br />
+  <div><img alt="HTML布局标签演示" src="http://c.biancheng.net/uploads/allimg/210930/162FV3D-0.gif" /><br />
+    图1：HTML 布局标签演示</div>
+  <br />
+  下面通过一个示例来演示如何使用上面介绍的标签来为网页布局：
+  <div>
+    <div>
+      <pre><ol><li>&lt;!DOCTYPE html&gt;</li><li>&lt;html lang=&quot;en&quot;&gt;</li><li>&lt;head&gt;</li><li>&lt;meta charset=&quot;utf-8&quot;&gt;</li><li>&lt;title&gt;HTML网页布局&lt;/title&gt;</li><li>&lt;style&gt;</li><li>    body {</li><li>        font: 14px Arial,sans-serif;</li><li>        margin: 0px;</li><li>    }</li><li>    header {</li><li>        padding: 10px 20px;</li><li>        background: #acb3b9;</li><li>    }</li><li>    header h1 {</li><li>        font-size: 24px;</li><li>    }</li><li>    .container {</li><li>        width: 100%;</li><li>        background: #f2f2f2;</li><li>    }</li><li>    nav, section {</li><li>        float: left;</li><li>        padding: 20px;</li><li>        min-height: 170px;</li><li>        box-sizing: border-box;</li><li>    }</li><li>    section {</li><li>        width: 80%;</li><li>    }</li><li>    nav {</li><li>        width: 20%;           </li><li>        background: #d4d7dc;</li><li>    }  </li><li>    nav ul {</li><li>        list-style: none;</li><li>        line-height: 24px;</li><li>        padding: 0px;</li><li>    }</li><li>    nav ul li a {</li><li>        color: #333;</li><li>    }</li><li>    .clearfix:after {</li><li>        content: &quot;.&quot;;</li><li>        display: block;</li><li>        height: 0;</li><li>        clear: both;</li><li>        visibility: hidden;</li><li>    }</li><li>    footer {</li><li>        background: #acb3b9;          </li><li>        text-align: center;</li><li>        padding: 5px;</li><li>    }</li><li>&lt;/style&gt;</li><li>&lt;/head&gt;</li><li>&lt;body&gt;</li><li>    &lt;div class=&quot;container&quot;&gt;</li><li>        &lt;header&gt;</li><li>            &lt;h1&gt;C语言中文网&lt;/h1&gt;</li><li>        &lt;/header&gt;</li><li>        &lt;div class=&quot;wrapper clearfix&quot;&gt;</li><li>            &lt;nav&gt;</li><li>                &lt;ul&gt;</li><li>                    &lt;li&gt;&lt;a href=&quot;http://c.biancheng.net/&quot;&gt;首页&lt;/a&gt;&lt;/li&gt;</li><li>                    &lt;li&gt;&lt;a href=&quot;http://c.biancheng.net/html/&quot;&gt;HTML教程&lt;/a&gt;&lt;/li&gt;</li><li>                    &lt;li&gt;&lt;a href=&quot;http://c.biancheng.net/css3/&quot;&gt;CSS教程&lt;/a&gt;&lt;/li&gt;</li><li>                    &lt;li&gt;&lt;a href=&quot;http://c.biancheng.net/js/&quot;&gt;JS教程&lt;/a&gt;&lt;/li&gt;</li><li>                    &lt;li&gt;&lt;a href=&quot;http://c.biancheng.net/java/&quot;&gt;Java教程&lt;/a&gt;&lt;/li&gt;</li><li>                    &lt;li&gt;&lt;a href=&quot;http://c.biancheng.net/python/&quot;&gt;Python教程&lt;/a&gt;&lt;/li&gt;</li><li>                &lt;/ul&gt;</li><li>            &lt;/nav&gt;</li><li>            &lt;section&gt;</li><li>                &lt;h2&gt;网站简介&lt;/h2&gt;</li><li>                &lt;p&gt;C语言中文网创办于 2012 年初，是一个在线学习&lt;b&gt;编程&lt;/b&gt;的网站。C语言中文网已经发布了众多优质编程教程，包括C语言、C++、Java、Python 等，它们都通俗易懂，深入浅出。&lt;/p&gt;</li><li>                &lt;p&gt;C语言中文网将会持续更新，并且不忘初心，坚持创作优质教程。&lt;/p&gt;</li><li>            &lt;/section&gt;</li><li>        &lt;/div&gt;</li><li>        &lt;footer&gt;</li><li>            &lt;p&gt;www.biancheng.net&lt;/p&gt;</li><li>        &lt;/footer&gt;</li><li>    &lt;/div&gt;</li><li>&lt;/body&gt;</li><li>&lt;/html&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  运行结果如下：
+  <div><img alt="HTML布局示例" src="http://c.biancheng.net/uploads/allimg/210930/1-2109301G61B03.png" /><br />
+    图2：HTML 布局示例</div>
+</div>
+<p><a name="17" id="117"></a></p>
+<h1>HTML &lt;iframe&gt;标签：内联框架</h1>
+<div id="ggxc-arctop-pc-17"></div>
+<div id="arc-body18">HTMl &lt;iframe&gt; 标签用来定义一个内联框架，使用它可以将另一个网页嵌入到当前网页中。&lt;iframe&gt; 标签会在网页中定义一个矩形区域，浏览器可以在这个区域内显示另一个页面的内容。<br />
+    <br />
+  &lt;iframe&gt; 标签的语法格式如下：<br />
+  <p>&lt;iframe src=&quot;url&quot; width=&quot;m&quot; height=&quot;n&quot;&gt;&lt;/iframe&gt;</p>
+  src 属性用来指定要嵌入的网页的地址；width 和 height 属性用来指定框架的宽度和高度，默认单位是像素，当然您也可以使用百分比。
+  <p>HTML &lt;iframe&gt; 标签不利于搜索引擎抓取页面内容，对 SEO 具有负面效果，在现代 Web 设计中不建议使用。</p>
+  下表列举了 &lt;iframe&gt; 标签的所有属性：<br />
+  <table>
+    <tbody>
+      <tr>
+        <th>属性</th>
+        <th>值</th>
+        <th>描述</th>
+      </tr>
+      <tr>
+        <td>align</td>
+        <td>left、right、top、middle、bottom</td>
+        <td>HTML5 不支持，HTML 4.01 已废弃。设置如何来对齐 &lt;iframe&gt;。</td>
+      </tr>
+      <tr>
+        <td>frameborder</td>
+        <td>1、0</td>
+        <td>HTML5 不支持。设置是否显示 &lt;iframe&gt; 周围的边框。</td>
+      </tr>
+      <tr>
+        <td>height</td>
+        <td>像素</td>
+        <td>设置 &lt;iframe&gt; 的高度。</td>
+      </tr>
+      <tr>
+        <td>longdesc</td>
+        <td>URL</td>
+        <td>HTML5 不支持。设置一个页面，该页面中包含了有关 &lt;iframe&gt; 的描述。</td>
+      </tr>
+      <tr>
+        <td>marginheight</td>
+        <td>像素</td>
+        <td>HTML5 不支持。设置 &lt;iframe&gt; 的顶部和底部的边距。</td>
+      </tr>
+      <tr>
+        <td>marginwidth</td>
+        <td>像素</td>
+        <td>HTML5 不支持。设置 &lt;iframe&gt; 的左侧和右侧的边距。</td>
+      </tr>
+      <tr>
+        <td>name</td>
+        <td>text</td>
+        <td>设置 &lt;iframe&gt; 的名称。</td>
+      </tr>
+      <tr>
+        <td>sandbox</td>
+        <td>&quot;&quot;、allow-forms、allow-same-origin、allow-scripts、allow-top-navigation</td>
+        <td>对 &lt;iframe&gt; 的内容定义一系列额外的限制。</td>
+      </tr>
+      <tr>
+        <td>scrolling</td>
+        <td>yes、no、auto</td>
+        <td>HTML5 不支持。设置是否在 &lt;iframe&gt; 中显示滚动条。</td>
+      </tr>
+      <tr>
+        <td>seamless</td>
+        <td>seamless</td>
+        <td>让 &lt;iframe&gt; 看起来像是父文档中的一部分（即没有边框和滚动条）。</td>
+      </tr>
+      <tr>
+        <td>src</td>
+        <td>URL</td>
+        <td>设置要在 &lt;iframe&gt; 中显示的文档地址（URL）。</td>
+      </tr>
+      <tr>
+        <td>srcdoc</td>
+        <td>HTML 代码</td>
+        <td>设置 &lt;iframe&gt; 中要显示的内容，该属性会覆盖 src 属性。</td>
+      </tr>
+      <tr>
+        <td>width</td>
+        <td>像素</td>
+        <td>设置 &lt;iframe&gt; 的宽度。</td>
+      </tr>
+    </tbody>
+  </table>
+  <h2>HTML &lt;iframe&gt; 示例</h2>
+  下面的几个实例演示了 &lt;iframe&gt; 标签的使用。
+  <h4>示例1</h4>
+  为内联框架设置高度和宽度。
+  <div>
+    <div>
+      <pre><ol><li>&lt;!DOCTYPE html&gt;</li><li>&lt;html lang=&quot;en&quot;&gt;</li><li>&lt;head&gt;</li><li>&lt;meta charset=&quot;utf-8&quot;&gt;</li><li>&lt;title&gt;HTML &amp;lt;iframe&amp;gt; 标签演示&lt;/title&gt;</li><li>&lt;/head&gt;</li><li>&lt;body&gt;</li><li>    &lt;p&gt;下面的内联框架将嵌入C语言中文网首页，宽度设置为 330 像素，高度设置为 580 像素，用以模拟手机端的显示效果。&lt;/p&gt;</li><li>    &lt;iframe src=&quot;http://c.biancheng.net/&quot; width=&quot;330&quot; height=&quot;580&quot;&gt;&lt;/iframe&gt;</li><li>&lt;/body&gt;</li><li>&lt;/html&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  显示效果：
+  <div><img alt="HTML内联框架演示" src="http://c.biancheng.net/uploads/allimg/211008/1-21100Q6302B48.png" /></div>
+  <h4>示例2</h4>
+  在 &lt;iframe&gt; 中打开指定页面。
+  <div>
+    <div>
+      <pre><ol><li>&lt;!DOCTYPE html&gt;</li><li>&lt;html lang=&quot;en&quot;&gt;</li><li>&lt;head&gt;</li><li>&lt;meta charset=&quot;utf-8&quot;&gt;</li><li>&lt;title&gt;HTML &amp;lt;iframe&amp;gt; 标签演示&lt;/title&gt;</li><li>&lt;style type=&quot;text/css&quot;&gt;</li><li>    #myframe{</li><li>        border: 1px solid #ddd;</li><li>        background-color: #f6f6f6;</li><li>    }</li><li>&lt;/style&gt;</li><li>&lt;/head&gt;</li><li>&lt;body&gt;</li><li>    &lt;p&gt;&lt;a href=&quot;http://c.biancheng.net/&quot; target=&quot;myframe&quot;&gt;猛击这里查看C语言中文网在手机端的显示效果&lt;/a&gt;&lt;/p&gt;</li><li>    &lt;iframe id=&quot;myframe&quot; name=&quot;myframe&quot; width=&quot;330&quot; height=&quot;580&quot;&gt;&lt;/iframe&gt;</li><li>&lt;/body&gt;</li><li>&lt;/html&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  显示效果：
+  <div><img alt="在iframe中打开指定页面" src="http://c.biancheng.net/uploads/allimg/211008/1-21100Q6411MY.png" /></div>
+  <br />
+  点击链接，即可在灰色板块中打开C语言中文网首页。<br />
+  <br />
+  注意，要想实现上述效果，需要为 &lt;iframe&gt; 标签设置 name 属性，并将 &lt;a&gt; 标签中 target 属性的值设置为 name 属性的值。
+  <h4>示例3</h4>
+  &lt;iframe&gt; 标签除了可以嵌入网页，还可以嵌入图片、视频等其它资源，嵌入的图片可以直接在当前页面上显示，嵌入的视频可以直接在当前页面上播放。请看下面的代码：
+  <div>
+    <div>
+      <pre><ol><li>&lt;!DOCTYPE html&gt;</li><li>&lt;html lang=&quot;en&quot;&gt;</li><li>&lt;head&gt;</li><li>&lt;meta charset=&quot;utf-8&quot;&gt;</li><li>&lt;title&gt;HTML &amp;lt;iframe&amp;gt; 标签演示&lt;/title&gt;</li><li>&lt;/head&gt;</li><li>&lt;body&gt;</li><li>    &lt;p&gt;在 HTML 内联框架中嵌入C语言中文网 Logo。&lt;/p&gt;</li><li>    &lt;iframe src=&quot;./logo.png&quot; width=&quot;300&quot; height=&quot;73&quot; scrolling=&quot;no&quot; style=&quot;border:1px solid #ddd;&quot;&gt;&lt;/iframe&gt;</li><li>&lt;/body&gt;</li><li>&lt;/html&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  运行效果：
+  <div><img alt="在HTML iframe标签中嵌入图片" src="http://c.biancheng.net/uploads/allimg/211008/1-21100QA954245.png" /></div>
+  <br />
+  嵌入其它资源时，需要将 &lt;iframe&gt; 标签的 src 属性设置为资源地址。</div>
+<p><a name="18" id="118"></a> </p>
+<h1>HTML &lt;head&gt;标签：头部</h1>
+<div></div>
+<div id="ggxc-arctop-pc-18"></div>
+<div id="arc-body19">HTML 中的 &lt;head&gt; 标签是所有头部标签的容器，这些头部标签用来定义有关 HTML 文档的元数据（描述数据的数据）以及所需资源的引用（例如 CSS 样式文件、JavaScript 脚本文件），对文档能够在浏览器中正确显示起到了非常重要的作用。根据我们的需求，可以在 HTML 头部定义大量的元数据，也可以定义很少或者根本就不定义。虽然头部标签是 HTML 文档的一部分，但其中的内容并不会显示在浏览器中。<br />
+    <br />
+  在 &lt;head&gt; 标签中可以使用的头部标签有 &lt;title&gt;、&lt;base&gt;、&lt;link&gt;、&lt;style&gt;、&lt;meta&gt;、&lt;script&gt; 和 &lt;noscript&gt; 等，下面就来简单介绍一下它们。<br />
+  <h2>1. &lt;title&gt; 标签</h2>
+  &lt;title&gt; 标签用来定义 HTML 文档的标题，只有包含 &lt;title&gt; 标签的文档才算是一个有效的 HTML 文档。另外，一个 HTML 文档中仅允许存在一个 &lt;title&gt; 标签，并且 &lt;title&gt; 标签必须放置在 &lt;head&gt; 标签中。<br />
+  <p>注意，在 &lt;title&gt; 标签内部仅允许包含纯文本内容，不能包含其他 HTML 标签。</p>
+  &lt;title&gt; 标签的主要作用如下所示：<br />
+  <ul>
+    <li>在浏览器标题栏或者任务栏中显示标题；</li>
+    <li>当将页面添加到收藏夹（书签）时提供标题；</li>
+    <li>在搜索结果中显示页面标题。</li>
+  </ul>
+  <br />
+  下面的示例演示了如何在 HTML 文档中使用 &lt;title&gt; 标签：
+  <div>
+    <div>
+      <pre><ol><li>&lt;head&gt;</li><li>    &lt;meta charset=&quot;utf-8&quot;&gt;</li><li>    &lt;title&gt;C语言中文网：一个在线学习编程的网站&lt;/title&gt;</li><li>&lt;/head&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  <br />
+  &lt;title&gt; 标签的内容必须与当前文档有关，并且不应该过长，中文页面请尽量控制在 30 个字符（包括空格）以内。
+  <h2>2. &lt;base&gt; 标签</h2>
+  &lt;base&gt; 标签用于为页面中所有相对链接指定一个基本链接，当您设置了基本链接后，当前页面中的所有相对链接都会使用这个基本链接作为前缀，如下例所示：<br />
+  <div>
+    <div>
+      <pre><ol><li>&lt;!DOCTYPE html&gt;</li><li>&lt;html lang=&quot;en&quot;&gt;</li><li>&lt;head&gt;</li><li>    &lt;meta charset=&quot;utf-8&quot;&gt;</li><li>    &lt;title&gt;&amp;lt;base&amp;gt;标签演示&lt;/title&gt;</li><li>    &lt;base href=&quot;http://c.biancheng.net/&quot;&gt;</li><li>&lt;/head&gt;</li><li>&lt;body&gt;</li><li>    &lt;ul&gt;</li><li>        &lt;li&gt;&lt;a href=&quot;index.html&quot;&gt;首页&lt;/a&gt;&lt;/li&gt;</li><li>        &lt;li&gt;&lt;a href=&quot;html/index.html&quot;&gt;HTML教程&lt;/a&gt;&lt;/li&gt;</li><li>    &lt;/ul&gt;</li><li>&lt;/body&gt;</li><li>&lt;/html&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  上面的示例中第一个 &lt;li&gt; 标签中的超链接会被解析为“http://c.biancheng.net/index.html”，第二个 &lt;li&gt; 中的超链接会被解析为“http://c.biancheng.net/html/index.html”。<br />
+  <p>注意，HTML 文档中的 &lt;base&gt; 标签必须出现在任何引用外部资源的标签之前，而且一个 HTML 文档中仅允许定义一个 &lt;base&gt; 标签。</p>
+  <h2>3. &lt;link&gt; 标签</h2>
+  &lt;link&gt; 标签经常用于引用外部 CSS 样式表，&lt;link&gt; 标签中包含两个主要的属性，分别是 rel 和 href。rel 属性用来指示引用文件的类型，href 属性用来设置外部文件的路径。示例代码如下：<br />
+  <p>&lt;head&gt;<br />
+        
+    &lt;title&gt;此处书写标题&lt;/title&gt;<br />
+        
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;common.css&quot;&gt;<br />
+    &lt;/head&gt;</p>
+  <p>HTML &lt;head&gt; 标签中可以包含任意数量的 &lt;link&gt; 标签。</p>
+  <h2>4、&lt;style&gt;</h2>
+  使用 &lt;style&gt; 标签可以在 HTML 文档中嵌入 CSS 样式，需要注意的是在 &lt;style&gt; 标签中定义的样式仅对当前 HTML 文档有效。示例代码如下：<br />
+  <div>
+    <div>
+      <pre><ol><li>&lt;head&gt;</li><li>    &lt;title&gt;此处书写标题&lt;/title&gt;</li><li>    &lt;style&gt;</li><li>        body { background-color: YellowGreen; }</li><li>        h1 { color: red; }</li><li>        p { color: green; }</li><li>    &lt;/style&gt;</li><li>&lt;/head&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  <p>注意：对于文档中的唯一样式可以使用 &lt;style&gt; 标签，但对于在多个文档中通用的样式，使用外部样式表更为合适。关于在 HTML 中嵌入 CSS 的更多内容，请转到《<a href="http://c.biancheng.net/view/1293.html" target="_blank">HTML嵌入CSS样式（四种方法）</a>》。</p>
+  <h2>5. &lt;meta&gt; 标签</h2>
+  &lt;meta&gt; 标签用于提供有关 HTML 文档的元数据，例如页面有效期、页面作者、关键字列表、页面描述等信息。&lt;meta&gt; 标签定义的数据并不会显示在页面上，但却会被浏览器解析。<br />
+  <h4>1) 定义字符集</h4>
+  <p>&lt;meta charset=&quot;UTF-8&quot;&gt;</p>
+  charset 属性用来指定 HTML 文档的字符编码，上面的示例中，我们将文档的字符编码设置为了“UTF-8”。<br />
+  <h4>2) 定义页面描述</h4>
+  <p>&lt;meta name=&quot;description&quot; content=&quot;HTML 是 Hyper Text Markup Language 的简写，表示超文本标记语言，同时 HTML 也是我们学习前端开发的基础。随着 web 前端技术的飞速发展，HTML 和 CSS 也成为了编程者的必备技能。&quot;&gt;</p>
+  定义页面的描述信息有利于搜索引擎的搜索。
+  <p>&lt;title&gt; 标签定义文档标题，name=&quot;description&quot; 定义文档描述，描述的长度通常大于标题。</p>
+  <h4>3) 定义关键字</h4>
+  <p>&lt;meta name=&quot;keywords&quot; content=&quot;HTML, HTML教程, HTML入门&quot;&gt;</p>
+  关键字用于为搜索引擎提供与页面有关的信息。<br />
+  <h4>4) 定义页面作者</h4>
+  <p>&lt;meta name=&quot;author&quot; content=&quot;严长生&quot;&gt;</p>
+  通过某些内容管理系统可以自动提取作者信息。<br />
+  <h4>5) 刷新页面</h4>
+  <p>&lt;meta http-equiv=&quot;refresh&quot; content=&quot;30&quot;&gt;</p>
+  上例中的代码用于向浏览器发送一个指令，使浏览器在经过指定的时间间隔（30 秒）后自动刷新页面。在 content 属性中除了可以指定时间间隔外，还可以再指定一个链接，这时页面将在指定的时间后重定向到链接所指向的页面，如下例所示：<br />
+  <p>&lt;meta http-equiv=&quot;refresh&quot; content=&quot;10; url=https://c.biancheng.net/&quot;&gt;</p>
+  <h2>6. &lt;script&gt; 标签</h2>
+  &lt;script&gt; 标签用于定义 JavaScript 脚本，示例代码如下：<br />
+  <p>&lt;head&gt;<br />
+        
+    &lt;title&gt;C语言中文网&lt;/title&gt;<br />
+        
+    &lt;script&gt;<br />
+            
+    document.write(&quot;C语言中文网&quot;)<br />
+        
+    &lt;/script&gt;<br />
+    &lt;/head&gt;</p>
+  有关 &lt;script&gt; 标签的详细介绍请查阅《HTML与JavaScript》一节。<br />
+  <h2>7. &lt;noscript&gt; 标签</h2>
+  当用户的浏览器不支持 JavaScript 脚本或者禁用 JavaScript 脚本时，可以在 &lt;noscript&gt; 标签中定义一些内容来替代不能运行的 JavaScript 脚本或者给用户一些提示。除了 &lt;script&gt; 标签外，在 &lt;noscript&gt; 标签中可以包含任何 HTML 元素，如下例所示：<br />
+  <div>
+    <div>
+      <div>
+        <pre><a href="http://c.biancheng.net/view/9395.html#">纯文本</a><a href="http://c.biancheng.net/view/9395.html#">复制</a></pre>
+      </div>
+      <pre><ol><li>&lt;head&gt;</li><li>    &lt;title&gt;C语言中文网&lt;/title&gt;</li><li>    &lt;noscript&gt;</li><li>        &lt;p&gt;您的浏览器不支持 JavaScript 或者您禁用了 JavaScript，请&lt;a href=&quot;http://yangan.com&quot;&gt;点击这里&lt;/a&gt;了解如何启用 JavaScript。&lt;/p&gt;</li><li>    &lt;/noscript&gt;</li><li>&lt;/head&gt;</li></ol></pre>
+    </div>
+  </div>
+</div>
+<dl>
+  <dt>&nbsp;</dt>
+</dl>
+<dl>
+  <dt>&nbsp;</dt>
+</dl>
+<p align="left" class="STYLE1">&nbsp;</p>
+</body>
+</html>

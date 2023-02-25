@@ -1,0 +1,1297 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>阳安网</title>
+<link rel="icon" href="D://本地磁盘/yaw/Release/1.ico" >
+<style type="text/css">
+<!--
+.STYLE1 {font-size: 36px
+}
+body {
+	background-color: #FFFFFF;
+}
+-->
+</style>
+</head>
+
+<body>
+<h1><a href="xbc.html"><span class="STYLE1"><img src="xya.png" width="50" height="50" /></span></a><span class="STYLE1">阳安网</span><a href="xbc.html">返回</a> <a name="0" id="0"></a></h1>
+<h1 align="center" class="STYLE1">json</h1>
+<h1>JSON教程（非常详细）</h1>
+<div></div>
+<div id="ggxc-arctop-pc-1"></div>
+<div id="arc-body"><img alt="json格式图标" src="http://c.biancheng.net/uploads/allimg/211109/4-211109100219600.png" />JSON 全称“JavaScript Object Notation”，译为“JavaScript 对象简谱”或“JavaScript 对象表示法”，是一种轻量级的、基于文本的、开放的数据交换格式，在 Web 开发领域有着举足轻重的地位，如果您想在 Web 开发领域大展身手的话，就必须了解 JSON。<br />
+    <br />
+  JSON 是最受欢迎的、使用最广泛的数据交换格式之一，它由 Douglas Crockford（道格拉斯·克罗克福特）在 2000 年初发明，主要用来在网络中传输数据。<br />
+  <br />
+  本套 JSON 教程主要针对 JSON 的基础知识进行了讲解，例如：语法、数据类型、创建和解析 JSON 数据等，并通过示例加以演示，以便您能更好的理解 JSON 的使用。<br />
+  <h2>读者</h2>
+  本教程旨在帮助初学者了解 JSON，通过本教程您将对 JSON 有一个很好的理解，并掌握如何在 PHP、Python、Java、JavaScript 等编程语言中使用 JSON。<br />
+  <h2>阅读条件</h2>
+在学习本教程之前，您需要对 Web 应用程序的工作原理有一个基本的了解，并且掌握一门编程语言，例如 PHP、Python、Java、JavaScript。</div>
+<div id="data-package" typeid="432"></div>
+<dl id="arc-list">
+  <dt>教程目录：</dt>
+  <dd>1. <a href="#1">JSON是什么？</a></dd>
+  <dd>2. <a href="#2">JSONP是什么？</a></dd>
+  <dd>3. <a href="#3">JSON语法规则</a></dd>
+  <dd>4. <a href="#4">JSON数据类型</a></dd>
+  <dd>5. <a href="#5">JSON对象（object）</a></dd>
+  <dd>6. <a href="#6">JSON数组（array）</a></dd>
+  <dd>7. <a href="#7">JSON注释</a></dd>
+  <dd>8. <a href="#8">JSON schema（模式）</a></dd>
+  <dd>9. <a href="#9">JSON和XML的区别</a></dd>
+  <dd>10. <a href="#10">JSON和BSON的区别</a></dd>
+  <dd>11. <a href="#11">JSON对比工具</a></dd>
+  <dd>12. <a href="#12">PHP JSON的解析和创建</a></dd>
+  <dd>13. <a href="#13">Python JSON的解析和创建</a></dd>
+  <dd>14. <a href="#14">Java JSON的解析和创建</a></dd>
+  <dd>15. <a href="#15">Ajax获取JSON数据</a></dd>
+</dl>
+<p><a name="1" id="1"></a></p>
+<h1>JSON是什么？</h1>
+<div id="ggxc-arctop-pc-2"></div>
+<div id="arc-body2">JSON 全称“JavaScript Object Notation”，译为“JavaScript 对象简谱”或“JavaScript 对象表示法”，是一种轻量级的、基于文本的、开放的数据交换格式。JSON 在 Web 开发领域有着举足轻重的地位，如果您想在 Web 开发领域大展身手的话，就必须了解 JSON。<br />
+    <p>数据交换是指，两个设备之间建立连接并互相传递数据的过程。</p>
+  尽管 JSON 的名称中包含“JavaScript”，但它并不是只能在 JavaScript 中使用，大多数编程语言都支持 JSON（有些本身就支持，有些可以通过第三方库得到支持），例如 JavaScript、Java、PHP、Python、C++ 等。<br />
+  <h2>什么是 JSON？</h2>
+  JSON 是一种纯字符串形式的数据，它本身不提供任何方法（函数），非常适合在网络中进行传输。JavaScript、PHP、Java、Python、C++ 等编程语言中都内置了处理 JSON 数据的方法。<br />
+  <br />
+  JSON 是基于 JavaScript（Standard ECMA-262 3rd Edition - December 1999）的一个子集，是一种开放的、轻量级的数据交换格式，采用独立于编程语言的文本格式来存储和表示数据，易于程序员阅读与编写，同时也易于计算机解析和生成，通常用于在 Web 客户端（浏览器）与 Web 服务器端之间传递数据。<br />
+  <br />
+  在 JSON 中，使用以下两种方式来表示数据：<br />
+  <ul>
+    <li>Object（对象）：键/值对（名称/值）的集合，使用花括号{ }定义。在每个键/值对中，以键开头，后跟一个冒号:，最后是值。多个键/值对之间使用逗号,分隔，例如{&quot;name&quot;:&quot;C语言中文网&quot;,&quot;url&quot;:&quot;http://c.biancheng.net&quot;}；</li>
+    <li>Array（数组）：值的有序集合，使用方括号[ ]定义，数组中每个值之间使用逗号,进行分隔。</li>
+  </ul>
+  <br />
+  下面展示了一个简单的 JSON 数据：<br />
+  <div>
+    <div>
+      <pre><ol><li>{</li><li>    &quot;Name&quot;:&quot;C语言中文网&quot;,</li><li>    &quot;Url&quot;:&quot;http://c.biancheng.net/&quot;,</li><li>    &quot;Tutorial&quot;:&quot;JSON&quot;,</li><li>    &quot;Article&quot;:[</li><li>        &quot;JSON 是什么？&quot;,</li><li>        &quot;JSONP 是什么？&quot;,</li><li>        &quot;JSON 语法规则&quot;</li><li>    ]</li><li>}</li></ol>
+  </pre>
+    </div>
+  </div>
+  <h2>JSON 发展史</h2>
+  2000 年初，Douglas Crockford（道格拉斯·克罗克福特）发明了 JSON，并从 2001 年开始推广使用。同年 4 月，位于旧金山湾区某车库的一台计算机发出了首个 JSON 格式的数据，这是计算机历史上的重要时刻。<br />
+  <br />
+  <div><img alt="道格拉斯·克罗克福特" src="http://c.biancheng.net/uploads/allimg/211109/1013032A9-0.jpg" /><br />
+    图：道格拉斯·克罗克福特</div>
+  <br />
+  2005-2006 年，JSON 正式成为主流的数据格式，雅虎、谷歌等知名网站开始广泛使用 JSON 格式。<br />
+  <br />
+  2013 年，ECMA International（欧洲计算机制造商协会）制定了 JSON 的语法标准——<a href="https://www.ecma-international.org/publications-and-standards/standards/ecma-404/" target="_blank">ECMA-404</a>。<br />
+  <br />
+  经过 20 年左右的发展，JSON 已经替代了 XML，成为了 Web 开发中首选的数据交换格式。<br />
+  <h2>为什么要使用 JSON？</h2>
+  JSON 并不是唯一能够实现在互联网中传输数据的方式，除此之外还有一种 XML 格式。JSON 和 XML 能够执行许多相同的任务，那么我们为什么要使用 JSON，而不是 XML 呢？<br />
+  <br />
+  之所以使用 JSON，最主要的原因是 JavaScript。众所周知，JavaScript 是 Web 开发中不可或缺的技术之一，而 JSON 是基于 JavaScript 的一个子集，JavaScript 默认就支持 JSON，而且只要您学会了 JavaScript，就可以轻松地使用 JSON，不需要学习额外的知识。<br />
+  <br />
+  另一个原因是 JSON 比 XML 的可读性更高，而且 JSON 更加简洁，更容易理解。<br />
+  <br />
+  与 XML 相比，JSON 具有以下优点：<br />
+  <ul>
+    <li>结构简单、紧凑：与 XML 相比，JSON 遵循简单、紧凑的风格，有利于程序员编辑和阅读，而 XML 相对比较复杂；</li>
+    <li>更快：JSON 的解析速度比 XML 更快（因为 XML 与 HTML 很像，在解析大型 XML 文件时需要消耗额外的内存），存储同样的数据，JSON 格式所占的存储空间更小；</li>
+    <li>可读性高：JSON 的结构有利于程序员阅读。</li>
+  </ul>
+  <h2>JSON 的不足</h2>
+  任何事物都不可能十全十美，JSON 也不例外，比如：<br />
+  <ul>
+    <li>只有一种数字类型：JSON 中只支持 IEEE-754 双精度浮点格式，因此您无法使用 JSON 来存储许多编程语言中多样化的数字类型；</li>
+    <li>没有日期类型：在 JSON 中您只能通过日期的字符串（例如：1970-01-01）或者时间戳（例如：1632366361）来表示日期；</li>
+    <li>没有注释：在 JSON 中无法添加注释；</li>
+    <li>冗长：虽然 JSON 比 XML 更加简洁，但它并不是最简洁的数据交换格式，对于数据量庞大或用途特殊的服务，您需要使用更加高效的数据格式。</li>
+  </ul>
+  <h2>JSON 应该如何存储？</h2>
+  JSON 数据可以存储在 .json 格式的文件中（与 .txt 格式类似，都属于纯文本文件），也可以将 JSON 数据以字符串的形式存储在数据库、Cookie、Session 中。<br />
+  <br />
+  要使用存储好的 JSON 数据也非常简单，不同的编程语言中提供了不同的方法来检索和解析 JSON 数据，例如 JavaScript 中的 JSON.parse() 和 JSON.stringify()、PHP 中的 json_decode() 和 json_encode()。<br />
+  <h2>什么时候会使用 JSON</h2>
+  简单了解了 JSON 之后，我们再来看看什么时候适合使用 JSON。<br />
+  <h4>1) 定义接口</h4>
+  JSON 使用最多的地方莫过于 Web 开发领域了，现在的数据接口基本上都是返回 JSON 格式的数据，比如：<br />
+  <ul>
+    <li>使用 Ajax 异步加载的数据；</li>
+    <li>RPC 远程调用；</li>
+    <li>前后端分离，后端返回的数据；</li>
+    <li>开发 API，例如百度、高德的一些开放接口。</li>
+  </ul>
+  <br />
+  这些接口一般都会提供一个接口文档，说明接口调用的方法、需要的参数以及返回数据的介绍等。<br />
+  <h4>2) 序列化</h4>
+  程序在运行时所有的变量都是存储在内存中的，如果程序重启或者服务器宕机，这些数据就会丢失。一般情况下运行时变量并不是很重要，丢了就丢了，但有些数据则需要保存下来，供下次程序启动或其它程序使用。<br />
+  <br />
+  我们可以将这些数据保存到数据库中，也可以保存到一个文件中，这个将内存中数据保存起来的过程称为序列化。序列化在 Python 中称为 pickling，在其他语言中也被称为 serialization、marshalling、flattening 等等，都是一个意思。<br />
+  <br />
+  通常情况下，序列化是将程序中的对象直接转换为可保存或者可传输的数据，但这样会保存对象的类型信息，无法做到跨语言使用，例如我们使用 Python 将数据序列化到硬盘，然后使用 Java 来读取这份数据，这时由于不同编程语言的数据类型不同，就会造成读取失败。如果在序列化之前，先将对象信息转换为 JSON 格式，则不会出现此类问题。<br />
+  <h4>3) 生成 Token</h4>
+  Token 的形式多种多样，JSON、字符串、数字等都可以用来生成 Token，JSON 格式的 Token 最有代表性的是 <a href="https://jwt.io/introduction" target="_blank">JWT</a>（JSON Web Tokens）。<br />
+  <br />
+  随着技术的发展，分布式 Web 应用越来越普及，通过 Session 管理用户登录状态的成本越来越高，因此慢慢发展为使用 Token 做登录身份校验，然后通过 Token 去取 Redis 中缓存的用户信息。随着之后 JWT 的出现，校验方式变得更加简单便捷，无需再通过 Redis 缓存，而是直接根据 Token 读取保存的用户信息。<br />
+  <h4>4) 配置文件</h4>
+  我们还可以使用 JSON 来作为程序的配置文件，最具代表型的是 <a href="https://www.npmjs.com/" target="_blank">npm</a>（Node.js 的包管理工具）的 package.json 包管理配置文件，如下所示：<br />
+  <div>
+    <div>
+      <pre><ol><li>{</li><li>    &quot;name&quot;: &quot;server&quot;,</li><li>    &quot;version&quot;: &quot;0.0.0&quot;,</li><li>    &quot;private&quot;: true,</li><li>    &quot;main&quot;: &quot;server.js&quot;,</li><li>    &quot;scripts&quot;: {</li><li>        &quot;start&quot;: &quot;node ./bin/www&quot;</li><li>    },</li><li>    &quot;dependencies&quot;: {</li><li>        &quot;cookie-parser&quot;: &quot;~1.4.3&quot;,</li><li>        &quot;debug&quot;: &quot;~2.6.9&quot;,</li><li>        &quot;express&quot;: &quot;~4.16.0&quot;,</li><li>        &quot;http-errors&quot;: &quot;~1.6.2&quot;,</li><li>        &quot;jade&quot;: &quot;~1.11.0&quot;,</li><li>        &quot;morgan&quot;: &quot;~1.9.0&quot;</li><li>    }</li><li>}</li></ol>
+  </pre>
+    </div>
+  </div>
+  <p>提示：虽然 JSON 可以用来定义配置文件，但由于 JSON 中不能添加注释，使得配置文件的可读性较差。</p>
+  <h2>总结</h2>
+  JSON 是一种轻量级的数据交换格式，它是基于 JavaScript 的一个子集，采用完全独立于编程语言的格式来表示数据，可以跨语言、跨平台使用。简洁清晰的层次结构使得 JSON 逐渐替代了 XML，成为了最理想的数据交换格式，广泛应用于 Web 开发领域。</div>
+<p><a name="2" id="2"></a></p>
+<h1>JSONP是什么？</h1>
+<div id="ggxc-arctop-pc-3"></div>
+<div id="arc-body3">JSONP 不是一门编程语言，也不是什么特别的技术，它更像一个漏洞，程序员可以利用这个漏洞，实现跨域（可以简单理解为跨域名）传输数据。虽然 JSONP 与 <a href="http://c.biancheng.net/json/what-is-json.html" target="_blank">JSON</a> 看起来很像，但它们却是完全不同的，本节我们就来简单介绍以下 JSONP。<br />
+    <br />
+  在介绍 JSONP 之前，先来介绍一下浏览器的同源策略。<br />
+  <h2>同源策略</h2>
+  同源策略是由 Netscape（网景）提出的一个著名的安全策略，所有支持 JavaScript 的浏览器都支持这个策略。<br />
+  <br />
+  所谓同源是指域名、协议、端口都相同。以 http://c.biancheng.net:80/ 为例，c.biancheng.net 为域名，http 为协议，80 为端口（提示：80 为默认端口，可以省略，若为其它端口则必须显示定义）。<br />
+  <br />
+  为了安全，浏览器不允许进行跨域请求。当我们通过 Ajax 在网页和服务器之间发送或接收数据时，需要保证网页与所请求的地址是同源的，否则无法请求成功。例如 http://c.biancheng.net/ 下的网页，只能与同在 http://c.biancheng.net/ 下的程序进行交互，无法与 https://www.baidu.com/ 下的程序进行交互。<br />
+  <br />
+  同源策略可以防止 JavaScript 脚本从您的网站中读取数据，并将数据发送到其它的网站。如果没有同源策略，很有可能会有恶意的程序泄露您网站中的内容。<br />
+  <br />
+  虽然同源策略在一定程度上提高了网站的安全，但也会给程序员带来一些麻烦，例如在访问一些开发接口时，由于同源策略的存在，会调用失败。要解决这种问题就需要用到跨域，跨域的方法有许多种，其中最经典的就是 JSONP。<br />
+  <h2>什么是 JSONP？</h2>
+  JSONP 全称“JSON with Padding”，译为“带回调的 JSON”，它是 JSON 的一种使用模式。通过 JSONP 可以绕过浏览器的同源策略，进行跨域请求。<br />
+  <br />
+  在进行 Ajax 请求时，由于同源策略的影响，不能进行跨域请求，而&lt;script&gt;标签的 src 属性却可以加载跨域的 JavaScript 脚本，JSONP 就是利用这一特性实现的。与普通的 Ajax 请求不同，在使用 JSONP 进行跨域请求时，服务器不再返回 JSON 格式的数据，而是返回一段调用某个函数的 JavaScript 代码，在 src 属性种调用，来实现跨域。<br />
+  <br />
+  JSONP 的优点是兼容性好，在一些老旧的浏览器种也可以运行，但它的缺点也非常明显，那就是只能进行 GET 请求。<br />
+  <h2>如何实现 JSONP</h2>
+  假设我们要从网站 localhost:8080 向服务器 localhost:8081 下的发送请求，并在服务器返回如下内容：<br />
+  <p>{&quot;name&quot;:&quot;C语言中文网&quot;, &quot;url&quot;:&quot;http://c.biancheng.net/&quot;}</p>
+  如果直接发送 Ajax 请求，由于同源策略的存在，请求会被阻止，因为网站和服务器不同源。示例代码如下：<br />
+  <div>
+    <div>
+      <pre><ol><li>&lt;!DOCTYPE html&gt;</li><li>&lt;html lang=&quot;en&quot;&gt;</li><li>&lt;head&gt;</li><li>    &lt;meta charset=&quot;UTF-8&quot;&gt;</li><li>    &lt;title&gt;JavaScript&lt;/title&gt;</li><li>&lt;/head&gt;</li><li>&lt;body&gt;</li><li>    &lt;div id=&quot;result&quot;&gt;&lt;/div&gt;</li><li>    &lt;button type=&quot;button&quot; onclick=&quot;sendAjax()&quot;&gt;发送请求&lt;/button&gt;</li><li>    &lt;script&gt;</li><li>        function sendAjax() {</li><li>            // 创建 XMLHttpRequest 对象</li><li>            var request = new XMLHttpRequest();</li><li>            // 实例化请求对象</li><li>            request.open(&quot;GET&quot;, &quot;http://localhost:8081/test.php&quot;);</li><li>            // 监听 readyState 的变化</li><li>            request.onreadystatechange = function() {</li><li>                // 检查请求是否成功</li><li>                if(this.readyState === 4 &amp;&amp; this.status === 200) {</li><li>                    // 将来自服务器的响应插入当前页面</li><li>                    document.getElementById(&quot;result&quot;).innerHTML = this.responseText;</li><li>                }</li><li>            };</li><li>            // 将请求发送到服务器</li><li>            request.send();</li><li>        }</li><li>    &lt;/script&gt;</li><li>&lt;/body&gt;</li><li>&lt;/html&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  点击页面的“发送请求”按钮，会返回如下错误：<br />
+  <p>Access to XMLHttpRequest at 'http://localhost:8081/test.php' from origin 'http://localhost:8080' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.<br />
+    GET http://localhost:8081/test.php net::ERR_FAILED</p>
+  想要成功从服务器中获取数据，就可以使用我们上面介绍的 JSONP 来实现，实现步骤如下：<br />
+  <br />
+  使用&lt;script&gt;标签，将标签的 src 属性设置为要请求的地址，如下所示：<br />
+  <p>&lt;script src=&quot;http://localhost:8081/test.php&quot;&gt;&lt;/script&gt;</p>
+  这时您会发现，&lt;script&gt;标签会自动解析并执行返回的内容，如果这些内容不是完整的 JavaScript 代码，程序就会报错，所有在进行 JSONP 跨域请求时，需要保证服务器返回一段完整的 JavaScript 代码。<br />
+  <br />
+  另外，返回的内容也不能是一段纯 JSON 的数据，因为 JSON 数据会自动转换为一个 JavaScript 对象，但不将其分配给变量或者传递给函数，我们也无法拿来使用。<br />
+  <br />
+  因此，我们可以在请求中提供一个回调函数（被作为参数传递的函数，等同于一般函数），然后通过服务器返回这个函数，并将要返回的 JSON 数据作为函数的参数一同返回，这样&lt;script&gt;标签在解析并执行返回内容是就会自动调用这个函数。示例代码如下：<br />
+  <p>&lt;script src=&quot;http://localhost:8081/test.php?callback=showJsonData&quot;&gt;&lt;/script&gt;</p>
+  服务器 http://localhost:8081/ 的完整代码如下所示：<br />
+  <div>
+    <div>
+      <pre><ol><li>&lt;?php</li><li>    $data = array('name'=&gt;'C语言中文网', 'url'=&gt;'http://c.biancheng.net/');  // 定义一个数组，其中包含要返回的内容</li><li>    $callback = $_GET['callback'];                // 接收请求中的回调函数</li><li>    echo $callback.&quot;(&quot;.json_encode($data).&quot;)&quot;;    // 将上面的数组转换为 JSON 格式，然后拼接到函数中，作为函数的参数，返回给前端</li><li>    return;                                       // 阻止程序向下继续运行</li><li>?&gt;   </li></ol>
+  </pre>
+    </div>
+  </div>
+  网站 localhost:8080 的完整代码如下所示：<br />
+  <div>
+    <div>
+      <pre><ol><li>&lt;!DOCTYPE html&gt;</li><li>&lt;html lang=&quot;en&quot;&gt;</li><li>&lt;head&gt;</li><li>    &lt;meta charset=&quot;UTF-8&quot;&gt;</li><li>    &lt;title&gt;JavaScript&lt;/title&gt;</li><li>&lt;/head&gt;</li><li>&lt;body&gt;</li><li>    &lt;script&gt;</li><li>        function showJsonData(data){</li><li>            console.log(data);</li><li>        }</li><li>    &lt;/script&gt;</li><li>    &lt;script src=&quot;http://localhost:8081/test.php?callback=showJsonData&quot;&gt;&lt;/script&gt;</li><li>&lt;/body&gt;</li><li>&lt;/html&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  运行结果如下：<br />
+  <p>{name: 'C语言中文网', url: 'http://c.biancheng.net/'}</p>
+  <h2>总结</h2>
+  通过 JSONP，您可以避开浏览器的同源策略，进行跨域请求。JSONP 是利用 HTML 标签的 src 属性引用资源不受同源策影响的特性来实现的，实现步骤如下：<br />
+  <ul>
+    <li>在请求地址中拼接一个回调函数，得到一个新的地址，将这个新地址赋值给 &lt;script&gt; 标签的 src 属性；</li>
+    <li>服务器接收这个回调函数，并向函数中注入参数，然后以字符串的形式返回这个函数以及其中的参数；</li>
+    <li>&lt;script&gt; 在接收到返回内容后，会将内容当作是一段 JavaScript 代码，自动执行。</li>
+  </ul>
+  <p>注意：服务器返回的内容，必须是一段可执行的 JavaScript 代码，不能是其它内容。</p>
+</div>
+<p><a name="3" id="3"></a></p>
+<h1>JSON语法规则</h1>
+<div id="ggxc-arctop-pc-4"></div>
+<div id="arc-body4">JSON 的语法与 JavaScript 中的对象很像，在 JSON 中主要使用以下两种方式来表示数据：<br />
+    <ul>
+      <li>Object（对象）：键/值对（名称/值）的集合，使用花括号{ }定义。在每个键/值对中，以键开头，后跟一个冒号:，最后是值。多个键/值对之间使用逗号,分隔，例如{&quot;name&quot;:&quot;C语言中文网&quot;,&quot;url&quot;:&quot;http://c.biancheng.net&quot;}；</li>
+      <li>Array（数组）：值的有序集合，使用方括号[ ]定义，数组中每个值之间使用逗号,进行分隔。</li>
+    </ul>
+  <br />
+  下面展示了一个简单的 JSON 数据：<br />
+  <div>
+    <div>
+      <pre><ol><li>{</li><li>    &quot;Name&quot;:&quot;C语言中文网&quot;,</li><li>    &quot;Url&quot;:&quot;http://c.biancheng.net/&quot;,</li><li>    &quot;Tutorial&quot;:&quot;JSON&quot;,</li><li>    &quot;Article&quot;:[</li><li>        &quot;JSON 是什么？&quot;,</li><li>        &quot;JSONP 是什么？&quot;,</li><li>        &quot;JSON 语法规则&quot;</li><li>    ]</li><li>}</li></ol>
+  </pre>
+    </div>
+  </div>
+  <p>注意：所有 JSON 数据需要包裹在一个花括号中，类似于 JavaScript 中的对象。</p>
+  <h2>JSON 中的键</h2>
+  JSON 数据是以键/值对（名称/值）的形式书写的，键表示数据的名称，需要以字符串的形式定义（在双引号中定义），后面紧跟一个冒号，最后是值，如下例所示：<br />
+  <p>&quot;name&quot;:&quot;C语言中文网&quot;</p>
+  类似于 JavaScript 对象中的：<br />
+  <p>name:&quot;C语言中文网&quot;</p>
+  <h2>JSON 中的值</h2>
+  JSON 中的值可以是以下数据类型：<br />
+  <ul>
+    <li>数字（整数或浮点数）；</li>
+    <li>字符串（需要在双引号中定义）；</li>
+    <li>布尔值（true 或 false）；</li>
+    <li>数组（在方括号中定义）；</li>
+    <li>对象（在花括号中定义）；</li>
+    <li>null（空）。</li>
+  </ul>
+  <br />
+  另外，在 JSON 中，不同的键/值对之间需要使用逗号进行分隔，如下例所示：<br />
+  <div>
+    <div>
+      <pre><ol><li>{</li><li>    &quot;number&quot;:123,</li><li>    &quot;float&quot;:3.14,</li><li>    &quot;string&quot;:&quot;C语言中文网&quot;,</li><li>    &quot;bool&quot;:true,</li><li>    &quot;array&quot;:[</li><li>        &quot;employees&quot;,</li><li>        {&quot;name&quot;:&quot;peter&quot;, &quot;age&quot;: 18},</li><li>        {&quot;name&quot;:&quot;Anna&quot;, &quot;age&quot;: 16}</li><li>    ],</li><li>    &quot;object&quot;:{</li><li>        &quot;name&quot;:&quot;C语言中文网&quot;,</li><li>        &quot;url&quot;:&quot;http://c.biancheng.net/&quot;</li><li>    }</li><li>}</li></ol>
+  </pre>
+    </div>
+  </div>
+  在使用 JSON 时，有以下几点需要注意：<br />
+  <ul>
+    <li>JSON 是一段包裹在花括号中的数据，数据由若干键/值对组成；</li>
+    <li>键和值之间使用冒号分隔；</li>
+    <li>不同的键/值对之间使用逗号分隔；</li>
+    <li>键需要以字符串的形式定义（即使用双引号包裹，注意：不能使用单引号）；</li>
+    <li>值可以是数字、字符串、布尔值、数组、对象、null；</li>
+    <li>键必须是唯一的，不能重复，否则后定义的键/值对会覆盖前面定义的键/值对；</li>
+    <li>JSON 中不可以使用八进制或十六进制表示数字。</li>
+  </ul>
+  <h2>JSON 与 JavaScript 对象的区别</h2>
+  粗略的看起来，您可能觉得 JSON 就是一个 JavaScript 的对象，但其实不是这样的，JSON 与 JavaScript 对象之间还是有区别的。<br />
+  <br />
+  首先，JSON 是一种数据交换格式，可以跨语言、跨平台使用，它只是与 JavaScript 有些渊源，并不是 JavaScript 的一部分。<br />
+  <br />
+  就语法而言，JSON 与 JavaScript 最主要的区别就是，JSON 中每个键都必须是一个字符串，而 JavaScript 对象则没有这个限制，如下所示：<br />
+  <p>// JavaScript 中的对象<br />
+    {<br />
+        
+    foo: &quot;bar&quot;<br />
+    }<br />
+    <br />
+    // JSON<br />
+    {<br />
+        
+    &quot;foo&quot;: &quot;bar&quot;<br />
+    }</p>
+  另外，在 JavaScript 对象中，您既可以使用双引号也可以使用单引号，但在 JSON 中只能使用双引号。还有就是 JSON 中没有日期类型，也不能定义注释，所以您只能通过日期的字符串（例如：1970-01-01）或者时间戳（例如：1632366361）来表示日期。</div>
+<p><a name="4" id="4"></a></p>
+<h1>JSON数据类型</h1>
+<div id="ggxc-arctop-pc-5"></div>
+<div id="arc-body5">JSON 是 Web 开发中使用最广泛的数据交换格式，它独立于编程语言，能够被大多数编程语言使用。本节我们来详细介绍一下 JSON 中支持的数据类型。<br />
+    <br />
+  JSON 中支持的数据类型可以分为简单数据类型和复杂数据类型两种，其中简单数据类型包括：string（字符串）、number（数字）、boolean（布尔值）和 null（空）；复杂数据类型包括：Array（数组）和 Object（对象）。<br />
+  <h2>1、字符串</h2>
+  JSON 中的字符串需要使用双引号定义（注意：不能使用单引号），字符串中可以包含零个或多个 Unicode 字符。另外，JSON 的字符串中也可以包含一些转义字符，例如：<br />
+  <ul>
+    <li>\\反斜线本身；</li>
+    <li>\/正斜线；</li>
+    <li>\&quot;双引号</li>
+    <li>\b退格；</li>
+    <li>\f换页；</li>
+    <li>\n换行；</li>
+    <li>\r回车；</li>
+    <li>\t水平制表符；</li>
+    <li>\u四位的十六进制数字。</li>
+  </ul>
+  <br />
+  示例代码如下：<br />
+  <div>
+    <div>
+      <pre><ol><li>{</li><li>    &quot;name&quot;:&quot;C语言中文网&quot;,</li><li>    &quot;url&quot;:&quot;http://c.biancheng.net/&quot;,</li><li>    &quot;title&quot;:&quot;JSON 数据类型&quot;</li><li>}</li></ol>
+  </pre>
+    </div>
+  </div>
+  <h2>2、数字</h2>
+  JSON 中不区分整型和浮点型，只支持使用 IEEE-754 双精度浮点格式来定义数字。此外，JSON 中不能使用八进制和十六进制表示数字，但可以使用 e 或 E 来表示 10 的指数。<br />
+  <p>IEEE-754 表示二进制浮点数算术标准，是 20 世纪 80 年代以来使用最广泛的浮点数运算标准。</p>
+  示例代码如下：<br />
+  <div>
+    <div>
+      <pre><ol><li>{</li><li>    &quot;number_1&quot; : 210,</li><li>    &quot;number_2&quot; : -210,</li><li>    &quot;number_3&quot; : 21.05,</li><li>    &quot;number_4&quot; : 1.0E+2</li><li>}</li></ol>
+  </pre>
+    </div>
+  </div>
+  <h2>3、布尔值</h2>
+  JSON 中的布尔值与 JavaScript、PHP、Java 等编程语言中相似，有两个值，分别为 true（真）和 false（假），如下例所示：<br />
+  <div>
+    <div>
+      <pre><ol><li>{</li><li>    &quot;message&quot; : true,</li><li>    &quot;pay_succeed&quot; : false</li><li>}</li></ol>
+  </pre>
+    </div>
+  </div>
+  <h2>4、空</h2>
+  null（空）是 JSON 中的一个特殊值，表示没有任何值，当 JSON 中的某些键没有具体值时，就可以将其设置为 null，如下例所示：<br />
+  <div>
+    <div>
+      <pre><ol><li>{</li><li>    &quot;id&quot; : 1,</li><li>    &quot;visibility&quot; : true,</li><li>    &quot;popularity&quot; : null</li><li>}</li></ol>
+  </pre>
+    </div>
+  </div>
+  <h2>5、对象</h2>
+  JSON 中，对象由花括号{ }以及其中的若干键/值对组成，一个对象中可以包含零个或多个键/值对，每个键/值对之间需要使用逗号,分隔，如下例所示：<br />
+  <div>
+    <div>
+      <pre><ol><li>{</li><li>    &quot;author&quot;: {</li><li>        &quot;name&quot;: &quot;C语言中文网&quot;,</li><li>        &quot;url&quot;: &quot;http://c.biancheng.net/&quot;</li><li>    }</li><li>}</li></ol>
+  </pre>
+    </div>
+  </div>
+  <h2>6、数组</h2>
+  JSON 中，数组由方括号[ ]和其中的若干值组成，值可以是 JSON 中支持的任意类型，每个值之间使用逗号,进行分隔，如下例所示：<br />
+  <div>
+    <div>
+      <div>
+        <pre><a href="http://c.biancheng.net/json/data-type.html#">纯文本</a><a href="http://c.biancheng.net/json/data-type.html#">复制</a></pre>
+      </div>
+      <pre><ol><li>{</li><li>    &quot;course&quot; : [</li><li>        &quot;JSON 教程&quot;,</li><li>        &quot;JavaScript 教程&quot;,</li><li>        &quot;HTML 教程&quot;,</li><li>        {</li><li>            &quot;website&quot; : &quot;C语言中文网&quot;,</li><li>            &quot;url&quot; : &quot;http://c.biancheng.net&quot;</li><li>        },</li><li>        [</li><li>            3.14,</li><li>            true</li><li>        ],</li><li>        null</li><li>    ]</li><li>}</li></ol>
+  </pre>
+    </div>
+  </div>
+</div>
+<p><a name="5" id="5"></a></p>
+<h1>JSON对象（object）</h1>
+<div id="ggxc-arctop-pc-6"></div>
+<div id="arc-body6">在 JSON 中，对象是一个无序的、键/值对的集合，一个对象以左花括号{开始，以右花括号}结束，左右花括号之间为对象中的若干键/值对。键/值对中，键必须是字符串类型（即使用双引号将键包裹起来），而值可以是 JSON 中的任意类型，键和值之间需要使用冒号:分隔开，不同的键/值对之间需要使用逗号,分隔开。关于 JSON 中支持的数据类型，您可以查阅《<a href="http://c.biancheng.net/json/data-type.html" target="_blank">JSON数据类型</a>》一节。<br />
+    <br />
+  下面来看一个 JSON 对象的例子：<br />
+  <div>
+    <div>
+      <pre><ol><li>{ </li><li>    &quot;website&quot;: {</li><li>        &quot;name&quot; : &quot;C语言中文网&quot;,</li><li>        &quot;url&quot; : &quot;http://c.biancheng.net/&quot;</li><li>    } </li><li>}</li></ol>
+  </pre>
+    </div>
+  </div>
+  通过上面的示例可以看出，整个 JSON 就是一个对象类型，在这个对象中包含一个名为“website”的键，与键所对应的值同样也是一个对象，对象中包含“name”、“url”等键，以及与键所对应的值。<br />
+  <br />
+  在 JSON 中使用对象类型时，有以下几点需要注意：<br />
+  <ul>
+    <li>对象必须包裹在花括号{ }中；</li>
+    <li>对象中的内容需要以键/值对的形式编写；</li>
+    <li>键必须是字符串类型，即使用双引号&quot; &quot;将键包裹起来；</li>
+    <li>值可以是任意 JSON 中支持的数据类型（例如字符串、数字、对象、数组、布尔值、null 等）；</li>
+    <li>键和值之间使用冒号进行分隔；</li>
+    <li>不同键/值对之间使用逗号进行分隔；</li>
+    <li>对象中的最后一个键/值对末尾不需要添加逗号。</li>
+  </ul>
+  <br />
+  另外，JSON 对象中可以嵌套其它的任意类型，例如对象、数组等，如下例所示：<br />
+  <div>
+    <div>
+      <pre><ol><li>// 键/值对中，键必须使用双引号定义，值若是字符串类型也必须使用双引号定义</li><li>{</li><li>    &quot;name&quot;: &quot;C语言中文网&quot;,</li><li>    &quot;age&quot;: 18,</li><li>    &quot;url&quot;: &quot;http://c.biancheng.net/&quot;,</li><li>    &quot;course&quot;: {</li><li>        &quot;title&quot;: &quot;JSON教程&quot;,</li><li>        &quot;list&quot;: [</li><li>            &quot;JSON是什么？&quot;,</li><li>            &quot;JSON语法规则&quot;,</li><li>            &quot;JSON数据类型&quot;    // 这个地方不能添加逗号，因为它是数组中最后一个值</li><li>        ]    // 这个地方也不能添加逗号，因为它是对象中最后一个键/值对</li><li>    }    // 这个地方也不可以有逗号，因为它也是对象的最后一个键/值对</li><li>}</li></ol>
+  </pre>
+    </div>
+  </div>
+  <p>提示：上面示例中，注释不是 JSON 的一部分，因为 JSON 中不支持定义注释。使用上述 JSON 数据之前，需要先将注释内容删除。</p>
+</div>
+<p><a name="6" id="6"></a></p>
+<h1>JSON数组（array）</h1>
+<div id="ggxc-arctop-pc-7"></div>
+<div id="arc-body7">数组是值的有序集合，JSON 中的数组与 JavaScript 中的数组相似，同样需要使用方括号[ ]定义，方括号中为数组中的若干值，值可以是 JSON 中支持的任意类型（例如字符串、数字、布尔值、对象、数组等），每个值之间使用逗号,分隔开，具体语法格式如下：<br />
+    <p>[value_1, value_2, value_3, ..., value_N]</p>
+  下面来看一个 JSON 数组的示例：<br />
+  <div>
+    <div>
+      <pre><ol><li>{</li><li>    &quot;array&quot;:[</li><li>        {</li><li>            &quot;name&quot;:&quot;C语言中文网&quot;,</li><li>            &quot;url&quot;:&quot;http://c.biancheng.net/&quot;,</li><li>            &quot;course&quot;:&quot;JSON教程&quot;</li><li>        },</li><li>        [</li><li>            &quot;JSON是什么？&quot;,</li><li>            &quot;JSON语法规则&quot;,</li><li>            &quot;JSON数据类型&quot;</li><li>        ],</li><li>        &quot;JSON&quot;,</li><li>        18,</li><li>        true</li><li>    ]</li><li>}</li></ol>
+  </pre>
+    </div>
+  </div>
+  通过上面的示例可以看出，JSON 中数组与对象不同，对象是由若干键/值对组成，而数组则是由若干值构成的。数组中的值可以是 JSON 中的任意类型，在上面的示例中就分别使用了对象、数组、字符串、数字、布尔值等类型。<br />
+  <br />
+  在 JSON 中使用数组时，有以下几点需要注意：<br />
+  <ul>
+    <li>数组必须使用方括号[ ]定义；</li>
+    <li>数组的内容由若干值组成；</li>
+    <li>每个值之间需要使用逗号,进行分隔；</li>
+    <li>最后一个值末尾不需要添加逗号；</li>
+    <li>数组中的值可以是 JSON 中的任何类型，例如字符串、数字、对象、数组、布尔值、null 等。</li>
+  </ul>
+</div>
+<p><a name="7" id="7"></a></p>
+<h1>JSON注释</h1>
+<div id="ggxc-arctop-pc-8"></div>
+<div id="arc-body8">JSON 是一种纯粹的数据交换格式，其简单、灵活的特性使得 JSON 适合被用于各种不同的场景，例如在配置文件中、在接口返回的数据中都会用到 JSON 格式。然而 JSON 却有一个非常明显的缺点，那就是 JSON 不能像编程语言那样添加注释，JSON 中的任何内容都会看作数据的一部分。<br />
+    <br />
+  之所以不允许添加注释，是因为 JSON 主要是用来存储数据的，过多的注释会对数据的可读性造成影响，同时也会造成数据体积变大，进而影响数据传输、解析的速度。<br />
+  <br />
+  但是，在某些场景中，我们又需要使用注释。例如在 JSON 格式的配置文件中，我们希望以注释的形式对配置信息进行解释说明；在接口返回的 JSON 数据中，我们希望通过注释描述数据的含义等等。那么我们要怎么在 JSON 数据中添加注释呢？下面就来介绍几种方法。<br />
+  <h2>使用特殊的键名</h2>
+  想要在 JSON 中添加注释，我们可以在要添加注释键/值对的前面（或后面）添加一个同名的键，并在键名中添加一个特殊字符加以区分，例如@、#、?、_、/等，然后在与键对应的值中定义注释的内容。<br />
+  <p>注意：在键名中添加特殊字符时，应尽量避免:、{、}、[、]等 JSON 中常用的字符。</p>
+  下面通过一个简单的示例来演示一下如何通过特殊的键名在 JSON 中添加注释：
+  <div>
+    <div>
+      <pre><ol><li>{</li><li>    &quot;@name&quot;: &quot;网站名称&quot;,</li><li>    &quot;name&quot;: &quot;C语言中文网&quot;,</li><li>    &quot;_url&quot;: &quot;网址&quot;,</li><li>    &quot;url&quot;: &quot;http://c.biancheng.net/&quot;,</li><li>    &quot;course&quot;: &quot;JSON 教程&quot;,</li><li>    &quot;@charge&quot;: &quot;0=收费; 1=免费&quot;,</li><li>    &quot;charge&quot;: 1,</li><li>    &quot;#list&quot;: &quot;教程目录&quot;,</li><li>    &quot;list&quot;: [</li><li>        &quot;JSON数据类型&quot;,</li><li>        &quot;JSON对象&quot;,</li><li>        &quot;JSON数组&quot;</li><li>    ],</li><li>    &quot;message&quot;: {</li><li>        &quot;code&quot;: 0,</li><li>        &quot;message&quot;: &quot;OK&quot;,</li><li>        &quot;#data&quot;: {</li><li>            &quot;#id&quot;: &quot;用户ID&quot;,</li><li>            &quot;#type&quot;: &quot;0=正常; 1=异常&quot;,</li><li>            &quot;#name&quot;: &quot;姓名&quot;,</li><li>            &quot;#createTime&quot;: &quot;创建时间(yyyy-MM-dd)&quot;</li><li>        },</li><li>        &quot;data&quot;: {</li><li>            &quot;id&quot;: &quot;12345&quot;,</li><li>            &quot;type&quot;: 0,</li><li>            &quot;name&quot;: &quot;我的名字&quot;,</li><li>            &quot;createTime&quot;: &quot;2020-05-20&quot;</li><li>        }</li><li>    }</li><li>} </li></ol>
+  </pre>
+    </div>
+  </div>
+  除了可以在键名中添加特殊字符外，也可以直接以“comment”、“_comment” 或 “__comment”作为键名来定义注释，如下例所示：<br />
+  <div>
+    <div>
+      <pre><ol><li>{</li><li>    &quot;_comment&quot;: &quot;C语言中文网（http://c.biancheng.net/）—— 一个在线学习编程的网站&quot;,</li><li>    &quot;course&quot;: {</li><li>        &quot;name&quot;: &quot;JSON 教程&quot;,</li><li>        &quot;url&quot;: &quot;http://c.biancheng.net/json/index.html&quot;</li><li>    }</li><li>}</li></ol>
+  </pre>
+    </div>
+  </div>
+  <h2>JSON5</h2>
+  JSON5 是由开发人员创建并在 GitHub（<a href="https://github.com/json5/json5/tree/4cf57da675f55c619f959132eb58a5683ca4a9c7" target="_blank">https://github.com/json5/json5/tree/4cf57da675f55c619f959132eb58a5683ca4a9c7</a>）上发布的 JSON 的非官方标准，可以将它看作是 JSON 的升级版。JSON5 主要是通过引入部分 ECMAScript5.1 的特性来扩展 JSON 语法，减少 JSON 的某些限制，同时兼容现有的 JSON 格式。<br />
+  <br />
+  与 JSON 相比，JSON5 做出了如下改变：<br />
+  <ul>
+    <li>在对象或数组的末尾（即最后一个键/值对或值），可以添加逗号；</li>
+    <li>字符串可以使用单引号定义；</li>
+    <li>字符串中可以包含转义字符，并且可以跨越多行；</li>
+    <li>可以定义十六进制的数字；</li>
+    <li>数字可以包含前导或后导的小数点；</li>
+    <li>数字前可以添加一个加、减号来表示正负数；</li>
+    <li>可以使用//来定义单行注释，使用/* ... */来定义多行注释。</li>
+  </ul>
+  <br />
+  如下例所示：<br />
+  <div>
+    <div>
+      <pre><ol><li>{</li><li>    // 网站名称</li><li>    &quot;name&quot;: &quot;C语言中文网&quot;,</li><li>    // 网址</li><li>    &quot;url&quot;: &quot;http://c.biancheng.net/&quot;,</li><li>    &quot;course&quot;: &quot;JSON 教程&quot;,</li><li>    // 0=收费; 1=免费</li><li>    &quot;charge&quot;: 1,</li><li>    // 教程目录</li><li>    &quot;list&quot;: [</li><li>        &quot;JSON数据类型&quot;,</li><li>        &quot;JSON对象&quot;,</li><li>        &quot;JSON数组&quot;</li><li>    ],</li><li>    &quot;message&quot;: {</li><li>        &quot;code&quot;: 0,</li><li>        &quot;message&quot;: &quot;OK&quot;,</li><li>        /*</li><li>            id = 用户ID</li><li>            type = 0=正常; 1=异常</li><li>            name = 姓名</li><li>            createTime = 创建时间(yyyy-MM-dd)</li><li>         */</li><li>        &quot;data&quot;: {</li><li>            &quot;id&quot;: &quot;12345&quot;,</li><li>            &quot;type&quot;: 0,</li><li>            &quot;name&quot;: &quot;我的名字&quot;,</li><li>            &quot;createTime&quot;: &quot;2020-05-20&quot;</li><li>        }</li><li>    }</li><li>} </li></ol>
+  </pre>
+    </div>
+  </div>
+  要使用 JSON5 非常简单，如果是在前端中使用，您可以直接引入一个 js 文件，如下例所示：<br />
+  <p>&lt;script src=&quot;https://unpkg.com/json5@^2.0.0/dist/index.min.js&quot;&gt;&lt;/script&gt;</p>
+  上面引入的 js 文件会创建一个全局的 JSON5 对象，示例代码如下：
+  <div>
+    <div>
+      <pre><ol><li>&lt;!DOCTYPE html&gt;</li><li>&lt;html lang=&quot;en&quot;&gt;</li><li>&lt;head&gt; </li><li>    &lt;meta charset=&quot;UTF-8&quot;&gt;</li><li>    &lt;title&gt;JavaScript&lt;/title&gt;</li><li>&lt;/head&gt;</li><li>&lt;body&gt;</li><li>    &lt;script src=&quot;https://unpkg.com/json5@^2.0.0/dist/index.min.js&quot;&gt;&lt;/script&gt;</li><li>    &lt;script&gt;</li><li>        var arr = {</li><li>            // 网站名称</li><li>            &quot;name&quot;: &quot;C语言中文网&quot;,</li><li>            // 网址</li><li>            &quot;url&quot;: &quot;http://c.biancheng.net/&quot;,</li><li>            &quot;course&quot;: &quot;JSON 教程&quot;,</li><li>            // 0=收费; 1=免费</li><li>            &quot;charge&quot;: 1,</li><li>            // 教程目录</li><li>            &quot;list&quot;: [</li><li>                &quot;JSON数据类型&quot;,</li><li>                &quot;JSON对象&quot;,</li><li>                &quot;JSON数组&quot;</li><li>            ],</li><li>            &quot;message&quot;: {</li><li>                &quot;code&quot;: 0,</li><li>                &quot;message&quot;: &quot;OK&quot;,</li><li>                /*</li><li>                    id = 用户ID</li><li>                    type = 0=正常; 1=异常</li><li>                    name = 姓名</li><li>                    createTime = 创建时间(yyyy-MM-dd)</li><li>                 */</li><li>                &quot;data&quot;: {</li><li>                    &quot;id&quot;: &quot;12345&quot;,</li><li>                    &quot;type&quot;: 0,</li><li>                    &quot;name&quot;: &quot;我的名字&quot;,</li><li>                    &quot;createTime&quot;: &quot;2020-05-20&quot;</li><li>                }</li><li>            }</li><li>        };</li><li>        var str = JSON5.stringify(arr);</li><li>        console.log(arr)</li><li>    &lt;/script&gt;</li><li>&lt;/body&gt;</li><li>&lt;/html&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  运行结果如下图所示：<br />
+  <br />
+  <div><img alt="在网页中引用 JSON5" src="http://c.biancheng.net/uploads/allimg/211109/10351WB5-0.gif" /><br />
+    图：在网页中引用 JSON5</div>
+  <br />
+  此外，您也可以通过 Node.js 来安装 JSON5，安装命令如下：<br />
+  <p>npm install json5</p>
+  安装成功后可以通过const JSON5 = require('json5')来创建全局的 JSON5 对象，如下例所示：<br />
+  <p>C:\Users\79330&gt;npm install json5<br />
+    npm WARN saveError ENOENT: no such file or directory, open 'C:\Users\79330\package.json'<br />
+    npm notice created a lockfile as package-lock.json. You should commit this file.<br />
+    npm WARN enoent ENOENT: no such file or directory, open 'C:\Users\79330\package.json'<br />
+    npm WARN 79330 No description<br />
+    npm WARN 79330 No repository field.<br />
+    npm WARN 79330 No README data<br />
+    npm WARN 79330 No license field.<br />
+    <br />
+    + json5@2.2.0<br />
+    added 2 packages from 5 contributors and audited 2 packages in 2.525s<br />
+    found 0 vulnerabilities<br />
+    <br />
+    C:\Users\79330&gt;node<br />
+    Welcome to Node.js v14.17.6.<br />
+    Type &quot;.help&quot; for more information.<br />
+    &gt; const JSON5 = require('json5')<br />
+    undefined<br />
+    &gt; var arr = {<br />
+    ...             // 网站名称<br />
+    ...             &quot;name&quot;: &quot;C语言中文网&quot;,<br />
+    ...             // 网址<br />
+    ...             &quot;url&quot;: &quot;http://c.biancheng.net/&quot;,<br />
+    ...             &quot;course&quot;: &quot;JSON 教程&quot;,<br />
+    ...             // 0=收费; 1=免费<br />
+    ...             &quot;charge&quot;: 1,<br />
+    ...             // 教程目录<br />
+    ...             &quot;list&quot;: [<br />
+    ...                 &quot;JSON数据类型&quot;,<br />
+    ...                 &quot;JSON对象&quot;,<br />
+    ...                 &quot;JSON数组&quot;<br />
+    ...             ],<br />
+    ...             &quot;message&quot;: {<br />
+    .....                 &quot;code&quot;: 0,<br />
+    .....                 &quot;message&quot;: &quot;OK&quot;,<br />
+    .....                 /*<br />
+    .....                     id = 用户ID<br />
+    .....                     type = 0=正常; 1=异常<br />
+    .....                     name = 姓名<br />
+    .....                     createTime = 创建时间(yyyy-MM-dd)<br />
+    .....                  */<br />
+    .....                 &quot;data&quot;: {<br />
+    .......                     &quot;id&quot;: &quot;12345&quot;,<br />
+    .......                     &quot;type&quot;: 0,<br />
+    .......                     &quot;name&quot;: &quot;我的名字&quot;,<br />
+    .......                     &quot;createTime&quot;: &quot;2020-05-20&quot;<br />
+    .......                 }<br />
+    .....             };<br />
+    undefined<br />
+    &gt; JSON5.stringify(arr)<br />
+    &quot;{name:'C语言中文网',url:'http://c.biancheng.net/',course:'JSON 教程',charge:1,list:['JSON数据类型','JSON对象','JSON数组'],message:{code:0,message:'OK',data:{id:'12345',type:0,name:'我的名字',createTime:'2020-05-20'}}}&quot;</p>
+</div>
+<p><a name="8" id="8"></a></p>
+<h1>JSON schema（模式）</h1>
+<div id="ggxc-arctop-pc-9"></div>
+<div id="arc-body9">JSON Schema 是一个描述和验证 JSON 数据结构的强大工具，我们可以把 JSON Schema 看作是一种规范，这个规范中规定了 JSON 数据的结构、键的命名、值的类型等等，通过规范可以校验指定的 JSON 数据，保证数据的准确。所以在接口调试过程中，经常使用 JSON Schema 来校验接口数据的准确性。<br />
+    <h2>什么是 JSON Schema</h2>
+  JSON Schema 译为“JSON模式”，它是由 IETF 编写和起草的。那么 JSON Schema 有什么作用呢？<br />
+  <p>IETF 是 The Internet Engineering Task Force 的简称，译为“国际互联网工程任务组”，是一个公开性质的大型民间国际团体。</p>
+  假如我们要使用 JSON 来存储一个产品的信息，如下所示：<br />
+  <div>
+    <div>
+      <pre><ol><li>{</li><li>    &quot;id&quot;: 1,</li><li>    &quot;name&quot;: &quot;JSON教程&quot;,</li><li>    &quot;author&quot;: &quot;C语言中文网&quot;,</li><li>    &quot;price&quot;: 99.9</li><li>}</li></ol>
+  </pre>
+    </div>
+  </div>
+  如上所示，虽然只是一段很简单的 JSON 数据，但是有人可能会问：“id”代表什么意思、“name”字段是否可以省略、“price”字段的值是否可以为 0 等等。<br />
+  <br />
+  JSON Schema 就是为了解决上述问题诞生的，在 JSON Schema 中可以规定要在 JSON 中出现的字段、字段含义、字段类型等信息，而且可以使用 JSON Schema 来校验 JSON 数据是否符合 Schema 中定义的规范。<br />
+  <h2>定义 Schema</h2>
+  JSON Schema 本身是一段 JSON 格式的数据，如下例所示：<br />
+  <div>
+    <div>
+      <pre><ol><li>{</li><li>    &quot;$schema&quot;: &quot;http://json-schema.org/draft-04/schema#&quot;,</li><li>    &quot;type&quot;: &quot;object&quot;,</li><li>    &quot;properties&quot;: {</li><li>        &quot;name&quot;:  { &quot;type&quot;: &quot;string&quot; },</li><li>        &quot;email&quot;: { &quot;type&quot;: &quot;string&quot; },</li><li>        &quot;age&quot;: {</li><li>            &quot;type&quot;: &quot;number&quot;,</li><li>            &quot;minimum&quot;: 0,</li><li>            &quot;exclusiveMinimum&quot;: false</li><li>        },</li><li>        &quot;telephone&quot;: {</li><li>            &quot;type&quot;: &quot;string&quot;,</li><li>            &quot;pattern&quot;: &quot;^(\\([0-9]{3}\\))?[0-9]{3}-[0-9]{4}$&quot;</li><li>        }</li><li>    },</li><li>    &quot;required&quot;: [&quot;name&quot;, &quot;email&quot;],</li><li>    &quot;additionalProperties&quot;: false</li><li>}</li></ol>
+  </pre>
+    </div>
+  </div>
+  上面 Schema 中，要求 JSON 数据必须符合以下要求：<br />
+  <ul>
+    <li>类型为 object；</li>
+    <li>JSON 中可以包含以下四个键：
+        <ul>
+          <li>name：必须是字符串类型；</li>
+          <li>email：必须是字符串类型；</li>
+          <li>age：必须是大于 0 的整数；</li>
+          <li>telephone：必须是字符串类型，并且需要匹配指定的正则表达式。</li>
+        </ul>
+    </li>
+    <li>上面的四个键中，name 和 email 必须定义，而 age 和 telephone 则是可选的；</li>
+    <li>除了上面四个键，不允许出现其它的键。</li>
+  </ul>
+  <br />
+  下面就是一个符合上面 Schema 的 JSON 数据：<br />
+  <div>
+    <div>
+      <pre><ol><li>{</li><li>    &quot;name&quot;: &quot;C语言中文网&quot;,</li><li>    &quot;email&quot;: &quot;2758010091@qq.com&quot;,</li><li>    &quot;age&quot;: 18</li><li>}</li></ol>
+  </pre>
+    </div>
+  </div>
+  大家都知道 JSON 中支持 string、number、object、array、boolean、null 等几种类型，针对不同的类型，Schema 中提供了一系列关键字，下面我们来介绍一下这些关键字以及用法：<br />
+  <h3>1) 字符串（String）</h3>
+  JSON Schema 中有关字符串的关键字如下表所示：<br />
+  <br />
+  <table>
+    <tbody>
+      <tr>
+        <th>关键字</th>
+        <th>描述</th>
+        <th>可选值</th>
+      </tr>
+      <tr>
+        <td>minLength</td>
+        <td>字符串最小长度，不能为负数</td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td>maxLength</td>
+        <td>字符串最大长度，不能为负数</td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td>pattern</td>
+        <td>正则表达式</td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td>format</td>
+        <td>字符串格式</td>
+        <td>&quot;date-time&quot;：日期和时间，如 2018-11-13T20:20:39+00:00<br />
+          &quot;time&quot;：时间，如 20:20:39+00:00<br />
+          &quot;date&quot;：日期，如 2018-11-13<br />
+          &quot;email&quot;：电子邮箱地址<br />
+          &quot;hostname&quot;：主机名<br />
+          &quot;ipv4&quot;：IPv4 地址<br />
+          &quot;ipv6&quot;：IPv6 地址<br />
+          &quot;uri&quot;：通用资源标识符（URI)<br />
+          &quot;uri-template&quot;：URI 模板（任何级别）<br />
+          &quot;regex&quot;：正则表达式</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3>2) 数值类型</h3>
+  JSON Schema 中有关数值的关键字如下表所示：<br />
+  <br />
+  <table>
+    <tbody>
+      <tr>
+        <th>关键字</th>
+        <th>描述</th>
+        <th>示例</th>
+      </tr>
+      <tr>
+        <td>integer</td>
+        <td>整数</td>
+        <td>{&quot;type&quot;: &quot;integer&quot;}</td>
+      </tr>
+      <tr>
+        <td>number</td>
+        <td>数字，包括整数和浮点数</td>
+        <td>{&quot;type&quot;: &quot;number&quot;}</td>
+      </tr>
+      <tr>
+        <td>multipleOf</td>
+        <td>数字必须是给定数字（正数）的倍数</td>
+        <td>{&quot;type&quot;: &quot;number&quot;, &quot;multipleOf&quot;: 3}</td>
+      </tr>
+      <tr>
+        <td>minimum</td>
+        <td>数值允许的最小值</td>
+        <td>{&quot;type&quot;: &quot;number&quot;, &quot;minimum&quot;: 1}</td>
+      </tr>
+      <tr>
+        <td>maximum</td>
+        <td>数值允许的最大值</td>
+        <td>{&quot;type&quot;: &quot;number&quot;, &quot;maximum&quot;: 9}</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3>3) 对象</h3>
+  <h4>属性（Properties）</h4>
+  在 JSON Schema 中，您可以使用 properties 关键字来定义 JSON 数据中的键，如下例所示：<br />
+  <div>
+    <div>
+      <pre><ol><li>{</li><li>    &quot;type&quot;: &quot;object&quot;,</li><li>    &quot;properties&quot;: {</li><li>        &quot;name&quot;: { &quot;type&quot;: &quot;string&quot;},</li><li>        &quot;age&quot;: {&quot;type&quot;: &quot;number&quot;, &quot;multipleOf&quot;: 3},</li><li>        &quot;date&quot;: {</li><li>            &quot;type&quot;: &quot;string&quot;,</li><li>            &quot;format&quot;: &quot;date&quot;</li><li>        }</li><li>    }</li><li>}</li></ol>
+  </pre>
+    </div>
+  </div>
+  <h4>额外属性（Asdditional Properties）</h4>
+  在 JSON Schema 中，您可以使用 additionalPropertiesis 定义额外的属性，值为 false 或一个 Schema 对象，如下例所示<br />
+  <div>
+    <div>
+      <pre><ol><li>{</li><li>    &quot;type&quot;: &quot;object&quot;,</li><li>    &quot;properties&quot;: {</li><li>        &quot;number&quot;: { &quot;type&quot;: &quot;number&quot;},</li><li>        &quot;street_name&quot;: { &quot;type&quot;: &quot;string&quot;},</li><li>        &quot;street_type&quot;: {</li><li>            &quot;type&quot;: &quot;string&quot;,</li><li>            &quot;enum&quot;: [&quot;Street&quot;, &quot;Avenue&quot;, &quot;Boulevard&quot;]</li><li>        }</li><li>    },</li><li>    &quot;additionalProperties&quot;: { &quot;type&quot;: &quot;string&quot;}</li><li>}</li></ol>
+  </pre>
+    </div>
+  </div>
+  <h4>必须属性（Required Properties）</h4>
+  在 JSON Schema 中，您可以使用 required 关键字声明 JSON 中必须定义的键，required 的值为一个数组，数组中的每个值必须是唯一的，如下例所示：<br />
+  <div>
+    <div>
+      <pre><ol><li>{</li><li>    &quot;type&quot;: &quot;object&quot;,</li><li>    &quot;properties&quot;: {</li><li>        &quot;name&quot;: { &quot;type&quot;: &quot;string&quot; },</li><li>        &quot;email&quot;: { &quot;type&quot;: &quot;string&quot; },</li><li>        &quot;address&quot;: { &quot;type&quot;: &quot;string&quot; },</li><li>        &quot;telephone&quot;: { &quot;type&quot;: &quot;string&quot; }</li><li>    },</li><li>    &quot;required&quot;: [&quot;name&quot;, &quot;email&quot;]</li><li>}</li></ol>
+  </pre>
+    </div>
+  </div>
+  <h4>属性名称（Property names）</h4>
+  在 JSON Schema 中，您可以使用 propertyNames 定义 JSON 数据中键的命名规则，如下例所示：<br />
+  <div>
+    <div>
+      <pre><ol><li>{</li><li>    &quot;type&quot;: &quot;object&quot;,</li><li>    &quot;propertyNames&quot;: {</li><li>        &quot;pattern&quot;: &quot;^[A-Za-z_][A-Za-z0-9_]*$&quot;</li><li>    }</li><li>}</li></ol>
+  </pre>
+    </div>
+  </div>
+  <h4>属性个数（Size）</h4>
+  在 JSON Schema 中，您可以使用 minProperties（最小数量）和 maxProperties（最大数量）关键字来限制 JSON 对象中键的个数，如下例所示：<br />
+  <div>
+    <div>
+      <pre><ol><li>{</li><li>    &quot;type&quot;: &quot;object&quot;,</li><li>    &quot;minProperties&quot;: 2,</li><li>    &quot;maxProperties&quot;: 3</li><li>}</li></ol>
+  </pre>
+    </div>
+  </div>
+  <h3>4) 数组</h3>
+  数组是值的有序集合，JSON 数组中的每个值都可以是不同的类型。<br />
+  <h4>元素（items）</h4>
+  默认情况下，数组的值可以是任何类型，但在 JSON Schema 中可以使用 items、additionalItems 和 contains 关键字来验证数组中的值，对于 JSON 中的数组，通常有两种验证方式：<br />
+  <ul>
+    <li>列表验证（List validation）：任意长度的数组，数组中每个值都匹配相同的 Schema；</li>
+    <li>元组验证（Tuple validation）：固定长度的数组，数组中每个值可以匹配不同的 Schema。</li>
+  </ul>
+  <h4>列表验证（List validation）</h4>
+  若希望数组中每个值都匹配相同的模式，可以通过 items 关键字设置单个模式，来验证数组中的所有值。当使用单个模式时，additionalItems 关键字是无效的，如下例所示（验证数组的所有值为数字）：<br />
+  <div>
+    <div>
+      <pre><ol><li>{</li><li>    &quot;type&quot;: &quot;array&quot;,</li><li>    &quot;items&quot;: {</li><li>        &quot;type&quot;: &quot;number&quot;</li><li>    }</li><li>}</li></ol>
+  </pre>
+    </div>
+  </div>
+  contains 关键字仅需要针对数组中的一个或多个项目进行验证，如下例所示（只需包含至少一个数字元素）：<br />
+  <div>
+    <div>
+      <pre><ol><li>{</li><li>    &quot;type&quot;: &quot;array&quot;,</li><li>    &quot;contains&quot;: {</li><li>        &quot;type&quot;: &quot;number&quot;</li><li>    }</li><li>}</li></ol>
+  </pre>
+    </div>
+  </div>
+  <h4>元组验证（Tuple validation）</h4>
+  在 JSON 数据中，如果数组的每个值都有不同的含义，那么这些值的类型也可能是不同的，例如：<br />
+  <p>[编号, 街道名称, 街道类型, 方向]</p>
+  为此，在 Schema 中我们可以向下面这样来验证 JSON 数据：<br />
+  <div>
+    <div>
+      <pre><ol><li>{</li><li>    &quot;type&quot;: &quot;array&quot;,</li><li>    &quot;items&quot;: [</li><li>        {</li><li>            &quot;type&quot;: &quot;number&quot;</li><li>        },</li><li>        {</li><li>            &quot;type&quot;: &quot;string&quot;</li><li>        },</li><li>        {</li><li>            &quot;type&quot;: &quot;string&quot;,</li><li>            &quot;enum&quot;: [&quot;Street&quot;, &quot;Avenue&quot;, &quot;Boulevard&quot;]</li><li>        },</li><li>        {</li><li>            &quot;type&quot;: &quot;string&quot;,</li><li>            &quot;enum&quot;: [&quot;NW&quot;, &quot;NE&quot;, &quot;SW&quot;, &quot;SE&quot;]</li><li>        }</li><li>    ]</li><li>}</li></ol>
+  </pre>
+    </div>
+  </div>
+  <h4>数组长度（Length）</h4>
+  可以使用 minItems、 maxItems 关键字指定数组的长度。如下例所示（指定数组的长度范围为 2 ~ 3）：<br />
+  <div>
+    <div>
+      <pre><ol><li>{</li><li>    &quot;type&quot;: &quot;array&quot;,</li><li>    &quot;minItems&quot;: 2,</li><li>    &quot;maxItems&quot;: 3</li><li>}</li></ol>
+  </pre>
+    </div>
+  </div>
+  <p>注意：数组长度不能为负数。</p>
+  <h4>唯一（Uniqueness）</h4>
+  将 uniqueItems 关键字设置为 true 可以确保数组中的每个元素都是唯一的，如下例所示：<br />
+  <div>
+    <div>
+      <pre><ol><li>{</li><li>    &quot;type&quot;: &quot;array&quot;,</li><li>    &quot;uniqueItems&quot;: true</li><li>}</li></ol>
+  </pre>
+    </div>
+  </div>
+  <h3>5) 布尔（boolean）</h3>
+  布尔类型只有两个值：true 和 false，如下例所示：<br />
+  <p>{&quot;type&quot;: &quot;boolean&quot;}</p>
+  <h3>6) 空值（null）</h3>
+  空类型通常用于表示没有值，当将值的类型指定为 null 时，则表示它只有一个可接受的值——null，如下例所示：<br />
+  <p>{&quot;type&quot;: &quot;null&quot;}</p>
+  <h3>7) 通用关键字</h3>
+  <h4>JSON Schema 包括几个通用的关键字 title、description、default、examples 用于不严格验证，这些关键字主要用来描述模式的功能、作用。这些注释属性都不是必须的，但建议添加。</h4>
+  <ul>
+    <li>title 和 description 关键字必须是字符串，“title”最好比较简短，而“description”应该提供关于该 schema 的详细描述；</li>
+    <li>default 关键字用来定义默认值；</li>
+    <li>examples 关键字是用于提供一系列针对该模式进行验证的示例。</li>
+  </ul>
+  <br />
+  如下例所示：<br />
+  <div>
+    <div>
+      <pre><ol><li>{</li><li>    &quot;title&quot;: &quot;Match anything&quot;,</li><li>    &quot;description&quot;: &quot;This is a schema that matches anything.&quot;,</li><li>    &quot;default&quot;: &quot;Default value&quot;,</li><li>    &quot;examples&quot;: [&quot;Anything&quot;, 4035]</li><li>}</li></ol>
+  </pre>
+    </div>
+  </div>
+  <h4>注释（Comments）</h4>
+  $comment 关键字用于添加注释/批注，它的值必须是一个字符串。<br />
+  <h4>枚举值（Enumerated values）</h4>
+  enum 关键字被用于定义枚举值（一组固定的值），它必须是一个至少包含一个值的数组，而且每个值都必须是唯一的。此外，type 和 enum 是并列的，必须同时满足，如下例所示：<br />
+  <div>
+    <div>
+      <pre><ol><li>{</li><li>    &quot;type&quot;: &quot;string&quot;,</li><li>    &quot;enum&quot;: [&quot;red&quot;, &quot;amber&quot;, &quot;green&quot;]</li><li>}</li></ol>
+  </pre>
+    </div>
+  </div>
+  <h4>常量值（Constant values）</h4>
+  const 关键字被用于定义一个常量值，如下例所示：<br />
+  <div>
+    <div>
+      <pre><ol><li>{</li><li>    &quot;properties&quot;: {</li><li>        &quot;country&quot;: {</li><li>            &quot;const&quot;: &quot;United States of America&quot;</li><li>        }</li><li>    }</li><li>}</li></ol>
+  </pre>
+    </div>
+  </div>
+  const 是 enum 的语法糖，所以下面两个定义是等价的：<br />
+  <div>
+    <div>
+      <pre><ol><li>{ &quot;const&quot;: &quot;United States of America&quot; }</li><li>{ &quot;enum&quot;: [ &quot;United States of America&quot; ]}</li></ol>
+  </pre>
+    </div>
+  </div>
+  <h3>8) $schema 关键字</h3>
+  $schema 关键字用于声明 JSON Schema 的版本，建议所有 JSON Schema 都声明一个 $schema，并且应该是 Schema 的第一个键/值对，如下例所示：<br />
+  <div>
+    <div>
+      <pre><ol><li>{&quot;$schema&quot;: &quot;http://json-schema.org/draft-04/schema#&quot;}</li></ol>
+  </pre>
+    </div>
+  </div>
+  如果需要声明 JSON Schema 的指定版本，则可以将 $schema 的值设置为以下几个：<br />
+  <ul>
+    <li>http://json-schema.org/draft-07/schema#</li>
+    <li>http://json-schema.org/draft-06/schema#</li>
+    <li>http://json-schema.org/draft-04/schema#</li>
+  </ul>
+  <h3>9) $ref 关键字</h3>
+  $ref 关键字用于引用其他地方的一个 Schema 片段，它的值为一个 URI 引用。如果是引用同一文档的 Schema 片段，则 $ref 的值需要以井号（#）开头，例如：<br />
+  <p>{ &quot;$ref&quot;: &quot;#/definitions/address&quot; }</p>
+  上面示例中的“#/definitions/address”意味着：<br />
+  <ul>
+    <li>转到文档的根；</li>
+    <li>找到 &quot;definitions&quot; 键的值；</li>
+    <li>在该对象中，找到键 &quot;address&quot; 的值。</li>
+  </ul>
+  <br />
+  如果要引用另外的 Schema 文件，可以向下面这样：<br />
+  <p>{ &quot;$ref&quot;: &quot;definitions.json#/address&quot; }</p>
+  完整的示例如下所示：<br />
+  <div>
+    <div>
+      <pre><ol><li>{</li><li>    &quot;$schema&quot;: &quot;http://json-schema.org/draft-04/schema#&quot;,</li><li>    &quot;definitions&quot;: {</li><li>        &quot;address&quot;: {</li><li>            &quot;type&quot;: &quot;object&quot;,</li><li>            &quot;properties&quot;: {</li><li>                &quot;street_address&quot;: { &quot;type&quot;: &quot;string&quot; },</li><li>                &quot;city&quot;: { &quot;type&quot;: &quot;string&quot; },</li><li>                &quot;state&quot;: { &quot;type&quot;: &quot;string&quot; }</li><li>            },</li><li>            &quot;required&quot;: [&quot;street_address&quot;, &quot;city&quot;, &quot;state&quot;]</li><li>        }</li><li>    },</li><li>    &quot;type&quot;: &quot;object&quot;,</li><li>    &quot;properties&quot;: {</li><li>        &quot;billing_address&quot;: { &quot;$ref&quot;: &quot;#/definitions/address&quot; },</li><li>        &quot;shipping_address&quot;: { &quot;$ref&quot;: &quot;#/definitions/address&quot; }</li><li>    }</li><li>}</li></ol>
+  </pre>
+    </div>
+  </div>
+  使用 $ref 关键字也可以引用当前 Schema 中的某一部分（类似于编程中的递归）。例如您有一个 person 模式，其中包含一个数组 children，每个数组也是一个 person 实例，如下例所示：<br />
+  <div>
+    <div>
+      <pre><ol><li>{</li><li>    &quot;$schema&quot;: &quot;http://json-schema.org/draft-07/schema#&quot;,</li><li>    &quot;definitions&quot;: {</li><li>        &quot;person&quot;: {</li><li>            &quot;type&quot;: &quot;object&quot;,</li><li>            &quot;properties&quot;: {</li><li>                &quot;name&quot;: { &quot;type&quot;: &quot;string&quot; },</li><li>                &quot;children&quot;: {</li><li>                    &quot;type&quot;: &quot;array&quot;,</li><li>                    &quot;items&quot;: { &quot;$ref&quot;: &quot;#/definitions/person&quot; },</li><li>                    &quot;default&quot;: []</li><li>                }</li><li>            }</li><li>        }</li><li>    },</li><li>    &quot;type&quot;: &quot;object&quot;,</li><li>    &quot;properties&quot;: {</li><li>        &quot;person&quot;: { &quot;$ref&quot;: &quot;#/definitions/person&quot; }</li><li>    }</li><li>}</li></ol>
+  </pre>
+    </div>
+  </div>
+  <h3>10) $id 关键字</h3>
+  $id 关键字的值是一个 URI 引用，它有两个用途：<br />
+  <ul>
+    <li>为 Schema 声明一个唯一的标识符；</li>
+    <li>声明一个基本 URI，$ref 可以基于该 URI 进行引用。</li>
+  </ul>
+  <br />
+  例如我们要引用 http://c.biancheng.net/ 域名的某个 Schema，则可以将 $id 设置为下面这样：<br />
+  <p>{ &quot;$id&quot;: &quot;http://c.biancheng.net/schemas/address.json&quot; }</p>
+  注意，当定义了上面所示的 $id 之后，若我们要使用 $ref 来引用同域名下的其它 Schema，则可以简写成如下所示的样子：<br />
+  <p>{ &quot;$ref&quot;: &quot;person.json&quot; }</p>
+  <h2>使用 JSON Schema 进行验证</h2>
+  了解了 JSON Schema 之后，我们就可以使用它来校验 JSON 数据了。网络中有许多 JSON Schema 的库，您可以在 <a href="https://json-schema.org/implementations.html" target="_blank">JSON Schema 的官网</a>查找合适的库。<br />
+  <br />
+  除了可以使用第三方库外，还可以通过一些在线工具来使用 Schema，例如 <a href="https://jsonschemalint.com/#!/version/draft-04/markup/json" target="_blank">https://jsonschemalint.com/#!/version/draft-04/markup/json</a>。</div>
+<p><a name="9" id="9"></a></p>
+<h1>JSON和XML的区别</h1>
+<div id="ggxc-arctop-pc-10"></div>
+<div id="arc-body10">JSON 和 XML 都是基于文本的可读格式，独立于编程语言，能够在几乎所有的编程语言中使用。本节我们就来介绍一下 JSON 和 XML 的区别。<br />
+    <br />
+  在介绍 JSON 和 XML 的区别之前，我们先来分别介绍一下 JSON 和 XML。<br />
+  <h2>什么是 XML？</h2>
+  XML 全称“Extensive Markup Language”，译为“可扩展标记语言”，是一种源自 SGML 的、基于文本的数据格式（XML 是 SGML 的一个子集）。<br />
+  <p>SGML 全称“Standard Generalized Markup language”，译为“标准通用标记语言”，简称“通用标言”，是一种定义电子文档结构和描述其内容的国际标准语言，是 1986 年国际标准化组织出版发布的一个信息管理方面的国际标准。</p>
+  XML 是一种专门为了存储数据而创建的标记语言，它的编写方式与 HTML 非常相似，能够通过不同的标签来标记不同的内容，下面展示了一个简单 XML 数据：<br />
+  <div>
+    <div>
+      <pre><ol><li>&lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&gt;</li><li>&lt;note&gt;</li><li>    &lt;title&gt;JSON教程&lt;/title&gt;</li><li>    &lt;author&gt;C语言中文网&lt;/author&gt;</li><li>    &lt;url&gt;http://c.biancheng.net/&lt;/url&gt;</li><li>    &lt;catalogue&gt;</li><li>        &lt;li&gt;JSON是什么？&lt;/li&gt;</li><li>        &lt;li&gt;JSONP是什么？&lt;/li&gt;</li><li>        &lt;li&gt;JSON语法规则&lt;/li&gt; </li><li>    &lt;/catalogue&gt;</li><li>&lt;/note&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  XML 旨在传输或保存数据，而不是显示数据，在 XML 中，没有预定义标签，其中使用的所有标签都是自定义的，而且所有的标签都由两个部分组成，分别是开始标签（例如&lt;tagname&gt;）和结束标签（例如&lt;/tagname&gt;）。需要注意的是，XML 中的标签是区分大小写的。<br />
+  <br />
+  XML 的主要优点是它可以跨平台、跨语言进行传输。另外，XML 数据可以保存在格式为 .xml 的文本文件中。<br />
+  <h2>什么是 JSON？</h2>
+  JSON 全称“JavaScript Object Notation”，译为“JavaScript 对象简谱”或“JavaScript 对象表示法”，是一种轻量级的、基于文本的、开放的数据交换格式。与 XML 相同，JavaScript 同样可以跨平台、跨语言传递数据。<br />
+  <br />
+  JSON 数据的结构类似于一个 JavaScript 对象，如下例所示：<br />
+  <div>
+    <div>
+      <pre><ol><li>{</li><li>    &quot;title&quot;:&quot;JSON教程&quot;,</li><li>    &quot;author&quot;:&quot;C语言中文网&quot;,</li><li>    &quot;url&quot;:&quot;http://c.biancheng.net/&quot;,</li><li>    &quot;catalogue&quot;:[</li><li>        &quot;JSON是什么？&quot;,</li><li>        &quot;JSONP是什么？&quot;,</li><li>        &quot;JSON语法规则&quot;</li><li>    ]</li><li>}</li></ol>
+  </pre>
+    </div>
+  </div>
+  JSON 的优点在于其结构灵活，所有的浏览器都支持。而且 JSON 语法简单，大多数编程语言都支持 JSON（有些本身就支持，有些可以通过第三方库得到支持）。另外，JSON 数据可以存储在 .json 格式的文本文件中。<br />
+  <br />
+  有关 JSON 的详细介绍，您可以查阅《<a href="http://c.biancheng.net/json/what-is-json.html" target="_blank">JSON是什么？</a>》一节。<br />
+  <h2>JSON 与 XML 之间的差异</h2>
+  尽管 JSON 和 XML 的功能非常相似，但它们之间还是存在一些差异的，如下表所示：<br />
+  <br />
+  <table>
+    <tbody>
+      <tr>
+        <th>JSON</th>
+        <th>XML</th>
+      </tr>
+      <tr>
+        <td>JSON 是一种数据格式</td>
+        <td>XML 是一种标记语言</td>
+      </tr>
+      <tr>
+        <td>与 XML 相比，JSON 数据更容易阅读</td>
+        <td>XML 文档相对来说阅读起来比较困难</td>
+      </tr>
+      <tr>
+        <td>JSON 数据可以存储在 .json 格式的文本文件中</td>
+        <td>XML 数据可以存储在 .xml 格式的文本文件中</td>
+      </tr>
+      <tr>
+        <td>JSON 中支持字符串、数字、数组、布尔值等类型</td>
+        <td>XML 中只有字符串类型</td>
+      </tr>
+      <tr>
+        <td>JSON 没有显示功能</td>
+        <td>XML 提供了显示数据的能力，因为它是一种标记语言</td>
+      </tr>
+      <tr>
+        <td>JSON 仅支持 UTF-8 编码</td>
+        <td>XML 支持各种编码</td>
+      </tr>
+      <tr>
+        <td>JSON 不支持注释</td>
+        <td>XML 支持注释</td>
+      </tr>
+      <tr>
+        <td>JSON 不支持命名空间</td>
+        <td>XML 支持命名空间</td>
+      </tr>
+      <tr>
+        <td>JSON 读写速度更快，且更容易解析</td>
+        <td>相对于 JSON，XML 数据结构更加复杂，解析速度相对较慢</td>
+      </tr>
+      <tr>
+        <td>相对于 XML，JSON 的安全性较低</td>
+        <td>相对于 JSON，XML 的安全性更高</td>
+      </tr>
+    </tbody>
+  </table>
+  <h2>JSON 与 XML 之间的相似之处</h2>
+  除了有许多不同的地方外，JSON 与 XML 之间也有许多相似的地方，最主要的就是，它们的用途是相同的，即存储和传输数据。其次，它们都可以存储在文本文件中，程序员无需借助计算机就可以读写它们中的内容。<br />
+  <br />
+  此外，在 HTTP 请求中，JSON 和 XML 都能够作为传输数据的类型，在服务器与客户端之间进行传递。</div>
+<p><a name="10" id="10"></a></p>
+<h1>JSON和BSON的区别</h1>
+<div id="ggxc-arctop-pc-11"></div>
+<div id="arc-body11">JSON 和 BSON 从名称上来看仅有一个字母的差别，非常相似，那么它们之间有什么区别呢？本节我们就来简单介绍一下。<br />
+    <h2>什么是 JSON？</h2>
+  JSON 全称“JavaScript Object Notation”，译为“JavaScript 对象简谱”或“JavaScript 对象表示法”，是一种轻量级的、基于文本的、开放的数据交换格式，主要用来在浏览器和服务器之间进行通信。<br />
+  <br />
+  下面展示了一个简单的 JSON 数据：<br />
+  <div>
+    <div>
+      <pre><ol><li>{</li><li>    &quot;title&quot;:&quot;JSON教程&quot;,</li><li>    &quot;author&quot;:&quot;C语言中文网&quot;,</li><li>    &quot;url&quot;:&quot;http://c.biancheng.net/&quot;,</li><li>    &quot;catalogue&quot;:[</li><li>        &quot;JSON是什么？&quot;,</li><li>        &quot;JSONP是什么？&quot;,</li><li>        &quot;JSON语法规则&quot;</li><li>    ]</li><li>}</li></ol>
+  </pre>
+    </div>
+  </div>
+  有关 JSON 的详细介绍，您可以阅读《<a href="http://c.biancheng.net/json/what-is-json.html" target="_blank">JSON是什么？</a>》一节。<br />
+  <h2>什么是 BSON？</h2>
+  BSON 全称“Binary Serialized Document Format”，译为“二进制序列化文档格式”，是由 10gen（一家公司的名称）开发的一种数据格式，目前主要用于 MongoDB 数据库中，是 MongoDB 的数据存储格式。<br />
+  <br />
+  BSON 基于 JSON，在 JSON 的基础上进行了升级，支持更多的数据类型。有时也将 BSON 称为“Binary JSON”，即“二进制 JSON”。<br />
+  <p>注意：BSON 并非只能用于 MongoDB，它也可以在其它编程语言中使用。</p>
+  与 JSON 相比，BSON 存取的效率更高，而且占用的空间更小。另外，除了支持 JSON 中的数据类型外，BSON 还支持日期（Date）和二进制（BinData）等类型。<br />
+  <h2>JSON 与 BSON 之间的区别</h2>
+  JSON 和 BSON 之间最主要的区别如下表所示：<br />
+  <br />
+  <table>
+    <tbody>
+      <tr>
+        <th>JSON</th>
+        <th>BSON</th>
+      </tr>
+      <tr>
+        <td>JSON 是 javascript 对象表示法</td>
+        <td>BSON 是二进制 JSON</td>
+      </tr>
+      <tr>
+        <td>是一种轻量级的、基于文本的、开放的数据交换格式</td>
+        <td>是一种二进制序列化文档格式</td>
+      </tr>
+      <tr>
+        <td>JSON 包含一些基本数据类型，如字符串、数字、布尔值、空值</td>
+        <td>除了支持 JSON 中的类型外，BSON 还包含一些额外的数据类型，例如日期（Date）、二进制（BinData）等</td>
+      </tr>
+      <tr>
+        <td>AnyDB、redis 等数据库将数据存储为 JSON 格式</td>
+        <td>MongoDB 中将数据存储为 BSON 格式</td>
+      </tr>
+      <tr>
+        <td>主要用于传输数据</td>
+        <td>主要用于存储数据</td>
+      </tr>
+      <tr>
+        <td>没有响应的编码和解码技术</td>
+        <td>有专用的编码和解码技术</td>
+      </tr>
+      <tr>
+        <td>如果想从 JSON 文件中读取指定信息，需要遍历整个数据</td>
+        <td>在 BSON 中，可以使用索引跳过到指定内容</td>
+      </tr>
+      <tr>
+        <td>JSON 格式不需要解析，因为它是人类可读的</td>
+        <td>BSON 需要解析，因为它是二进制的</td>
+      </tr>
+      <tr>
+        <td>JSON 是对象和数组的组合，其中对象是键值对的集合，而数组是元素的有序列表</td>
+        <td>BSON 是二进制数据，在其中可以存储一些附加信息，例如字符串长度、对象类型等</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<p><a name="11" id="11"></a></p>
+<h1>JSON对比工具</h1>
+<div id="ggxc-arctop-pc-12"></div>
+<div id="arc-body12">JSON 是 Web 开发领域中最常用的数据传输格式之一，因为 JSON 的可读性较高，对于一些简单的 JSON 数据，我们不需要借助任何工具就可以轻易的读取。但对于复杂的 JSON 数据就需要借助工具才行，本节我们来介绍一些 JSON 对比工具。<br />
+    <br />
+  要对比 JSON 数据，最简单的方法就是借助在线工具，在线工具即不需要安装，也不需要配置环境就可以拿来使用，在网络中可以找到许多优秀的 JSON 在线对比工具，如下所示：<br />
+  <ul>
+    <li><a href="https://jsoncompare.org/" target="_blank">https://jsoncompare.org/</a></li>
+    <li><a href="https://jsoncompare.com/#!/diff/" target="_blank">https://jsoncompare.com/#!/diff/</a></li>
+    <li><a href="https://jsondiff.org/" target="_blank">https://jsondiff.org/</a></li>
+    <li><a href="http://jsondiff.com/" target="_blank">http://jsondiff.com/</a></li>
+    <li><a href="http://www.jsondiff.com/" target="_blank">http://www.jsondiff.com/</a></li>
+    <li><a href="https://extendsclass.com/json-diff.html" target="_blank">https://extendsclass.com/json-diff.html</a></li>
+    <li><a href="https://www.textcompare.org/json/" target="_blank">https://www.textcompare.org/json/</a></li>
+    <li><a href="https://jsoncompare.org/" target="_blank">https://jsoncompare.org/</a></li>
+    <li><a href="https://alldiff.in/" target="_blank">https://alldiff.in/</a></li>
+    <li><a href="https://bestjsonformatter.com/json-diff/" target="_blank">https://bestjsonformatter.com/json-diff/</a></li>
+    <li><a href="https://www.jsonformatting.com/json-compare/" target="_blank">https://www.jsonformatting.com/json-compare/</a></li>
+    <li><a href="https://url-decode.com/tool/json-diff/" target="_blank">https://url-decode.com/tool/json-diff/</a></li>
+    <li><a href="https://www.sojson.com/jsondiff.html" target="_blank">https://www.sojson.com/jsondiff.html</a></li>
+    <li><a href="https://www.json.cn/" target="_blank">https://www.json.cn/</a></li>
+    <li><a href="http://json365.com/json_compare" target="_blank">http://json365.com/json_compare</a></li>
+    <li><a href="https://jsonlint.com/" target="_blank">https://jsonlint.com/</a></li>
+  </ul>
+  <br />
+  以 https://jsondiff.org/ 为例，要对比两个 JSON 数据，具体操作如下图所示：<br />
+  <br />
+  <div><img alt="对比两个 JSON 数据" src="http://c.biancheng.net/uploads/allimg/211109/10591J1W-0.gif" /><br />
+    图：对比两个 JSON 数据</div>
+  <br />
+  对比结果如下图所示：<br />
+  <br />
+  <div><img alt="JSON 数据对比结果" src="http://c.biancheng.net/uploads/allimg/211109/10591ML4-1.gif" /><br />
+    图：JSON 数据对比结果</div>
+  <br />
+  除了在线工具外，我们也可以通过代码编辑器来对比 JSON 数据，例如 Visual Studio Code（简称“VS Code”）中就内置了文件对比工具，具体操作如下：<br />
+  <br />
+  首先，选中第一个要对比的文件，点击鼠标右键，在弹出的菜单中选择“选择以进行比较”或“Select for Compare”，如下图所示：<br />
+  <br />
+  <div><img alt="选择第一个要对比的文件" src="http://c.biancheng.net/uploads/allimg/211109/10591JC4-2.gif" /><br />
+    图：选择第一个要对比的文件</div>
+  <br />
+  然后，选中第二个要对比的文件，点击鼠标右键，在弹出的菜单中选择“与已选项目进行比较”或“Compare with Selected”，如下图所示：<br />
+  <br />
+  <div><img alt="选择第二个要对比的文件" src="http://c.biancheng.net/uploads/allimg/211109/10591H395-3.gif" /><br />
+    图：选择第二个要对比的文件</div>
+  <br />
+  对比结果如下图所示：<br />
+  <br />
+  <div><img alt="对比两个 json 文件" src="http://c.biancheng.net/uploads/allimg/211109/10591GN3-4.gif" /><br />
+    图：对比两个 json 文件</div>
+  <br />
+  除了 VS Code 外，使用 Sublime Text 编辑器也可以进行文件对比，但是需要在 Sublime Text 中安装一个名为“Sublimerge”的插件，插件的安装方法大家可以参考 <a href="https://www.cnblogs.com/superjishere/p/11624668.html" target="_blank">https://www.cnblogs.com/superjishere/p/11624668.html</a>。插件安装完成后就可以进行文件对比了，具体操作如下：<br />
+  <br />
+  首先，在第一个要对比的文件中单击鼠标右键，在弹出的菜单中选择“Sublimerge”→“Compare to View”，如下图所示：<br />
+  <br />
+  <div><img alt="第一个要对比的文件 " src="http://c.biancheng.net/uploads/allimg/211109/10591G1T-5.gif" /><br />
+    图：第一个要对比的文件 </div>
+  <br />
+  然后，在弹出的菜单中选择第二个要对比的文件，如下图所示：<br />
+  <br />
+  <div><img alt="第二个要对比的文件" src="http://c.biancheng.net/uploads/allimg/211109/10591J093-6.gif" /><br />
+    图：第二个要对比的文件</div>
+  <br />
+  对比结果如下图所示：<br />
+  <br />
+  <div><img alt="对比两个 json 文件" src="http://c.biancheng.net/uploads/allimg/211109/10591IK9-7.gif" /><br />
+    图：对比两个 json 文件</div>
+</div>
+<p><a name="12" id="12"></a></p>
+<h1>PHP JSON的解析和创建</h1>
+<div id="ggxc-arctop-pc-13"></div>
+<div id="arc-body13">JSON（全称“JavaScript Object Notation”）是一种轻量级的数据交换格式，易于读写，广泛应用于 Web 开发领域。本节我们来介绍一下在 PHP 中如何创建和解析 JSON 数据。<br />
+    <br />
+  PHP 中提供了 json_encode() 和 json_decode() 两个函数分别创建和解析 JSON 数据，其中：<br />
+  <ul>
+    <li>json_encode()：可以将变量转换为 JSON 格式；</li>
+    <li>json_decode()：可以对 JSON 格式的字符串进行解析。</li>
+  </ul>
+  <h2>json_encode()</h2>
+  json_encode() 函数能够将一个 PHP 变量转换为 JSON 数据，其语法格式如下：<br />
+  <p>json_encode(mixed $value, int $options = 0, int $depth = 512): string | false</p>
+  参数说明如下：<br />
+  <ul>
+    <li>$value：要转换的变量，变量可以是任意数据类型；</li>
+    <li>$options：可选参数，默认值为 0，可选值为以下 PHP 常量：JSON_FORCE_OBJECT、JSON_HEX_QUOT、JSON_HEX_TAG、JSON_HEX_AMP、JSON_HEX_APOS、JSON_INVALID_UTF8_IGNORE、JSON_INVALID_UTF8_SUBSTITUTE、 JSON_NUMERIC_CHECK、JSON_PARTIAL_OUTPUT_ON_ERROR、JSON_PRESERVE_ZERO_FRACTION、JSON_PRETTY_PRINT、JSON_UNESCAPED_LINE_TERMINATORS、JSON_UNESCAPED_SLASHES、JSON_UNESCAPED_UNICODE、JSON_THROW_ON_ERROR。关于这些常量了解即可，一般不怎么使用，它们的具体含义您可以通过 <a href="https://www.php.net/manual/zh/json.constants.php" target="_blank">JSON 常量</a>查阅；</li>
+    <li>$depth：可选参数，用来设置递归的最大深度，它的值必须大于 0，默认值为 512，同 $options 参数一样，该参数同样不怎么使用。</li>
+  </ul>
+  <br />
+  若转换成功，json_encode() 函数会返回字符串类型的转换结果，若转换失败，则返回 false。<br />
+  <br />
+  【示例】使用 json_encode() 函数将 PHP 变量转换为 JSON 格式：<br />
+  <div>
+    <div>
+      <pre><ol><li>&lt;?php</li><li>    $arr = [</li><li>        &quot;title&quot;     =&gt; &quot;JSON教程&quot;,</li><li>        &quot;author&quot;    =&gt; &quot;C语言中文网&quot;,</li><li>        &quot;url&quot;       =&gt; &quot;http://c.biancheng.net/&quot;,</li><li>        &quot;catalogue&quot; =&gt; [</li><li>            &quot;JSON是什么？&quot;,</li><li>            &quot;JSONP是什么？&quot;,</li><li>            &quot;JSON语法规则&quot;</li><li>        ]</li><li>    ];</li><li>    echo json_encode($arr);</li><li>?&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  运行结果如下：<br />
+  <p>{&quot;title&quot;:&quot;JSON\u6559\u7a0b&quot;,&quot;author&quot;:&quot;C\u8bed\u8a00\u4e2d\u6587\u7f51&quot;,&quot;url&quot;:&quot;http:\/\/c.biancheng.net\/&quot;,&quot;catalogue&quot;:[&quot;JSON\u662f\u4ec0\u4e48\uff1f&quot;,&quot;JSONP\u662f\u4ec0\u4e48\uff1f&quot;,&quot;JSON\u8bed\u6cd5\u89c4\u5219&quot;]}</p>
+  通过运行结果可以看出，在使用 json_encode() 函数将变量转换为 JSON 数据时，会将变量中的中文字符编码为 Unicode 字符（\uXXXX 格式的字符），如果不需要这样的转换，将 json_encode() 函数的第二个参数设置为 JSON_UNESCAPED_UNICODE 即可，如下例所示：<br />
+  <div>
+    <div>
+      <pre><ol><li>&lt;?php</li><li>    $arr = [</li><li>        &quot;title&quot;     =&gt; &quot;JSON教程&quot;,</li><li>        &quot;author&quot;    =&gt; &quot;C语言中文网&quot;,</li><li>        &quot;url&quot;       =&gt; &quot;http://c.biancheng.net/&quot;,</li><li>        &quot;catalogue&quot; =&gt; [</li><li>            &quot;JSON是什么？&quot;,</li><li>            &quot;JSONP是什么？&quot;,</li><li>            &quot;JSON语法规则&quot;</li><li>        ]</li><li>    ];</li><li>    echo json_encode($arr,JSON_UNESCAPED_UNICODE );</li><li>?&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  运行结果如下：<br />
+  <p>{&quot;title&quot;:&quot;JSON教程&quot;,&quot;author&quot;:&quot;C语言中文网&quot;,&quot;url&quot;:&quot;http:\/\/c.biancheng.net\/&quot;,&quot;catalogue&quot;:[&quot;JSON是什么？&quot;,&quot;JSONP是什么？&quot;,&quot;JSON语法规则&quot;]}</p>
+  <h2>json_decode()</h2>
+  json_decode() 函数能够解析 JSON 格式的字符串，并将解析后的结果保存到一个变量中，其语法格式如下：<br />
+  <p>json_decode(string $json, bool $assoc = false, int $depth = 512, int $options = 0): mixed</p>
+  参数说明如下：<br />
+  <ul>
+    <li>$json：必填参数，要解析的 JSON 字符串；</li>
+    <li>$assoc：可选参数，默认值为 false，若将值设置为 true，那么 json_decode() 函数将返回一个数组；</li>
+    <li>$depth：可选参数，用来设置递归的最大深度，默认值为 512，也可以设置为其它大于 0 的值；</li>
+    <li>$options：可选参数，默认值为 0，可选值为 JSON_BIGINT_AS_STRING、JSON_INVALID_UTF8_IGNORE、JSON_INVALID_UTF8_SUBSTITUTE、JSON_OBJECT_AS_ARRAY、JSON_THROW_ON_ERROR 等常量，可以同时设置多个常量，常量之间使用竖线|进行分隔。有关上述常量的含义，您可以通过 <a href="https://www.php.net/manual/zh/json.constants.php" target="_blank">PHP 预定义常量</a>查阅。</li>
+  </ul>
+  <br />
+  若解析成功，json_decode() 函数会返回 JSON 中的数据，若解析失败，或者 JSON 的数据深度超过了递归的限制，则返回 null。<br />
+  <br />
+  【示例】使用 json_decode() 函数解析 JSON 数据：<br />
+  <div>
+    <div>
+      <pre><ol><li>&lt;?php</li><li>    $str = '{&quot;title&quot;:&quot;JSON教程&quot;,&quot;author&quot;:&quot;C语言中文网&quot;,&quot;url&quot;:&quot;http:\/\/c.biancheng.net\/&quot;,&quot;catalogue&quot;:[&quot;JSON是什么？&quot;,&quot;JSONP是什么？&quot;,&quot;JSON语法规则&quot;]}';</li><li>    echo &quot;&lt;pre&gt;&quot;;</li><li>    var_dump(json_decode($str, true));</li><li>?&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  运行结果如下：<br />
+  <p>array(4) {<br />
+        
+    [&quot;title&quot;]=&gt;<br />
+        
+    string(10) &quot;JSON教程&quot;<br />
+        
+    [&quot;author&quot;]=&gt;<br />
+        
+    string(16) &quot;C语言中文网&quot;<br />
+        
+    [&quot;url&quot;]=&gt;<br />
+        
+    string(23) &quot;http://c.biancheng.net/&quot;<br />
+        
+    [&quot;catalogue&quot;]=&gt;<br />
+        
+    array(3) {<br />
+            
+    [0]=&gt;<br />
+            
+    string(16) &quot;JSON是什么？&quot;<br />
+            
+    [1]=&gt;<br />
+            
+    string(17) &quot;JSONP是什么？&quot;<br />
+            
+    [2]=&gt;<br />
+            
+    string(16) &quot;JSON语法规则&quot;<br />
+        
+    }<br />
+    }</p>
+</div>
+<p><a name="13" id="13"></a></p>
+<h1>Python JSON的解析和创建</h1>
+<div id="ggxc-arctop-pc-14"></div>
+<div id="arc-body14">本节我们来介绍一下如何使用 Python 来创建和解析 JSON 数据。<br />
+    <br />
+  与 PHP 类似，Python 中同样提供了两个函数来分别创建和解析 JSON 数据，注意：本节是基于 Python3 进行介绍的：<br />
+  <ul>
+    <li>json.dumps()：将 Python 对象转换为 JSON 数据；</li>
+    <li>json.loads()：将 JSON 数据解析为 Python 对象。</li>
+  </ul>
+  <h2>json.dumps()</h2>
+  在 Python 中，您可以使用 json.dumps() 函数将 Python 对象转换为 JSON 数据，语法格式如下：<br />
+  <p>json.dumps(obj, skipkeys=False, ensure_ascii=True, check_circular=True, allow_nan=True, cls=None, indent=None, separators=None, encoding=&quot;utf-8&quot;, default=None, sort_keys=False, **kw)</p>
+  参数说明如下：<br />
+  <ul>
+    <li>obj：要转换为 JSON 数据的 Python 对象；</li>
+    <li>skipkeys：默认值为 False，如果 dict 中 keys 内的数据不是 Python 的基本类型（str、unicode、int、long、float、bool、None），会报 TypeError 错误，若设置为 True，则会跳过这类 key；</li>
+    <li>ensure_ascii：默认值 True，即输出 ASCLL 码，若设置为 False，则可以输出中文；</li>
+    <li>check_circular：如果值为 False，则跳过对容器类型的循环引用检查，循环引用将导致溢出错误；</li>
+    <li>allow_nan：默认值 True，在处理 JSON 规范以外的 Float 类型时（例如：nan、inf、-inf），将其转换为 JavaScript 中的等价类型（例如：NaN、Infinity、-Infinity），若设置为 False，则会引发一个 ValueError 错误，</li>
+    <li>cls：用来指定一个自定义的 JSONEncoder 子类，来替换 JSONCoder 类；</li>
+    <li>indent：按照给定数值，将数据缩进显示，让数据读起来更加清晰；</li>
+    <li>separators：分隔符，分别设置不同 dict 项之间的分隔符和 dict 项内 key 与 value 之间的分隔符，并将冒号:与逗号,之后的空格全部去除；</li>
+    <li>encoding：设置 JSON 数据的编码方式，默认为 UTF-8；</li>
+    <li>default：指定一个函数，当某个对象无法被序列化时会调用该函数；</li>
+    <li>sort_keys：若值为 Ture，则表示按照 dict 排序（a 到 z）输出。</li>
+  </ul>
+  <br />
+  示例代码如下：<br />
+  <div>
+    <div>
+      <pre><ol><li>import json</li><li></li><li>dictionary = {&quot;title&quot;:&quot;JSON教程&quot;,&quot;author&quot;:&quot;C语言中文网&quot;,&quot;url&quot;:&quot;http://c.biancheng.net/&quot;,&quot;catalogue&quot;:[&quot;JSON是什么？&quot;,&quot;JSONP是什么？&quot;,&quot;JSON语法规则&quot;]}</li><li>jsonString = json.dumps(dictionary, indent=4, ensure_ascii=False)</li><li>print(jsonString)</li></ol>
+  </pre>
+    </div>
+  </div>
+  运行结果如下：<br />
+  <p>{<br />
+        
+    &quot;title&quot;: &quot;JSON教程&quot;,<br />
+        
+    &quot;author&quot;: &quot;C语言中文网&quot;,<br />
+        
+    &quot;url&quot;: &quot;http://c.biancheng.net/&quot;,<br />
+        
+    &quot;catalogue&quot;: [<br />
+            
+    &quot;JSON是什么？&quot;,<br />
+            
+    &quot;JSONP是什么？&quot;,<br />
+            
+    &quot;JSON语法规则&quot;<br />
+        
+    ]<br />
+    }</p>
+  <h2>json.loads()</h2>
+  在 Python 中，您可以使用 json.loads() 函数将 JSON 数据转换为 Python 对象，语法格式如下：<br />
+  <p>json.loads(s[, encoding[, cls[, object_hook[, parse_float[, parse_int[, parse_constant[, object_pairs_hook[, **kw]]]]]]]])</p>
+  参数说明如下：<br />
+  <ul>
+    <li>s：要转换的 JSON 数据，可以是 str、bytes 或 bytearray 等类型；</li>
+    <li>encoding：可选参数，设置 JSON 数据的编码方式，默认为 UTF-8；</li>
+    <li>cls：可选参数，用于指定一个自定义 JSONCoder 的子类，来替换 JSONCoder 类；</li>
+    <li>object_hook：可选参数，将函数的返回值替换为指定的类型，该功能可以用来实现自定义解码器，例如 JSON-RPC；</li>
+    <li>parse_float：可选参数，如果指定该参数，那么在解码 JSON 数据时，符合 float 类型的字符串将转换为指定的类型；</li>
+    <li>parse_int：可选参数，如果指定该参数，那么在解码 JSON 数据时，符合 int 类型的字符串将转换为指定的类型；</li>
+    <li>parse_constant：可选参数，如果指定该参数，那么在解码 JSON 数据时，若出现 -Infinity、Infinity、NaN 等字符串，则调用指定的方法；</li>
+    <li>object_pairs_hook：可选参数，将结果以 key-value 有序列表的形式返回，如果 object_hook 和 object_pairs_hook 同时指定的话，优先按照 object_pairs_hook 的设置返回。</li>
+  </ul>
+  <br />
+  示例代码如下：<br />
+  <div>
+    <div>
+      <pre><ol><li>import json</li><li></li><li>json_str = '{&quot;title&quot;:&quot;JSON教程&quot;,&quot;author&quot;:&quot;C语言中文网&quot;,&quot;url&quot;:&quot;http://c.biancheng.net/&quot;,&quot;catalogue&quot;:[&quot;JSON是什么？&quot;,&quot;JSONP是什么？&quot;,&quot;JSON语法规则&quot;]}'</li><li>data = json.loads(json_str)</li><li>print(data)</li></ol>
+  </pre>
+    </div>
+  </div>
+  运行结果如下：<br />
+  <p>{'title': 'JSON教程', 'author': 'C语言中文网', 'url': 'http://c.biancheng.net/', 'catalogue': ['JSON是什么？', 'JSONP是 什么？', 'JSON语法规则']}</p>
+</div>
+<p><a name="14" id="14"></a></p>
+<h1>Java JSON的解析和创建</h1>
+<div id="ggxc-arctop-pc-15"></div>
+<div id="arc-body15">几乎所有的编程语言例如：Java、Python、Node.js、JavaScript 和 Ruby 等都提供了创建和解析 JSON 数据的方法，本节我们主要来介绍一下如何使用 Java 来创建和解析 JSON 数据。<br />
+    <br />
+  Java 中没有内置任何处理 JSON 数据的函数或库，所以我们需要借助一些开源的库来实现 JSON 数据的创建和解析，比较常用的有 JSON.simple、Jackson、Gson、Moshi 等，接下来以 JSON.simple 为例，来演示一下如何使用 Java 来创建和解析 JSON 数据。<br />
+  <h2>使用 Java 创建 JSON 数据</h2>
+  在 Java 中，您可以使用 JSONObject 来将 Java 数据转换为 JSON 格式，示例代码如下：<br />
+  <div>
+    <div>
+      <pre><ol><li>import org.json.simple.JSONObject;</li><li></li><li>class JsonEncodeDemo {</li><li></li><li>    public static void main(String[] args) {</li><li>        JSONObject obj = new JSONObject();</li><li>   </li><li>        obj.put(&quot;title&quot;, &quot;JSON教程&quot;);</li><li>        obj.put(&quot;author&quot;, &quot;C语言中文网&quot;);</li><li>        obj.put(&quot;url&quot;, &quot;http://c.biancheng.net/&quot;);</li><li>        obj.put(&quot;hits&quot;, 100);</li><li>   </li><li>        System.out.print(obj);</li><li>    }</li><li>}</li></ol>
+  </pre>
+    </div>
+  </div>
+  编译并执行上述程序，结果如下：<br />
+  <p>{&quot;hits&quot;:100,&quot;author&quot;:&quot;C语言中文网&quot;,&quot;title&quot;:&quot;JSON教程&quot;,&quot;url&quot;:&quot;http:\/\/c.biancheng.net\/&quot;}</p>
+  <h2>使用 Java 解析 JSON 数据</h2>
+  在 Java 中，您可以使用 JSONObjcet 和 JSONArray 来将 JSON 数据解析为 Java 对象，示例代码如下：<br />
+  <div>
+    <div>
+      <pre><ol><li>import org.json.simple.JSONObject;</li><li>import org.json.simple.JSONArray;</li><li>import org.json.simple.parser.ParseException;</li><li>import org.json.simple.parser.JSONParser;</li><li></li><li>class JsonDecodeDemo {</li><li>    public static void main(String[] args) {</li><li>        JSONParser parser = new JSONParser();</li><li>        String s = &quot;[0,{\&quot;hits\&quot;:100,\&quot;author\&quot;:\&quot;C语言中文网\&quot;,\&quot;title\&quot;:\&quot;JSON教程&quot;,\&quot;url\&quot;:\&quot;http://c.biancheng.net/\&quot;}]&quot;;</li><li>        try{</li><li>            Object obj = parser.parse(s);</li><li>            JSONArray array = (JSONArray)obj;</li><li></li><li>            System.out.println(array.get(1));</li><li>            System.out.println();</li><li>        }catch(ParseException pe) {</li><li>            System.out.println(&quot;position: &quot; + pe.getPosition());</li><li>            System.out.println(pe);</li><li>        }</li><li>    }</li><li>}</li></ol>
+  </pre>
+    </div>
+  </div>
+  编译并执行上述程序，结果如下：<br />
+  <p>{&quot;hits&quot;:100,&quot;author&quot;:&quot;C语言中文网&quot;,&quot;title&quot;:&quot;JSON教程&quot;,&quot;url&quot;:&quot;http:\/\/c.biancheng.net\/&quot;}</p>
+</div>
+<p><a name="15" id="15"></a></p>
+<h1>Ajax获取JSON数据</h1>
+<div id="ggxc-arctop-pc-16"></div>
+<div id="arc-body16">Ajax 全称“Asynchronous JavaScript and XML”，译为“异步 JavaScript 和 XML”，程序员们习惯称之为“阿贾克斯”，通过 Ajax 我们可以异步在服务器与客户端之间传递数据。在 Ajax 中，普遍使用 JSON 作为传输数据的格式。<br />
+    <br />
+  一般情况下，我们可以通过 JavaScript 来发送 Ajax 请求，并接收响应的信息。下面通过一个示例来演示一下（有关 Ajax 的详细介绍大家可以查阅《<a href="http://c.biancheng.net/javascript/ajax.html" target="_blank">JavaScript Ajax请求</a>》一节）：<br />
+  <div>
+    <div>
+      <pre><ol><li>&lt;!DOCTYPE html&gt;</li><li>&lt;html lang=&quot;en&quot;&gt;</li><li>&lt;head&gt;</li><li>    &lt;meta content=&quot;text/html; charset=utf-8&quot;&gt;</li><li>    &lt;title&gt;AJAX And JSON&lt;/title&gt;</li><li>    &lt;script type=&quot;application/javascript&quot;&gt;</li><li>        function load() {</li><li>            var url = &quot;./data.json&quot;; // 获取 JSON 数据的链接</li><li>            var request;</li><li></li><li>            if (window.XMLHttpRequest) {</li><li>                request = new XMLHttpRequest(); //发送 Ajax 请求，适用于 Chrome, mozilla 等浏览器 </li><li>            } else if (window.ActiveXObject) {</li><li>                request = new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;); // 发送 Ajax 请求，适用于 IE 浏览器 </li><li>            }</li><li>            request.onreadystatechange = function() {</li><li>                if (request.readyState == 4) {</li><li>                    var jsonObj = JSON.parse(request.responseText); // 解析 JSON 数据</li><li>                    document.getElementById(&quot;title&quot;).innerHTML     = jsonObj.title;</li><li>                    document.getElementById(&quot;author&quot;).innerHTML    = jsonObj.author;</li><li>                    document.getElementById(&quot;url&quot;).innerHTML       = jsonObj.url;</li><li>                    document.getElementById(&quot;catalogue&quot;).innerHTML = jsonObj.catalogue;</li><li>                }</li><li>            }</li><li>            request.open(&quot;GET&quot;, url, true);</li><li>            request.send();</li><li>        }</li><li>    &lt;/script&gt;</li><li>&lt;/head&gt;</li><li>&lt;body&gt;</li><li>    Title: &lt;span id=&quot;title&quot;&gt;&lt;/span&gt;&lt;br /&gt;</li><li>    Author: &lt;span id=&quot;author&quot;&gt;&lt;/span&gt;&lt;br /&gt;</li><li>    Url: &lt;span id=&quot;url&quot;&gt;&lt;/span&gt;&lt;br /&gt;</li><li>    Catalogue: &lt;span id=&quot;catalogue&quot;&gt;&lt;/span&gt;&lt;br /&gt;</li><li>    &lt;button type=&quot;button&quot; onclick=&quot;load()&quot;&gt;点击加载 JSON 数据&lt;/button&gt;</li><li>&lt;/body&gt;</li><li>&lt;/html&gt;</li></ol>
+  </pre>
+    </div>
+  </div>
+  上面代码中使用到的 date.json 文件中的内容如下：
+  <div>
+    <div>
+      <pre><ol><li>{</li><li>    &quot;title&quot;: &quot;JSON教程&quot;,</li><li>    &quot;author&quot;: &quot;C语言中文网&quot;,</li><li>    &quot;url&quot;: &quot;http://c.biancheng.net/&quot;,</li><li>    &quot;catalogue&quot;: [</li><li>        &quot;JSON是什么？&quot;,</li><li>        &quot;JSONP是什么？&quot;,</li><li>        &quot;JSON语法规则&quot;</li><li>    ]</li><li>}</li></ol>
+  </pre>
+    </div>
+  </div>
+  提示，上述代码需要在服务器环境中才能运行，运行之后点击网页中的按钮即可获取指定的 JSON 数据，并将数据显示到网页中，如下图所示：<br />
+  <br />
+  <div><img alt="通过 Ajax 获取 JSON 数据" src="http://c.biancheng.net/uploads/allimg/211109/11162VY6-0.gif" /><br />
+    图：通过 Ajax 获取 JSON 数据</div>
+</div>
+<p>&nbsp;</p>
+</body>
+</html>

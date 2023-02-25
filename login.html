@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+	
+    <style type="text/css">
+    body {
+	background-color: #0446F9;
+	text-align: center;	
+}
+    #1 {
+	background-color: #FF0004;
+	height: 200000px;
+	width: 200px;
+}
+    #1 {
+	width: 100px;
+	height: auto;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	font-size: 10px;
+	background-color: #FF0004;
+}
+    .STYLE3 {
+	font-size: 36px;
+	text-align: left;
+}
+    </style>
+</head>
+<body>
+	
+		<div>
+		  <p><span class="STYLE3"><img src="xya.png" width="50" height="50" />阳安网</span></p>
+          <div align="center"><span class="STYLE3">阳安网</span> <span class="STYLE3"> </span></div>
+			<p style="text-align: center"><span>用户名:</span>
+			  <input type="text" placeholder="请输入用户名..." id="username">
+          </p>
+			<p style="text-align: center"><span style="text-align: center">密 码:</span>
+			  <span style="text-align: center">
+			  <input type="password" placeholder="请输入用户名..." id="passwd">
+	      </span></p>
+			<p>
+			  <input type="button" value="登录" onclick="login()" class="btns" onmouseover="this.style.backgroundColor='#FF8D00'" onmouseout="this.style.backgroundColor='#FC5628'"> 
+			  <input type="button" id="#1" value="清除" onclick="doClear()" />
+		  </p>
+    </div>
+		<script type="text/javascript">
+			let accountAll = [{ // 存储账户json数据的数组
+					username: 123,
+					passwd: 'qwe'
+				},
+				{
+					username: 456,
+					passwd: 'asd'
+				},
+				{
+					username: 789,
+					passwd: 'zxc'
+				},
+			    {   username: 1234,
+				    passwd: '1234'
+				},
+			]
+			function login() { //登陆判断
+				let username = document.getElementById('username').value;
+				let passwd = document.getElementById('passwd').value;
+				let account = accountAll.filter(function(e) {
+					return e.username == username
+				})[0]; // 筛选账号返回数组，不存在则返回空数组
+				if (!account) {
+					alert('账户不存在');
+				} else {
+					if (account.username == username && account.passwd == passwd) {
+						alert('登陆成功');
+					    window.location = "main.html"
+					} else {
+						alert('密码错误');
+					}
+				
+				}
+			}
+			function doClear() { //获取页面所有的input框，是text和password框，内容=空串
+				let inputs = document.getElementsByTagName("input");
+				for (let i = 0; i < inputs.length; i++) {
+					if (inputs[i].type == 'text' || inputs[i].type == 'password') {
+						inputs[i].value = '';
+					}
+				}
+			}
+			//给清除按钮增加onclick事件
+			let btnClear = document.getElementById('btnClear');
+			btnClear.addEventListener('click', function() {
+				doClear();
+			});
+		</script>
+	</body>
+</html>

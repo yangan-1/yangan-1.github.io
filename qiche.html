@@ -1,0 +1,206 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<link href="ht/css/1.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+#key {
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	font-size: 18px;
+	color: #000000;
+}
+</style>
+</head>
+<script type="text/javascript">
+function onSearch(obj){//js函数开始
+  setTimeout(function(){//因为是即时查询，需要用setTimeout进行延迟，让值写入到input内，再读取
+    var storeId = document.getElementById('store');//获取table的id标识
+    var rowsLength = storeId.rows.length;//表格总共有多少行
+    var key = obj.value;//获取输入框的值
+    var searchCol = 1;//要搜索的哪一列，这里是第一列，从0开始数起
+    for(var i=1;i<rowsLength;i++){//按表的行数进行循环，本例第一行是标题，所以i=1，从第二行开始筛选（从0数起）
+      var searchText = storeId.rows[i].cells[searchCol].innerHTML;//取得table行，列的值
+      if(searchText.match(key)){//用match函数进行筛选，如果input的值，即变量 key的值为空，返回的是ture，
+        storeId.rows[i].style.display='';//显示行操作，
+      }else{
+        storeId.rows[i].style.display='none';//隐藏行操作
+      }
+    }
+  },200);//200为延时时间
+}
+</script>
+<body>
+<div ><span style="font-size: 14pt">请输入名称</span> 
+	<input name="key" type="text" id="key" onKeyDown="onSearch(this)" value="">
+  <BUTTON style="HEIGHT:25px" onClick="javascript:if (confirm('查询数据？')) location.href='#';else return;"><img src="ht/images/btn_search.gif" width="16" height="16" align="absmiddle"> 查询</BUTTON>
+</div>
+
+<td height="100%" valign="top">
+    <div style="overflow:auto;height:100%; width:100%">
+<table width="994" height="212" border="1" id="store">
+	
+  <TR class="store">
+    <th width="48" align="center" bgcolor="#cee4ff" style="color: #000000"><input type="checkbox" name="checkbox" id="store2"></th>
+    <th width="226" align="center" bgcolor="#cee4ff" style="color: #000000" >名称</th>
+    <th width="201" align="center" bgcolor="#cee4ff" style="color: #000000" >阳安唯一识别号</th>
+    <th width="162" align="center" bgcolor="#cee4ff" style="color: #000000" >阳安机密等级</th>
+    <th width="70" align="center" bgcolor="#cee4ff" style="color: #000000" >详情链接</th>
+    <th width="247" align="center" bgcolor="#cee4ff" id="1" style="color: #000000">操作</th>
+  </TR>
+  <TR bgcolor="#FFFFFF" class="store">
+    <TD height="40" align="center"><input type="checkbox" name="checkbox2" id="checkbox2"></TD>
+    <TD align="center">1</TD>
+    <TD align="center">YAZ00001</TD>
+    <TD align="center">A区01号</TD>
+    <TD align="center">1级</TD>
+    <TD align="center"><BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('查看该信息？')) location.href='01_detail.html';else return;">查看</BUTTON>
+      <BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('编辑该信息？')) location.href='01_edit.html';else return;">编辑</BUTTON>
+      <BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('通过审核？')) location.href='#';else return;">审核</BUTTON>
+      <BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('合同报备？')) location.href='#';else return;">报备</BUTTON></TD>
+  </TR>
+  <TR bgcolor="#FFFFFF" class="BGCgray">
+    <TD height="35" align="center" bgcolor="#9E9E9E"><input type="checkbox" name="checkbox3" id="checkbox3"></TD>
+    <TD align="center" bgcolor="#9E9E9E">1</TD>
+    <TD align="center" bgcolor="#9E9E9E">YAZ00002</TD>
+    <TD align="center" bgcolor="#9E9E9E">&nbsp;</TD>
+    <TD align="center" bgcolor="#9E9E9E">1级</TD>
+    <TD align="center" bgcolor="#9E9E9E"><BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('查看该信息？')) location.href='01_detail.html';else return;">查看</BUTTON>
+      <BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('编辑该信息？')) location.href='01_edit.html';else return;">编辑</BUTTON>
+      <BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('通过审核？')) location.href='#';else return;">审核</BUTTON>
+      <BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('合同报备？')) location.href='#';else return;">报备</BUTTON></TD>
+  </TR>
+  <TR bgcolor="#FFFFFF" class="store">
+    <TD height="33" align="center"><input type="checkbox" name="checkbox4" id="checkbox4"></TD>
+    <TD align="center">1</TD>
+    <TD align="center">YAZ00003</TD>
+    <TD align="center">&nbsp;</TD>
+    <TD align="center">&nbsp;</TD>
+    <TD align="center"><BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('查看该信息？')) location.href='01_detail.html';else return;">查看</BUTTON>
+      <BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('编辑该信息？')) location.href='01_edit.html';else return;">编辑</BUTTON>
+      <BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('通过审核？')) location.href='#';else return;">审核</BUTTON>
+      <BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('合同报备？')) location.href='#';else return;">报备</BUTTON></TD>
+  </TR>
+  <TR bgcolor="#FFFFFF" class="BGCgray">
+    <TD height="31" align="center" bgcolor="#9E9E9E"><input type="checkbox" name="checkbox" id="checkbox"></TD>
+    <TD align="center" bgcolor="#9E9E9E">2</TD>
+    <TD align="center" bgcolor="#9E9E9E">YAZ00004</TD>
+    <TD align="center" bgcolor="#9E9E9E">&nbsp;</TD>
+    <TD align="center" bgcolor="#9E9E9E">&nbsp;</TD>
+    <TD align="center" bgcolor="#9E9E9E"><BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('查看该信息？')) location.href='01_detail.html';else return;">查看</BUTTON>
+      <BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('编辑该信息？')) location.href='01_edit.html';else return;">编辑</BUTTON>
+      <BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('通过审核？')) location.href='#';else return;">审核</BUTTON>
+      <BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('合同报备？')) location.href='#';else return;">报备</BUTTON></TD>
+  </TR>
+  <TR bgcolor="#FFFFFF" class="store">
+    <TD height="40" align="center"><input type="checkbox" name="checkbox2" id="checkbox2"></TD>
+    <TD align="center">1</TD>
+    <TD align="center">YAZ00001</TD>
+    <TD align="center">A区01号</TD>
+    <TD align="center">1级</TD>
+    <TD align="center"><BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('查看该信息？')) location.href='01_detail.html';else return;">查看</BUTTON>
+      <BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('编辑该信息？')) location.href='01_edit.html';else return;">编辑</BUTTON>
+      <BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('通过审核？')) location.href='#';else return;">审核</BUTTON>
+      <BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('合同报备？')) location.href='#';else return;">报备</BUTTON></TD>
+  </TR>
+  <TR bgcolor="#FFFFFF" class="BGCgray">
+    <TD height="35" align="center" bgcolor="#9E9E9E"><input type="checkbox" name="checkbox3" id="checkbox3"></TD>
+    <TD align="center" bgcolor="#9E9E9E">1</TD>
+    <TD align="center" bgcolor="#9E9E9E">YAZ00002</TD>
+    <TD align="center" bgcolor="#9E9E9E">&nbsp;</TD>
+    <TD align="center" bgcolor="#9E9E9E">1级</TD>
+    <TD align="center" bgcolor="#9E9E9E"><BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('查看该信息？')) location.href='01_detail.html';else return;">查看</BUTTON>
+      <BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('编辑该信息？')) location.href='01_edit.html';else return;">编辑</BUTTON>
+      <BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('通过审核？')) location.href='#';else return;">审核</BUTTON>
+      <BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('合同报备？')) location.href='#';else return;">报备</BUTTON></TD>
+  </TR>
+  <TR bgcolor="#FFFFFF" class="store">
+    <TD height="33" align="center"><input type="checkbox" name="checkbox4" id="checkbox4"></TD>
+    <TD align="center">1</TD>
+    <TD align="center">YAZ00003</TD>
+    <TD align="center">&nbsp;</TD>
+    <TD align="center">&nbsp;</TD>
+    <TD align="center"><BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('查看该信息？')) location.href='01_detail.html';else return;">查看</BUTTON>
+      <BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('编辑该信息？')) location.href='01_edit.html';else return;">编辑</BUTTON>
+      <BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('通过审核？')) location.href='#';else return;">审核</BUTTON>
+      <BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('合同报备？')) location.href='#';else return;">报备</BUTTON></TD>
+  </TR>
+  <TR bgcolor="#FFFFFF" class="BGCgray">
+    <TD height="31" align="center" bgcolor="#9E9E9E"><input type="checkbox" name="checkbox" id="checkbox"></TD>
+    <TD align="center" bgcolor="#9E9E9E">2</TD>
+    <TD align="center" bgcolor="#9E9E9E">YAZ00004</TD>
+    <TD align="center" bgcolor="#9E9E9E">&nbsp;</TD>
+    <TD align="center" bgcolor="#9E9E9E">&nbsp;</TD>
+    <TD align="center" bgcolor="#9E9E9E"><BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('查看该信息？')) location.href='01_detail.html';else return;">查看</BUTTON>
+      <BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('编辑该信息？')) location.href='01_edit.html';else return;">编辑</BUTTON>
+      <BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('通过审核？')) location.href='#';else return;">审核</BUTTON>
+      <BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('合同报备？')) location.href='#';else return;">报备</BUTTON></TD>
+  </TR>
+  <TR bgcolor="#FFFFFF" class="store">
+    <TD height="40" align="center"><input type="checkbox" name="checkbox2" id="checkbox2"></TD>
+    <TD align="center">1</TD>
+    <TD align="center">YAZ00001</TD>
+    <TD align="center">A区01号</TD>
+    <TD align="center">1级</TD>
+    <TD align="center"><BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('查看该信息？')) location.href='01_detail.html';else return;">查看</BUTTON>
+      <BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('编辑该信息？')) location.href='01_edit.html';else return;">编辑</BUTTON>
+      <BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('通过审核？')) location.href='#';else return;">审核</BUTTON>
+      <BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('合同报备？')) location.href='#';else return;">报备</BUTTON></TD>
+  </TR>
+  <TR bgcolor="#FFFFFF" class="BGCgray">
+    <TD height="35" align="center" bgcolor="#9E9E9E"><input type="checkbox" name="checkbox3" id="checkbox3"></TD>
+    <TD align="center" bgcolor="#9E9E9E">1</TD>
+    <TD align="center" bgcolor="#9E9E9E">YAZ00002</TD>
+    <TD align="center" bgcolor="#9E9E9E">&nbsp;</TD>
+    <TD align="center" bgcolor="#9E9E9E">1级</TD>
+    <TD align="center" bgcolor="#9E9E9E"><BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('查看该信息？')) location.href='01_detail.html';else return;">查看</BUTTON>
+      <BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('编辑该信息？')) location.href='01_edit.html';else return;">编辑</BUTTON>
+      <BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('通过审核？')) location.href='#';else return;">审核</BUTTON>
+      <BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('合同报备？')) location.href='#';else return;">报备</BUTTON></TD>
+  </TR>
+  <TR bgcolor="#FFFFFF" class="store">
+    <TD height="33" align="center"><input type="checkbox" name="checkbox4" id="checkbox4"></TD>
+    <TD align="center">1</TD>
+    <TD align="center">YAZ00003</TD>
+    <TD align="center">&nbsp;</TD>
+    <TD align="center">&nbsp;</TD>
+    <TD align="center"><BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('查看该信息？')) location.href='01_detail.html';else return;">查看</BUTTON>
+      <BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('编辑该信息？')) location.href='01_edit.html';else return;">编辑</BUTTON>
+      <BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('通过审核？')) location.href='#';else return;">审核</BUTTON>
+      <BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('合同报备？')) location.href='#';else return;">报备</BUTTON></TD>
+  </TR>
+  <TR bgcolor="#FFFFFF" class="BGCgray">
+    <TD height="31" align="center" bgcolor="#9E9E9E"><input type="checkbox" name="checkbox" id="checkbox"></TD>
+    <TD align="center" bgcolor="#9E9E9E">2</TD>
+    <TD align="center" bgcolor="#9E9E9E">YAZ00004</TD>
+    <TD align="center" bgcolor="#9E9E9E">&nbsp;</TD>
+    <TD align="center" bgcolor="#9E9E9E">&nbsp;</TD>
+    <TD align="center" bgcolor="#9E9E9E"><BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('查看该信息？')) location.href='01_detail.html';else return;">查看</BUTTON>
+      <BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('编辑该信息？')) location.href='01_edit.html';else return;">编辑</BUTTON>
+      <BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('通过审核？')) location.href='#';else return;">审核</BUTTON>
+      <BUTTON style="height:21px; font-size:12px" onClick="javascript:if (confirm('合同报备？')) location.href='#';else return;">报备</BUTTON></TD>
+  </TR>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="20%" height="25"><table border="0" cellspacing="0" cellpadding="3">
+      <tr>
+        <td><a href="#"><img src="ht/images/prev_top.gif" width="16" height="16" border="0"></a></td>
+        <td><a href="#"><img src="ht/images/prev.gif" width="16" height="16" border="0"></a></td>
+        <td><a href="#"><img src="ht/images/next.gif" width="16" height="16" border="0"></a></td>
+        <td><a href="#"><img src="ht/images/prev_end.gif" width="16" height="16" border="0"></a></td>
+      </tr>
+    </table></td>
+    <td width="20%" align="center"><table border="0" cellspacing="0" cellpadding="3">
+      <tr>
+        <td><a href="#"><img src="ht/images/next.gif" width="16" height="16" border="0"></a></td>
+        <td><input name="textfield23" type="text" size="3" style="width:25;height:18">
+          <span style="font-size: 14px">          /页</span></td>
+      </tr>
+    </table></td>
+    <td width="20%" align="right" style="font-size: 14px">共10条记录显示到1/1</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+</html>

@@ -29,85 +29,56 @@
 		80%{transform:translateX(-2460px);}
 		100%{transform:translateX(-3280px);}
 		}
-    #select {
+    #q {
+		width:500;
+		height:1000;
+}
+    #q {
 	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
-	font-size: 24px;
-	width: 150px;
-	background: #03F909
-	
+	font-size: 40px;
+	font-weight: 5000px;
+	style="text-align: right";
+}
+    #q {
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	font-weight: 900;
+	line-height: normal;
 }
     </style>
 </head>
-<!-- Cookie计数 -->
-<SCRIPT language="JavaScript">
-    function www_helpor_net(offset) {
-        var endstr = document.cookie.indexOf(";", offset);
-        if (endstr == -1)
-            endstr = document.cookie.length;
-        return unescape(document.cookie.substring(offset, endstr));
-    }
-
-
-    function GetCookie(name) {
-        var arg = name + "=";
-        var alen = arg.length;
-        var clen = document.cookie.length;
-        var i = 0;
-        while (i < clen) {
-            var j = i + alen;
-            if (document.cookie.substring(i, j) == arg)
-                return www_helpor_net(j);
-            i = document.cookie.indexOf(" ", i) + 1; if (i == 0)
-                break;
-        }
-        return null;
-    }
-
-
-    function SetCookie(name, value) {
-        var argv = SetCookie.arguments;
-        var argc = SetCookie.arguments.length;
-        var expires = (2 < argc) ? argv[2] : null;
-        var path = (3 < argc) ? argv[3] : null;
-        var domain = (4 < argc) ? argv[4] : null;
-        var secure = (5 < argc) ? argv[5] : false;
-        document.cookie = name + "=" + escape(value) + ((expires == null) ? "" : ("; expires=" + expires.toGMTString())) + ((path == null) ? "" : ("; path=" + path)) + ((domain == null) ? "" : ("; domain=" + domain)) + ((secure == true) ? "; secure" : "");
-    }
-
-    var expdate = new Date();
-    var visits;
-
-    expdate.setTime(expdate.getTime() + (24 * 60 * 60 * 1000 * 365)); //设置COOKIES时间为1年,自己随便设置该时间
-
-    if (!(visits = GetCookie("visits")))
-        visits = 0; visits++; SetCookie("visits", visits, expdate, "/", null, false);
-    //以下信息显示可以使用标准的HTML语法,自己随便设置
-    document.write("你已经光临本页" + visits + "次！");
-//-->
-</SCRIPT>
 <body>
-<div id="1" style="text-align: right">
-  <h1>请选择语言</h1>
- <select onchange="window.open(this.options[this.selectedIndex].value)" id="select">
-        <option selected="selected">请选择</option>
-        <option value="zh-cn/index.html">中文</option>
-        <option value="en-gh/index.html">English</option>
-    </select>
-<script>
-    $(function(){
-        $("#select").change(function(){
-            var op=$("#select").find('option');
-            op.get(0).selected=true;
-        });
-    })
-</script>
+<div >
+  <BUTTON  style="right" id="q" onClick="javascript:if (confirm('前往登录界面？')) location.href='dlzc.html';else return;">登录</BUTTON> 
 </div>
-<br>
-
 <div id="pp1">
-  <div id="pp2"><a href="https://chunwan.cctv.com/2023/index.shtml"><img src="zh-cn/image/2.png" width="1300" height="500"></a><a href="https://chunwan.cctv.com/2023/index.shtml"><img src="zh-cn/image/2.png" width="1300" height="500"></a><a href="https://chunwan.cctv.com/2023/index.shtml"><img src="zh-cn/image/2.png" width="1300" height="500"></a> </div>
+  <div id="pp2">
+    <p><a href="dlzc.html"><img src="python.png" width="1300" height="500"></a><a href="dlzc.html"><img src="c.png" width="1300" height="500"></a><a href="dlzc.html"><img src="java.jpg" width="1300" height="500"></a></p>
+  </div>
 </div>
-
+<table width="1316" border="1">
+  <tbody>
+    <tr>
+      <td width="200"><img src="jya.jpg" width="200" height="200" alt=""/></td>
+		<td width="828">  <h1>阳安集团发展史</h1>
+            <p style="text-align: left">2010年6月，阳安集团正式宣布挂牌成立。</p>
+            <p style="text-align: left">2010年7月，阳安集团正式挂牌成立。</p>
+            <p style="text-align: left">2012年1月，阳安集团成立首个分公司----沈阳阳安游戏设计中心。</p>
+            <p style="text-align: left">2015年6月，阳安集团成立5周年。... </p>
+          <h1>
+			<td width="266"><h1>&nbsp;</h1>
+              <p>&nbsp;</p>
+			 </td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
 <p>&nbsp;</p>
 </body>
 </html>
